@@ -1,0 +1,756 @@
+# September 15, 2021
+# Owen Doherty - Eagle Rock Analytics
+# support@pyregence.org or owen@eaglerockanalytics.com
+# By region w/ outputs for plotting
+# version 0.9 release shortly
+
+
+# Acknowledgement
+# Based off code by Jeff Oliver -- jcoliver@email.arizona.edu
+
+
+library("sp")
+library("raster")
+library("maptools")
+library("rgdal")
+library("dismo")
+library(stars)
+library(dplyr)
+library(tidyverse)
+library(rgeos)
+library(rJava)
+library(mapdata)
+library(ggplot2)
+library(colorspace)
+
+#Mapping assets
+setwd('/home/owen/research/electricity/hadISD/')
+load(file = "map_objects.RData")
+
+# Parameters from Website: Analysis Type; Station Quality Flag, Location Flag
+
+# Analysis type
+# Options: Fire Weather or Climatology
+# will direct to wrf or daymet data
+
+# Station Quality Flag
+# set level of data quality; 1 highest, 2 iou/state, 3 universities, 4 private, 5 citizen
+#quality.accept <- input from webserver
+quality.accept <- 2
+quality.string <- c('highest','iou/state','universities', 'private', 'citizen')
+
+# Location Flag
+# Regions and IOUs
+#location.flag <- input from webserver
+location.flag <- 3
+
+# Variables to Pass Flag
+
+####################################
+#Section 1: Geographic domain
+####################################
+
+#Flag values: 
+# 1: Bear Valley Electric Service
+# 2: Liberty Utilities (a.k.a. CalPeco for California Pacific Electric Co.)
+# 3: Pacific Gas and Electric Company (PG&E)
+# 4: PacifiCorp
+# 5: San Diego Gas & Electric (SDG&E)
+# 6: Southern California Edison (SCE)
+
+#Fire Weather shapes:
+#7: Bay_Area
+#8: Central_Coast
+#9: LA
+#10: Modoc
+#11: Northwest
+#12: San_Diego
+#13: Sierras_East
+#14: Sierras_West
+
+setwd('~/research/wildfire/rds')
+all_shapes <- readRDS(file="firewx_regions.RDS") #all shapes has joined objects, so defines regions where IOU and fire weather overlap
+IOU_areas.sf <-readRDS(file="IOU_areas.RDS") #stand alone IOU areas (no info about firew wx)
+firewx.sf <- readRDS(file="firewx.sf.RDS") #stand alone fire wx areas (no info about IOU territories)
+
+
+####################################
+#Section 2: Find the Weather Station Data
+####################################
+#Load weather data as its own dataset
+setwd('~/research/wildfire/rds')
+wx.station <- readRDS(file = "wx_station.rds")
+
+# #set level of data quality; 1 highest, 2 iou/state, 3 universities, 4 private, 5 citizen
+# #quality.accept = 3
+# 
+# station.sub <- wx.station %>%
+# #  filter(Quality<=quality.accept) %>%
+#   drop_na(Latitude,Longitude)  #drop rows where Lat and Lon are missing
+# 
+# #create a spatial points data.frame for extraction by region below
+# xy <-station.sub %>%
+#   dplyr::select(Longitude,Latitude)
+# 
+# wx.station.spdf <- SpatialPointsDataFrame(coords=xy, data=station.sub, proj4string = CRS("+proj=longlat +datum=WGS84 +ellps=WGS84 +towgs84=0,0,0"))
+
+####################################
+#Section 3: Define Regions of Interest
+####################################
+
+loc.number<-c('Bear Valley Electric Service','Liberty Utilities','Pacific Gas & Electric Company','PacifiCorp','San Diego Gas & Electric','Southern California Edison','Bay_Area','Central_Coast','LA', 'Modoc', 'Northwest', 'San Diego', 'Sierras_East','Sierras_West')
+location.string = loc.number[location.flag]
+
+#Load shape files for user selected regions
+#6 or lower is an IOU; 7 or higher is a fire weather region
+
+if(location.flag <= 6) {
+  region_shape = IOU_areas.sf %>%
+    filter(region==location.string)
+  
+} else {
+  region_shape = firewx.sf%>%
+    filter(region==location.string)
+}
+
+
+####################################
+# Section 4: Basic Climate Data
+####################################
+
+#See process_worldclim.R
+setwd('/home/owen/research/wildfire/rds/')
+#bioclim.data.CA <- stackOpen("CA_worldclim_crop.stk")
+bioclim.data.CA<-brick("CA_worldclim_crop.tif")
+
+#bioclim.data.CA <-readRDS(file="CA_worldclim_crop.RDS") #avoid RDS for raster stacks
+#bioclim.data.CA <- readAll(bioclim.data.CA) #reads entire object into RAM - avoid writing rasters as RDS in the future
+
+#bioclim.data.CA <-raster("CA_worldclim_crop.grd")
+
+
+
+
+####################################
+# Section 5: Loops
+####################################
+
+#for (l in 2:length(loc.number)) {
+for (l in 12:length(loc.number)) {
+  for (t in 1:5 ) {
+
+    # #debug values
+    # l = 6
+    # t = 2
+    
+    #################
+    # Section 5a: Load shape files for user selected regions
+    #################
+    
+    #6 or lower is an IOU; 7 or higher is a fire weather region
+    location.string = loc.number[l]
+    print(location.string)
+    file.location.string = gsub(" ", "", location.string, fixed = TRUE)
+    
+    thres.string = quality.string[t]
+    print(thres.string)
+    
+    if(l <= 6) {
+      region_shape = IOU_areas.sf %>%
+        filter(region==location.string)
+      
+    } else {
+      region_shape = firewx.sf%>%
+        filter(region==location.string)
+    }
+    
+    shape.extent <- extent(region_shape)
+    
+    ##################
+    # Section 5b: Crop climate data & weather stations for region of interest
+    #################
+    
+    cr <- raster::crop(bioclim.data.CA, extent(region_shape), snap="out")    #crop out a subset of data                
+    fr <- rasterize(st_zm(region_shape), cr)   #rasterize the plolygon && use `st_zm(...)` to coerce to XY dimensions
+    
+    
+    #fr.sp <- sf::as_Spatial(sf::st_as_sf(stars::st_as_stars(fr), as_points = FALSE, merge = TRUE)) #create a spatial polygon for use later  -- FAST (creates overlaps)
+    fr.sp <- rasterToPolygons(fr, dissolve=TRUE) #create a spatial polygon for use later -- SLOW OPTION (no overlaps)
+    fr.sf <-  st_as_sf(fr.sp)
+    
+    #check: does the masked data get passed to maxent
+    region_bioclim <- mask(x=cr, mask=fr)    #create a poly-raster
+    
+        #to-do: test plots output here
+        #plot(region_bioclim)
+        
+    #filter weather stations by data quality flag
+        #set level of data quality; 1 highest, 2 iou/state, 3 universities, 4 private, 5 citizen
+    station.sub <- wx.station  %>%
+      dplyr::filter(Quality<=t) %>%
+      drop_na(Latitude,Longitude)  #drop rows where Lat and Lon are missing
+    
+    #create a spatial points data.frame for extraction by region below
+    xy <-station.sub %>%
+      dplyr::select(Longitude,Latitude)
+    
+    wx.station.spdf <- SpatialPointsDataFrame(coords=xy, data=station.sub, proj4string = CRS("+proj=longlat +datum=WGS84 +ellps=WGS84 +towgs84=0,0,0"))   
+    #now convert spatial points df to simple feature
+    wx.station.sf <- st_as_sf(wx.station.spdf)
+    
+    #extract stations within the polygon of region (fr)
+    wx.stations.within.sf <- st_intersection(fr.sf,wx.station.sf)
+    
+    ##################
+    # Section 5c: Maxent
+    ##################
+    # withold 10% of the data for testing the model
+    stationocc<-st_drop_geometry(wx.stations.within.sf %>%
+      select(Longitude,Latitude)
+    )
+    
+     fold <- kfold(stationocc, k=9)          #withold 10%, k = 10; withold 20% k= 5; withold 11.1%, k=9
+     stationtest <- stationocc[fold == 1, ]
+     stationtrain <- stationocc[fold != 1, ]
+    # 
+    #this logic will help with regions where there are less than 10 stations
+    #fold fails if the number of weather stations < number of folds 
+    
+    # if (length(stationocc)>10){
+    #   fold <- kfold(stationocc, k=10)          #withold 10%, k = 10; withold 20% k= 5
+    #   stationtest <- stationocc[fold == 1, ]
+    #   stationtrain <- stationocc[fold != 1, ]
+    # } else {
+    #   stationtest <- stationocc[1, ]
+    #   stationtrain <- stationocc[2:length(stationocc), ]
+    # }
+    # 
+    #Identify background points
+    bg <- randomPoints(region_bioclim, 10000) #background "pseudolocations" -1000 probably sufficient
+    
+    #fit the maxent model
+    maxent.me <- maxent(region_bioclim, stationtrain, a=bg)
+    
+    # predict to entire dataset
+    maxent.pred <- predict(maxent.me, region_bioclim)
+    
+    #######################################
+    # Section 6: Diagnostic Plots
+    #######################################
+    
+    # plot showing importance of each variable
+    setwd('~/research/wildfire/march2021/diag/')
+    
+    png(filename=paste0("var_import_",file.location.string,"_wxstathresh_",t),res=100,width=1280,height=1024)
+      ttxt = paste("Predictor Importance \n ",location.string)
+      plot(maxent.me)
+    dev.off()
+    
+    # response curves
+    png(filename=paste0("var_import_",file.location.string,"_wxstathresh_",t),res=100,width=1280,height=1024)
+      ttxt = paste("Response Curves \n ",location.string)
+      response(maxent.me)
+    dev.off()
+
+
+    
+    #Convert the predicted coverage to a spatial data frame
+    test_spdf <- as(maxent.pred, "SpatialPixelsDataFrame")
+    test_df <- as.data.frame(test_spdf)
+    
+    #Save workspace for later
+    #save(bioclim.data,stationocc,stationtest,stationtrain,maxent.me,maxent.pred,obs.data,file="/media/owen/data2/wildfire/statewide_test.RData") 
+    
+    #plot predictions
+    setwd('~/research/wildfire/march2021/diag/')
+    
+
+    png(filename=paste0("ss_",file.location.string,"_wxstathresh_",t),res=100,width=1280,height=1024)
+      ttxt = paste("Similarity Score For \n ",location.string)
+      plot(maxent.pred, main=ttxt)
+      map('worldHires', fill=FALSE, add=TRUE)
+      points(stationtest$longitude, stationtest$latitude, pch="+", cex=0.2)
+      points(stationtrain$longitude, stationtrain$latitude, pch="o", cex=0.2)
+    dev.off()
+    
+    # #simplest way to use 'evaluate'
+    # e1 <- evaluate(me, p=occtest, a=bg, x=predictors)
+    # 
+    # # alternative 1
+    # # extract values
+    # pvtest <- data.frame(extract(predictors, occtest))
+    # avtest <- data.frame(extract(predictors, bg))
+    # 
+    # e2 <- evaluate(me, p=pvtest, a=avtest)
+    # 
+    # # alternative 2 
+    # # predict to testing points 
+    # testp <- predict(me, pvtest) 
+    # head(testp)
+    # testa <- predict(me, avtest) 
+    # 
+    # e3 <- evaluate(p=testp, a=testa)
+    # e3
+    # threshold(e3)
+    # 
+    # plot(e3, 'ROC')
+    # 
+    # 
+    # 
+    # #testing the model
+    # # background data
+    # bg <- randomPoints(bioclim.data, 1000) #background "pseudoabsences"
+    # 
+    # #simplest way to use 'evaluate'
+    # e1 <- evaluate(rattler.me, p=stationtest, a=bg, x=bioclim.data)
+    # 
+    # plot(e1, 'ROC')
+    # rattlerChangePoints = extract(rattler.change, rattlerocc)
+    # hist(rattlerChangePoints, main="", xlab="Change in habitat suitability")
+    # abline(v=0, col="red")
+    # 
+    # rattlerMitChangePoints = extract(rattler.mit.change, rattlerocc)
+    # hist(rattlerChangePoints, main="", x)
+    # abline(v=0, col="red")
+    
+    
+    #############################
+    #Section #7: Output nice map
+    ############################
+    
+    setwd('~/research/wildfire/march2021/figs/')
+    
+    #Plot all stations
+    labtext = paste("Similarity Score For ",location.string)
+    subtext = paste('Weather Station Quality Threshold', t, 'of 5: ', thres.string) 
+    captext = 'Pyregence.org [EPC-18-026]'
+    fout = paste0("ss_",file.location.string,"_wxstathresh_",t,'.pdf')
+    
+    a <- ggplot(data = wx.stations.within.sf, aes(x = Longitude, y = Latitude)) + 
+      geom_polygon(data = CA, aes(x=long, y = lat, group = group), fill = 'grey70', color='black', size=1) +
+      geom_tile(data=test_df, aes(x=x, y=y, fill=layer), alpha=0.8) + 
+      scale_fill_continuous_sequential(palette = "Viridis")+
+      geom_polygon(data = CA.counties, aes(x=long, y=lat, group=group), color="black",fill=NA, size=0.5, alpha=0, show.legend = TRUE)+
+      geom_path(data = highways.in, aes(x=long, y=lat, group=group), inherit.aes = FALSE, size=0.05, color="black", alpha=1, show.legend = TRUE)+
+      geom_point(alpha=0.5, size=0.1, color="black")+
+      
+      coord_fixed(xlim = c(shape.extent@xmin,shape.extent@xmax),  ylim = c(shape.extent@ymin, shape.extent@ymax), ratio=1.3)+
+      
+      theme(plot.title = element_text(size = 25, face = "bold"),
+            legend.title = element_text(size = 15),
+            axis.text = element_text(size = 15),
+            axis.title.x = element_text(size = 20, vjust = -0.5),
+            axis.title.y = element_text(size = 20, vjust = 0.2),
+            legend.text = element_text(size = 10)) +
+      theme_bw() +
+      labs(title=labtext,caption=captext,subtitle=subtext, x="Longitude",y="Latitude")
+    
+    #a
+    ggsave(file=fout, plot = a, device = "pdf", dpi = 300) 
+    
+    #############################
+    #Section #8: Data dump
+    ############################ 
+    setwd('~/research/wildfire/march2021/data/')
+    
+    fout = paste0("model_",file.location.string,"_wxstathresh_",t,'.RData')
+    save(list=c("maxent.me", "maxent.pred"), file=fout)
+    
+    fout = paste0("prediction",file.location.string,"_wxstathresh_",t,'.RDS')
+    saveRDS(test_spdf,fout) 
+  } # end weather station quality threshold loop
+} #end location loop
+
+
+
+# # Load the data to use for our base map
+# data(wrld_simpl)
+# data("state.vbm")
+# 
+# # Plot the base map
+# plot(wrld_simpl, 
+#      xlim = c(min.lon, max.lon),
+#      ylim = c(min.lat, max.lat),
+#      axes = TRUE, 
+#      col = "grey95")
+# 
+# # Add the points for individual observation
+# points(x = obs.data$longitude, 
+#        y = obs.data$latitude, 
+#        col = "olivedrab", 
+#        pch = 20, 
+#        cex = 0.75)
+# # And draw a little box around the graph
+# box()
+
+# withold 20% of the data for testing the model
+stationocc=data.frame(obs.data$longitude,obs.data$latitude)
+fold <- kfold(stationocc, k=5)
+stationtest <- stationocc[fold == 1, ]
+stationtrain <- stationocc[fold != 1, ]
+
+#Get basic weather data
+bioclim.data.1 <- getData(name = "worldclim",
+                          var = "bio",
+                          res = 0.5,
+                          lat = (min.lat+max.lat)/2,
+                          lon = min.lon)
+
+#pge strattles the line need second tile
+bioclim.data.2 <- getData(name = "worldclim",
+                          var = "bio",
+                          res = 0.5,
+                          lat = min.lat,
+                          lon = max.lon)
+
+#This section of code hangs a long time...
+temp <- raster::merge(bioclim.data.1,bioclim.data.2)
+#bioclim.data <- mosaic(bioclim.data.1,bioclim.data.2,fun=mean)
+
+#Subset raster stacks to California domain
+library(tigris)
+states.sf <-states(cb=FALSE)
+ca.sf <- states.sf %>%
+    filter(STUSPS=='CA')
+
+# options(tigris_class="sp")
+# states.sp <-states(cb=FALSE)
+# ca.sp <- states.sp %>%
+#   filter_state("california")
+
+bioclim.data <- mask(temp,ca.sf)                       #mask will mask out data points outside CA shapefile
+bioclim.data <- crop(bioclim.data,extent(geographic.extent))  #crop will grab all data within the cube defined by extent
+
+#Identify background points
+bg <- randomPoints(bioclim.data, 1000) #background "pseudoabsences"
+
+#fit the maxent model
+library(rJava)
+rattler.me <- maxent(bioclim.data, stationtrain, a=bg)
+
+# plot showing importance of each variable
+plot(rattler.me)
+
+# response curves
+response(rattler.me)
+
+# predict to entire dataset
+rattler.pred <- predict(rattler.me, bioclim.data)
+
+#Convert the predicted coverage to a spatial data frame
+test_spdf <- as(rattler.pred, "SpatialPixelsDataFrame")
+test_df <- as.data.frame(test_spdf)
+
+#Save workspace for later
+#save(bioclim.data,stationocc,stationtest,stationtrain,rattler.me,rattler.pred,obs.data,file="/media/owen/data2/wildfire/statewide_test.RData") 
+
+#plot predictions
+plot(rattler.pred, main="Statewide Similarity")
+map('worldHires', fill=FALSE, add=TRUE)
+points(obs.data$longitude, obs.data$latitude, pch="+", cex=0.2)
+
+#Load Weather Region Shapefiles
+setwd('~/research/wildfire/fire-weather-shapes/')
+dir <- '~/research/wildfire/fire-weather-shapes/'
+
+ff <- list.files(dir, pattern="\\.shp$", full.names=TRUE)
+fire.wx.l <-lapply(ff,shapefile)
+fire.wx.reg <- do.call(bind,fire.wx.l)
+
+#Load GIS objects
+setwd('/home/owen/research/electricity/hadISD/')
+load(file = "map_objects.RData")
+
+setwd('/home/owen/research/wildfire/')
+#Plot all stations
+library(ggplot2)
+library(colorspace)
+labtext = 'Statewide Station Similarity'
+#subtext = 'All Long Term ISD Stations'
+captext = 'Produced in support of EPC-18-026'
+fout = 'statewide_map.pdf'
+a <- ggplot(data = active.sub, aes(x = Longitude, y = Latitude)) + 
+  geom_polygon(data = CA, aes(x=long, y = lat, group = group), fill = 'grey70', color='black', size=1) +
+  geom_tile(data=test_df, aes(x=x, y=y, fill=layer), alpha=0.8) + 
+  #scale_fill_gradientn("similarity score",colours=c("#FFECB3","#E85285","#3e0020"), na.value = NA, limits=c(0,1)) +
+  #scale_fill_gradientn("similarity score",colours=c("#FFECB3","#FFA500","#1e003e"), na.value = NA, limits=c(0.1,0.7)) +
+  #scale_fill_continuous_sequential(palette = "Viridis", begin = 0.1, end = 0.7)+
+  scale_fill_continuous_sequential(palette = "Viridis")+
+  #scale_fill_gradientn("similarity score",colours = colorspace::Viridis(7), na.value = NA, limits=c(0.1,0.7)) +
+  geom_polygon(data = CA.counties, aes(x=long, y=lat, group=group), color="black",fill=NA, size=0.5, alpha=0, show.legend = TRUE)+
+  geom_path(data = highways.in, aes(x=long, y=lat, group=group), inherit.aes = FALSE, size=0.05, color="black", alpha=1, show.legend = TRUE)+
+  geom_point(alpha=0.5, size=0.1, color="black")+
+  
+  coord_fixed(xlim = c(min.lon,max.lon),  ylim = c(min.lat, max.lat), ratio=1.3)+
+  
+  
+  theme(plot.title = element_text(size = 25, face = "bold"),
+        legend.title = element_text(size = 15),
+        axis.text = element_text(size = 15),
+        axis.title.x = element_text(size = 20, vjust = -0.5),
+        axis.title.y = element_text(size = 20, vjust = 0.2),
+        legend.text = element_text(size = 10)) +
+  theme_bw() +
+  labs(title=labtext,caption=captext,x="Longitude",y="Latitude")
+
+#a
+ggsave(file=fout, plot = a, device = "pdf", dpi = 300)
+
+#Plot: Statewide by Fire Regions 
+library(ggplot2)
+library(colorspace)
+labtext = 'Statewide Station Similarity'
+#subtext = 'All Long Term ISD Stations'
+captext = 'Produced in support of EPC-18-026'
+fout = 'statewide_map_by_firewx.pdf'
+a <- ggplot(data = active.sub, aes(x = Longitude, y = Latitude)) + 
+  geom_polygon(data = CA, aes(x=long, y = lat, group = group), fill = 'grey70', color='black', size=1) +
+  geom_tile(data=test_df, aes(x=x, y=y, fill=layer), alpha=0.8) + 
+  scale_fill_continuous_sequential(palette = "Viridis")+
+  geom_polygon(data = fire.wx.reg, aes(x=long, y=lat, group=group), color="black",fill=NA, size=0.5, alpha=0, show.legend = TRUE)+
+  #geom_path(data = highways.in, aes(x=long, y=lat, group=group), inherit.aes = FALSE, size=0.01, color="black", alpha=1, show.legend = TRUE)+
+  geom_point(alpha=0.5, size=0.1, color="black")+
+  
+  coord_fixed(xlim = c(min.lon,max.lon),  ylim = c(min.lat, max.lat), ratio=1.3)+
+  
+  
+  theme(plot.title = element_text(size = 25, face = "bold"),
+        legend.title = element_text(size = 15),
+        axis.text = element_text(size = 15),
+        axis.title.x = element_text(size = 20, vjust = -0.5),
+        axis.title.y = element_text(size = 20, vjust = 0.2),
+        legend.text = element_text(size = 10)) +
+  theme_bw() +
+  labs(title=labtext,caption=captext,x="Longitude",y="Latitude")
+
+#a
+ggsave(file=fout, plot = a, device = "pdf", dpi = 300)
+
+####
+#Plot by Service Area
+####
+
+#Load GIS objects
+library(rgdal)
+setwd('/home/owen/research/wildfire/service_areas/')
+service <- readOGR(dsn = ".")
+service <- spTransform(service,CRSobj = CA@proj4string)
+
+library(dplyr)
+library(sf)
+service.sf <- st_as_sf(service)
+service.sf <- service.sf %>%
+  filter(Type == "IOU")
+
+
+service.st <- as(service.sf, "Spatial")
+
+
+setwd('/home/owen/research/wildfire/')
+
+labtext = 'Statewide Station Similarity'
+#subtext = 'All Long Term ISD Stations'
+captext = 'Produced in support of EPC-18-026'
+fout = 'statewide_map_by_IOU.pdf'
+a <- ggplot(data = active.sub, aes(x = Longitude, y = Latitude)) + 
+  geom_polygon(data = CA, aes(x=long, y = lat, group = group), fill = 'grey70', color='black', size=1) +
+  geom_tile(data=test_df, aes(x=x, y=y, fill=layer), alpha=0.8) + 
+  scale_fill_continuous_sequential(palette = "Viridis")+
+  geom_polygon(data = service.st, aes(x=long, y=lat, group=group), color="black",fill=NA, size=0.5, alpha=0, show.legend = TRUE)+
+  #geom_sf(data = service.sf, color="black",fill=NA, size=0.5, alpha=0, show.legend = TRUE)+
+  #geom_path(data = highways.in, aes(x=long, y=lat, group=group), inherit.aes = FALSE, size=0.01, color="black", alpha=1, show.legend = TRUE)+
+  geom_point(alpha=0.5, size=0.1, color="black")+
+  
+  coord_fixed(xlim = c(min.lon,max.lon),  ylim = c(min.lat, max.lat), ratio=1.3)+
+  
+  
+  theme(plot.title = element_text(size = 25, face = "bold"),
+        legend.title = element_text(size = 15),
+        axis.text = element_text(size = 15),
+        axis.title.x = element_text(size = 20, vjust = -0.5),
+        axis.title.y = element_text(size = 20, vjust = 0.2),
+        legend.text = element_text(size = 10)) +
+  theme_bw() +
+  labs(title=labtext,caption=captext,x="Longitude",y="Latitude")
+
+#a
+ggsave(file=fout, plot = a, device = "pdf", dpi = 300)
+
+
+
+
+
+# Read in SDG&E proposed weather stations
+setwd('~/research/wildfire')
+new.data <- read.csv(file = "2020 New Weather Stations_redacted.csv")
+
+#Create a subset of the stations with just latitude and longitude
+library('dplyr')
+prop.data <- new.data %>%
+  select('Lat','Lon')
+colnames(prop.data)[1:2] <-c("latitude","longitude")
+
+# Check the data to make sure it loaded correctly
+summary(prop.data)
+
+#Plot map with proposed stations
+setwd('/home/owen/research/wildfire/')
+#Plot all stations
+library(ggplot2)
+labtext = 'SDG&E Proposed Station Similarity'
+#subtext = 'All Long Term ISD Stations'
+captext = 'Produced in support of EPC-18-026'
+fout = 'sdg&e_map_proposed.pdf'
+a <- ggplot(data = obs.data, aes(x = longitude, y = latitude)) + 
+  geom_polygon(data = CA, aes(x=long, y = lat, group = group), fill = 'grey70', color='black', size=1) +
+  geom_tile(data=test_df, aes(x=x, y=y, fill=layer), alpha=0.8) + 
+  scale_fill_gradientn("similarity score",colours=c("#FFECB3","#E85285","#3e0020"), na.value = NA, limits=c(0,1)) +
+  geom_polygon(data = CA.counties, aes(x=long, y=lat, group=group), color="black",fill=NA, size=0.5, alpha=0, show.legend = TRUE)+
+  geom_path(data = highways.in, aes(x=long, y=lat, group=group), inherit.aes = FALSE, size=0.05, color="black", alpha=1, show.legend = TRUE)+
+  geom_point(alpha=1, size=0.75, color="black")+
+  geom_point(data=prop.data, aes(x=longitude,y=latitude),alpha=1, size=0.75, color="blue")+
+  
+  coord_fixed(xlim = c(min.lon,max.lon),  ylim = c(min.lat, max.lat), ratio=1.3)+
+  
+  
+  theme(plot.title = element_text(size = 25, face = "bold"),
+        legend.title = element_text(size = 15),
+        axis.text = element_text(size = 15),
+        axis.title.x = element_text(size = 20, vjust = -0.5),
+        axis.title.y = element_text(size = 20, vjust = 0.2),
+        legend.text = element_text(size = 10)) +
+  theme_bw() +
+  labs(title=labtext,caption=captext,x="Longitude",y="Latitude")
+
+#a
+ggsave(file=fout, plot = a, device = "pdf", dpi = 300)
+
+
+#Match new points with a score
+prop.rev = prop.data[,c(2,1)] #reverse lon/lat
+prop.rev <- prop.rev[!is.na(prop.data$latitude), ]  #drop NAN
+
+prop_spdf <- SpatialPointsDataFrame(
+  prop.rev, proj4string=CRS("+proj=longlat +datum=WGS84 +ellps=WGS84 +towgs84=0,0,0"),data=prop.rev) #convert to spatial data frame
+
+#extract one modeled similarity score for proposed new location
+extracted.vals<-extract(rattler.pred,prop_spdf,method="simple")
+
+
+#Merge extracted data with station information from SDG&E
+prop.data<-na.omit(prop.data)
+scores.df<-cbind(prop.data,extracted.vals)
+
+colnames(scores.df)[1:2] <-c("Lat","Lon")
+scores.merged.df<-merge(scores.df,new.data,by=c("Lat","Lon"))
+
+#Make a pretty table
+library(knitr)
+library(kableExtra)
+
+#Create a subset of the stations with just latitude and longitude
+library('dplyr')
+less.merged.df <- scores.merged.df %>%
+  select('Lat','Lon','extracted.vals','Proposed.Weather.Station','Community') %>%
+  arrange(desc(extracted.vals)) %>%
+  `colnames<-`(c("Lat", "Lon", "Similarity", "Station Name", "Community"))
+
+
+x <- head(less.merged.df, n = 5) %>%
+  kable() %>%
+  kable_styling(bootstrap_options = c("striped"))
+save_kable(x, file="highest_sdge_stations.png")
+
+x <- tail(less.merged.df, n = 5) %>%
+  kable() %>%
+  kable_styling(bootstrap_options = c("striped"))
+save_kable(x, file="lowest_sdge_stations.png")
+
+
+# prop.rev = prop.data[,c(2,1)]
+# r_prop = rasterize(prop.rev, rattler.pred, getCover=TRUE)
+# r_prop[r_prop==0] = NA
+# 
+# 
+# 
+# cellStats(!is.na(r2), sum)
+# extract(rattler.pred,r_prop,method="simple",layer=1,buffer=1000,small=TRUE)
+
+
+
+
+
+
+
+#simplest way to use 'evaluate'
+e1 <- evaluate(me, p=occtest, a=bg, x=predictors)
+
+# alternative 1
+# extract values
+pvtest <- data.frame(extract(predictors, occtest))
+avtest <- data.frame(extract(predictors, bg))
+
+e2 <- evaluate(me, p=pvtest, a=avtest)
+
+# alternative 2 
+# predict to testing points 
+testp <- predict(me, pvtest) 
+head(testp)
+testa <- predict(me, avtest) 
+
+e3 <- evaluate(p=testp, a=testa)
+e3
+threshold(e3)
+
+plot(e3, 'ROC')
+
+
+
+#testing the model
+# background data
+bg <- randomPoints(bioclim.data, 1000) #background "pseudoabsences"
+
+#simplest way to use 'evaluate'
+e1 <- evaluate(rattler.me, p=stationtest, a=bg, x=bioclim.data)
+
+plot(e1, 'ROC')
+rattlerChangePoints = extract(rattler.change, rattlerocc)
+hist(rattlerChangePoints, main="", xlab="Change in habitat suitability")
+abline(v=0, col="red")
+
+rattlerMitChangePoints = extract(rattler.mit.change, rattlerocc)
+hist(rattlerChangePoints, main="", x)
+abline(v=0, col="red")
+
+
+# wx.station2 <- station.sub
+# coordinates(wx.station2) <- ~ Longitude + Latitude
+# proj4string(wx.station2) <- proj4string(fr.sp)
+# 
+# 
+# 
+# #extract stations within the polygon of region (fr)
+# library(rgeos)
+# test <- gDifference(wx.station.spdf,fr.sp)
+# test <- gUnion(wx.station.spdf,fr.sp)
+# 
+# 
+# within.stations <- as.data.frame(test@pointobj)
+# 
+# sp::over(fr.sp,wx.station2)
+# 
+# 
+# wx.within.logic <- sp::over(wx.station.spdf,fr.sp,weights=FALSE)
+# 
+# 
+# 
+# wx.within.logic <- raster::extract(fr,wx.station.spdf,weights=FALSE)
+# wx.stations.within <- subset(wx.station.spdf,wx.station.within)
+# 
+# wx.stations.within <- wx.station.spdf[wx.within.logic, ]
+
+#scale_fill_gradientn("similarity score",colours=c("#FFECB3","#E85285","#3e0020"), na.value = NA, limits=c(0,1)) +
+#scale_fill_gradientn("similarity score",colours=c("#FFECB3","#FFA500","#1e003e"), na.value = NA, limits=c(0.1,0.7)) +
+#scale_fill_continuous_sequential(palette = "Viridis", begin = 0.1, end = 0.7)+
+
+#scale_fill_gradientn("similarity score",colours = colorspace::Viridis(7), na.value = NA, limits=c(0.1,0.7)) +

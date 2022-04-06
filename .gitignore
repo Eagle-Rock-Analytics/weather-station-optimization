@@ -1,0 +1,6 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+map_data/worldclim/
+map_data/CA_worldclim_crop.tif

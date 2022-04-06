@@ -8,24 +8,38 @@
 # Acknowledgement
 # Based off code by Jeff Oliver -- jcoliver@email.arizona.edu
 
+# Updates
+# Grace Di Cecco - Eagle Rock Analytics
+# April 5, 2022
+
+#### Libraries #####
 
 library("sp")
 library("raster")
-library("maptools")
-library("rgdal")
+library("maptools") #depreciating
+library("rgdal") #depreciating
 library("dismo")
 library(stars)
 library(dplyr)
 library(tidyverse)
-library(rgeos)
+library(rgeos) #depreciating
 library(rJava)
 library(mapdata)
 library(ggplot2)
 library(colorspace)
 
+
+#### setup directories #### 
+
+map_data <- "map_data/"
+weather_stations <- "weather_stations/"
+output_dir <- "data_out/"
+fig_dir <- "figs/"
+
 #Mapping assets
-setwd('/home/owen/research/electricity/hadISD/')
-load(file = "map_objects.RData")
+load(file = paste0(map_data, "map_objects.RData"))
+
+#### Params #####
 
 # Parameters from Website: Analysis Type; Station Quality Flag, Location Flag
 
@@ -46,9 +60,9 @@ location.flag <- 3
 
 # Variables to Pass Flag
 
-####################################
-#Section 1: Geographic domain
-####################################
+
+#### Section 1: Geographic domain ####
+
 
 #Flag values: 
 # 1: Bear Valley Electric Service
@@ -68,18 +82,15 @@ location.flag <- 3
 #13: Sierras_East
 #14: Sierras_West
 
-setwd('~/research/wildfire/rds')
-all_shapes <- readRDS(file="firewx_regions.RDS") #all shapes has joined objects, so defines regions where IOU and fire weather overlap
-IOU_areas.sf <-readRDS(file="IOU_areas.RDS") #stand alone IOU areas (no info about firew wx)
-firewx.sf <- readRDS(file="firewx.sf.RDS") #stand alone fire wx areas (no info about IOU territories)
+all_shapes <- readRDS(file=paste0(map_data, "firewx_regions.RDS")) #all shapes has joined objects, so defines regions where IOU and fire weather overlap
+IOU_areas.sf <-readRDS(file=paste0(map_data, "IOU_areas.RDS")) #stand alone IOU areas (no info about firew wx)
+firewx.sf <- readRDS(file=paste0(map_data, "firewx.sf.RDS")) #stand alone fire wx areas (no info about IOU territories)
 
+#### Section 2: Find the Weather Station Data ####
 
-####################################
-#Section 2: Find the Weather Station Data
-####################################
 #Load weather data as its own dataset
-setwd('~/research/wildfire/rds')
-wx.station <- readRDS(file = "wx_station.rds")
+
+wx.station <- readRDS(file = paste0(map_data, "wx_station.rds"))
 
 # #set level of data quality; 1 highest, 2 iou/state, 3 universities, 4 private, 5 citizen
 # #quality.accept = 3
@@ -94,9 +105,7 @@ wx.station <- readRDS(file = "wx_station.rds")
 # 
 # wx.station.spdf <- SpatialPointsDataFrame(coords=xy, data=station.sub, proj4string = CRS("+proj=longlat +datum=WGS84 +ellps=WGS84 +towgs84=0,0,0"))
 
-####################################
-#Section 3: Define Regions of Interest
-####################################
+#### Section 3: Define Regions of Interest ####
 
 loc.number<-c('Bear Valley Electric Service','Liberty Utilities','Pacific Gas & Electric Company','PacifiCorp','San Diego Gas & Electric','Southern California Edison','Bay_Area','Central_Coast','LA', 'Modoc', 'Northwest', 'San Diego', 'Sierras_East','Sierras_West')
 location.string = loc.number[location.flag]
@@ -113,15 +122,11 @@ if(location.flag <= 6) {
     filter(region==location.string)
 }
 
-
-####################################
-# Section 4: Basic Climate Data
-####################################
+#### Section 4: Basic Climate Data ####
 
 #See process_worldclim.R
-setwd('/home/owen/research/wildfire/rds/')
 #bioclim.data.CA <- stackOpen("CA_worldclim_crop.stk")
-bioclim.data.CA<-brick("CA_worldclim_crop.tif")
+bioclim.data.CA<-brick(paste0(map_data, "CA_worldclim_crop.tif"))
 
 #bioclim.data.CA <-readRDS(file="CA_worldclim_crop.RDS") #avoid RDS for raster stacks
 #bioclim.data.CA <- readAll(bioclim.data.CA) #reads entire object into RAM - avoid writing rasters as RDS in the future
@@ -129,23 +134,17 @@ bioclim.data.CA<-brick("CA_worldclim_crop.tif")
 #bioclim.data.CA <-raster("CA_worldclim_crop.grd")
 
 
-
-
-####################################
-# Section 5: Loops
-####################################
+#### Section 5: Loops ####
 
 #for (l in 2:length(loc.number)) {
-for (l in 12:length(loc.number)) {
+for (l in 2:length(loc.number)) {
   for (t in 1:5 ) {
 
     # #debug values
     # l = 6
     # t = 2
     
-    #################
-    # Section 5a: Load shape files for user selected regions
-    #################
+    #### Section 5a: Load shape files for user selected regions ####
     
     #6 or lower is an IOU; 7 or higher is a fire weather region
     location.string = loc.number[l]
@@ -166,9 +165,7 @@ for (l in 12:length(loc.number)) {
     
     shape.extent <- extent(region_shape)
     
-    ##################
-    # Section 5b: Crop climate data & weather stations for region of interest
-    #################
+    #### Section 5b: Crop climate data & weather stations for region of interest ####
     
     cr <- raster::crop(bioclim.data.CA, extent(region_shape), snap="out")    #crop out a subset of data                
     fr <- rasterize(st_zm(region_shape), cr)   #rasterize the plolygon && use `st_zm(...)` to coerce to XY dimensions
@@ -201,9 +198,8 @@ for (l in 12:length(loc.number)) {
     #extract stations within the polygon of region (fr)
     wx.stations.within.sf <- st_intersection(fr.sf,wx.station.sf)
     
-    ##################
-    # Section 5c: Maxent
-    ##################
+    #### Section 5c: Maxent ####
+    
     # withold 10% of the data for testing the model
     stationocc<-st_drop_geometry(wx.stations.within.sf %>%
       select(Longitude,Latitude)
@@ -234,25 +230,33 @@ for (l in 12:length(loc.number)) {
     # predict to entire dataset
     maxent.pred <- predict(maxent.me, region_bioclim)
     
-    #######################################
-    # Section 6: Diagnostic Plots
-    #######################################
+    #### Section 6: Diagnostic Plots ####
     
     # plot showing importance of each variable
-    setwd('~/research/wildfire/march2021/diag/')
     
-    png(filename=paste0("var_import_",file.location.string,"_wxstathresh_",t),res=100,width=1280,height=1024)
-      ttxt = paste("Predictor Importance \n ",location.string)
-      plot(maxent.me)
+    pdf(file=paste0(fig_dir, "var_import_",file.location.string,"_wxstathresh_",t, ".pdf"), width = 8, height = 6)
+      plot(maxent.me, main = paste("Predictor Importance \n ",location.string))
     dev.off()
     
     # response curves
-    png(filename=paste0("var_import_",file.location.string,"_wxstathresh_",t),res=100,width=1280,height=1024)
-      ttxt = paste("Response Curves \n ",location.string)
-      response(maxent.me)
+    pdf(file=paste0(fig_dir, "res_curves_",file.location.string,"_wxstathresh_",t, ".pdf"), width = 8, height = 6)
+      response(maxent.me, main = paste("Response Curves \n ",location.string))
     dev.off()
 
 
+    # ROC plots
+    pvtest <- data.frame(raster::extract(region_bioclim, stationtrain))
+    avtest <- data.frame(raster::extract(region_bioclim, bg))
+    
+    testp <- predict(maxent.me, pvtest) 
+    testa <- predict(maxent.me, avtest) 
+    
+    e3 <- evaluate(p=testp, a=testa)
+    
+    pdf(file=paste0(fig_dir, "roc_",file.location.string,"_wxstathresh_",t, ".pdf"), width = 8, height = 6)
+    plot(e3, 'ROC')
+    mtext(location.string, side = 3)
+    dev.off()
     
     #Convert the predicted coverage to a spatial data frame
     test_spdf <- as(maxent.pred, "SpatialPixelsDataFrame")
@@ -262,12 +266,10 @@ for (l in 12:length(loc.number)) {
     #save(bioclim.data,stationocc,stationtest,stationtrain,maxent.me,maxent.pred,obs.data,file="/media/owen/data2/wildfire/statewide_test.RData") 
     
     #plot predictions
-    setwd('~/research/wildfire/march2021/diag/')
     
 
-    png(filename=paste0("ss_",file.location.string,"_wxstathresh_",t),res=100,width=1280,height=1024)
-      ttxt = paste("Similarity Score For \n ",location.string)
-      plot(maxent.pred, main=ttxt)
+    pdf(file=paste0(fig_dir, "ss_",file.location.string,"_wxstathresh_",t, ".pdf"), width = 8, height = 6)
+      plot(maxent.pred, main=paste("Similarity Score For \n ",location.string))
       map('worldHires', fill=FALSE, add=TRUE)
       points(stationtest$longitude, stationtest$latitude, pch="+", cex=0.2)
       points(stationtrain$longitude, stationtrain$latitude, pch="o", cex=0.2)
@@ -313,18 +315,14 @@ for (l in 12:length(loc.number)) {
     # hist(rattlerChangePoints, main="", x)
     # abline(v=0, col="red")
     
-    
-    #############################
-    #Section #7: Output nice map
-    ############################
-    
-    setwd('~/research/wildfire/march2021/figs/')
+
+    #### Section #7: Output nice map ####
     
     #Plot all stations
     labtext = paste("Similarity Score For ",location.string)
     subtext = paste('Weather Station Quality Threshold', t, 'of 5: ', thres.string) 
     captext = 'Pyregence.org [EPC-18-026]'
-    fout = paste0("ss_",file.location.string,"_wxstathresh_",t,'.pdf')
+    fout = paste0(fig_dir, "ss_",file.location.string,"_wxstathresh_",t,'.pdf')
     
     a <- ggplot(data = wx.stations.within.sf, aes(x = Longitude, y = Latitude)) + 
       geom_polygon(data = CA, aes(x=long, y = lat, group = group), fill = 'grey70', color='black', size=1) +
@@ -332,7 +330,7 @@ for (l in 12:length(loc.number)) {
       scale_fill_continuous_sequential(palette = "Viridis")+
       geom_polygon(data = CA.counties, aes(x=long, y=lat, group=group), color="black",fill=NA, size=0.5, alpha=0, show.legend = TRUE)+
       geom_path(data = highways.in, aes(x=long, y=lat, group=group), inherit.aes = FALSE, size=0.05, color="black", alpha=1, show.legend = TRUE)+
-      geom_point(alpha=0.5, size=0.1, color="black")+
+      geom_point(size=1, color="black")+
       
       coord_fixed(xlim = c(shape.extent@xmin,shape.extent@xmax),  ylim = c(shape.extent@ymin, shape.extent@ymax), ratio=1.3)+
       
@@ -348,15 +346,12 @@ for (l in 12:length(loc.number)) {
     #a
     ggsave(file=fout, plot = a, device = "pdf", dpi = 300) 
     
-    #############################
-    #Section #8: Data dump
-    ############################ 
-    setwd('~/research/wildfire/march2021/data/')
+    #### Section #8: Data dump ####
     
-    fout = paste0("model_",file.location.string,"_wxstathresh_",t,'.RData')
+    fout = paste0(output_dir, "model_",file.location.string,"_wxstathresh_",t,'.RData')
     save(list=c("maxent.me", "maxent.pred"), file=fout)
     
-    fout = paste0("prediction",file.location.string,"_wxstathresh_",t,'.RDS')
+    fout = paste0(output_dir, "prediction",file.location.string,"_wxstathresh_",t,'.RDS')
     saveRDS(test_spdf,fout) 
   } # end weather station quality threshold loop
 } #end location loop
@@ -527,7 +522,7 @@ a <- ggplot(data = active.sub, aes(x = Longitude, y = Latitude)) +
 ggsave(file=fout, plot = a, device = "pdf", dpi = 300)
 
 ####
-#Plot by Service Area
+# Plot by Service Area
 ####
 
 #Load GIS objects

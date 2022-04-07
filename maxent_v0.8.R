@@ -137,7 +137,7 @@ bioclim.data.CA<-brick(paste0(map_data, "CA_worldclim_crop.tif"))
 #### Section 5: Loops ####
 
 #for (l in 2:length(loc.number)) {
-for (l in 2:length(loc.number)) {
+for (l in 6:length(loc.number)) {
   for (t in 1:5 ) {
 
     # #debug values
@@ -330,7 +330,7 @@ for (l in 2:length(loc.number)) {
       scale_fill_continuous_sequential(palette = "Viridis")+
       geom_polygon(data = CA.counties, aes(x=long, y=lat, group=group), color="black",fill=NA, size=0.5, alpha=0, show.legend = TRUE)+
       geom_path(data = highways.in, aes(x=long, y=lat, group=group), inherit.aes = FALSE, size=0.05, color="black", alpha=1, show.legend = TRUE)+
-      geom_point(size=1, color="black")+
+      geom_point(alpha= 0.8, size=0.25, color="black")+
       
       coord_fixed(xlim = c(shape.extent@xmin,shape.extent@xmax),  ylim = c(shape.extent@ymin, shape.extent@ymax), ratio=1.3)+
       
@@ -356,7 +356,7 @@ for (l in 2:length(loc.number)) {
   } # end weather station quality threshold loop
 } #end location loop
 
-
+#### Old code below ####
 
 # # Load the data to use for our base map
 # data(wrld_simpl)

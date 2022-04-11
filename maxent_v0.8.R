@@ -137,7 +137,7 @@ bioclim.data.CA<-brick(paste0(map_data, "CA_worldclim_crop.tif"))
 #### Section 5: Loops ####
 
 #for (l in 2:length(loc.number)) {
-for (l in 6:length(loc.number)) {
+for (l in 2:length(loc.number)) {
   for (t in 1:5 ) {
 
     # #debug values
@@ -225,7 +225,8 @@ for (l in 6:length(loc.number)) {
     bg <- randomPoints(region_bioclim, 10000) #background "pseudolocations" -1000 probably sufficient
     
     #fit the maxent model
-    maxent.me <- maxent(region_bioclim, stationtrain, a=bg)
+    maxent.me <- maxent(region_bioclim, stationtrain, a=bg,
+                        args = c("betamultiplier=0.5"))
     
     # predict to entire dataset
     maxent.pred <- predict(maxent.me, region_bioclim)
@@ -237,7 +238,7 @@ for (l in 6:length(loc.number)) {
     pdf(file=paste0(fig_dir, "var_import_",file.location.string,"_wxstathresh_",t, ".pdf"), width = 8, height = 6)
       plot(maxent.me, main = paste("Predictor Importance \n ",location.string))
     dev.off()
-    
+
     # response curves
     pdf(file=paste0(fig_dir, "res_curves_",file.location.string,"_wxstathresh_",t, ".pdf"), width = 8, height = 6)
       response(maxent.me, main = paste("Response Curves \n ",location.string))
@@ -257,7 +258,7 @@ for (l in 6:length(loc.number)) {
     plot(e3, 'ROC')
     mtext(location.string, side = 3)
     dev.off()
-    
+
     #Convert the predicted coverage to a spatial data frame
     test_spdf <- as(maxent.pred, "SpatialPixelsDataFrame")
     test_df <- as.data.frame(test_spdf)
@@ -316,7 +317,7 @@ for (l in 6:length(loc.number)) {
     # abline(v=0, col="red")
     
 
-    #### Section #7: Output nice map ####
+    #### Section 7: Output nice map ####
     
     #Plot all stations
     labtext = paste("Similarity Score For ",location.string)
@@ -346,7 +347,7 @@ for (l in 6:length(loc.number)) {
     #a
     ggsave(file=fout, plot = a, device = "pdf", dpi = 300) 
     
-    #### Section #8: Data dump ####
+    #### Section 8: Data dump ####
     
     fout = paste0(output_dir, "model_",file.location.string,"_wxstathresh_",t,'.RData')
     save(list=c("maxent.me", "maxent.pred"), file=fout)
@@ -356,7 +357,7 @@ for (l in 6:length(loc.number)) {
   } # end weather station quality threshold loop
 } #end location loop
 
-#### Old code below ####
+#### Unid. code ####
 
 # # Load the data to use for our base map
 # data(wrld_simpl)
@@ -572,8 +573,7 @@ a <- ggplot(data = active.sub, aes(x = Longitude, y = Latitude)) +
 ggsave(file=fout, plot = a, device = "pdf", dpi = 300)
 
 
-
-
+#### Section 9: SDG&E proposed weather stations ####
 
 # Read in SDG&E proposed weather stations
 setwd('~/research/wildfire')

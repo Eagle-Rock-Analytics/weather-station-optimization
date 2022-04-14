@@ -2,37 +2,62 @@
 # Statewide Analysis - Rough (no layers)
 # Based off code by Jeff Oliver -- jcoliver@email.arizona.edu
 
+#### Setup ####
 
 library("sp")
 library("raster")
 library("maptools")
 library("rgdal")
 library("dismo")
-
-# Read in statewide weather stations
-setwd('~/research/wildfire')
-in.data <- read.csv(file = "statewide_stations.csv")
-
-#Remove all rows with na's in them
-in.data <- in.data[rowSums(is.na(in.data)) == 0,]
-
-#Remove stations with incorrect metadata
-in.data<-in.data[!(in.data$Station.Name=="CW5652 Two Harbors"),]  #this station has a wrong longitude
-
-#filter to only include recently active stations
-in.data$last.year <- as.numeric(format(as.Date(in.data$Last.Data.Date,'%Y-%m-%d'),'%Y'))
-
 library(dplyr)
-# revise and revisit later - maybe include stations that had data in last quarter of 2020?
-active.stations <- in.data %>% filter(last.year>=2021)
+library(ggplot2)
+library(ggmap)
+library(maps)
+library(mapdata)
+library(tigris)
+library(rJava)
+library(colorspace)
+library(sf)
+library(rdgal)
+library(knitr)
+library(kableExtra)
 
-#options to filter based on data quality
-data.q<-read.csv(file="data_quality_networks.csv")
-data.q.short <- data.q %>%
-  select(c("Abbreviation","Quality","Tier"))
-colnames(data.q.short)[1] <-"Mesonet"
 
-active.all <- merge(active.stations,data.q.short,by="Mesonet",all=TRUE)
+## Directories
+map_data <- "map_data/"
+weather_dir <- "fire-weather-shapes/"
+fig_dir <- "figs/"
+station_dir <- "weather_stations/"
+
+#### Statewide weather stations ####
+
+# Commented out code to produce data file in git repo
+# Read in statewide weather stations
+# setwd('~/research/wildfire')
+# in.data <- readRDS(file = "statewide_stations.csv")
+# 
+# #Remove all rows with na's in them
+# in.data <- in.data[rowSums(is.na(in.data)) == 0,]
+# 
+# #Remove stations with incorrect metadata
+# in.data<-in.data[!(in.data$Station.Name=="CW5652 Two Harbors"),]  #this station has a wrong longitude
+# 
+# #filter to only include recently active stations
+# in.data$last.year <- as.numeric(format(as.Date(in.data$Last.Data.Date,'%Y-%m-%d'),'%Y'))
+# 
+# # revise and revisit later - maybe include stations that had data in last quarter of 2020?
+# active.stations <- in.data %>% filter(last.year>=2021)
+# 
+# #options to filter based on data quality
+# data.q<-read.csv(file="data_quality_networks.csv")
+# data.q.short <- data.q %>%
+#   select(c("Abbreviation","Quality","Tier"))
+# colnames(data.q.short)[1] <-"Mesonet"
+# 
+# active.all <- merge(active.stations,data.q.short,by="Mesonet",all=TRUE)
+
+## Read in merged dataset
+active.all <- readRDS(paste0(map_data, "wx_station.rds"))
 
 #set level of data quality; 1 highest, 2 iou/state, 3 universities, 4 private, 5 citizen
 quality.accept = 3
@@ -40,15 +65,7 @@ quality.accept = 3
 active.sub <- active.all %>%
     filter(Quality<=quality.accept)
 
-#######
-#Create a map of all stations
-#######
-
-library(ggplot2)
-library(ggmap)
-library(maps)
-library(mapdata)
-
+#### Create a map of all stations ####
 
 states <- map_data("state")
 ca_df <- subset(states, region == "california")
@@ -69,7 +86,6 @@ ca_base + theme_bw() +
 
 
 #Create a subset of the stations with just latitude and longitude
-library('dplyr')
 obs.data <- active.sub %>%
   select('Latitude','Longitude')
 colnames(obs.data)[1:2] <-c("latitude","longitude")
@@ -135,7 +151,6 @@ temp <- raster::merge(bioclim.data.1,bioclim.data.2)
 #bioclim.data <- mosaic(bioclim.data.1,bioclim.data.2,fun=mean)
 
 #Subset raster stacks to California domain
-library(tigris)
 states.sf <-states(cb=FALSE)
 ca.sf <- states.sf %>%
     filter(STUSPS=='CA')
@@ -152,8 +167,9 @@ bioclim.data <- crop(bioclim.data,extent(geographic.extent))  #crop will grab al
 bg <- randomPoints(bioclim.data, 1000) #background "pseudoabsences"
 
 #fit the maxent model
-library(rJava)
-rattler.me <- maxent(bioclim.data, stationtrain, a=bg)
+rattler.me <- maxent(bioclim.data, stationtrain, a=bg,
+                     args = c("betamultiplier=0.5"))
+# AUC = 0.566
 
 # plot showing importance of each variable
 plot(rattler.me)
@@ -178,22 +194,14 @@ points(obs.data$longitude, obs.data$latitude, pch="+", cex=0.2)
 
 
 #Load Weather Region Shapefiles
-setwd('~/research/wildfire/fire-weather-shapes/')
-dir <- '~/research/wildfire/fire-weather-shapes/'
-
-ff <- list.files(dir, pattern="\\.shp$", full.names=TRUE)
+ff <- list.files(weather_dir, pattern="\\.shp$", full.names=TRUE)
 fire.wx.l <-lapply(ff,shapefile)
 fire.wx.reg <- do.call(bind,fire.wx.l)
 
-
 #Load GIS objects
-setwd('/home/owen/research/electricity/hadISD/')
-load(file = "map_objects.RData")
+load(file = paste0(map_data,"map_objects.RData"))
 
-setwd('/home/owen/research/wildfire/')
 #Plot all stations
-library(ggplot2)
-library(colorspace)
 labtext = 'Statewide Station Similarity'
 #subtext = 'All Long Term ISD Stations'
 captext = 'Produced in support of EPC-18-026'
@@ -223,11 +231,9 @@ a <- ggplot(data = active.sub, aes(x = Longitude, y = Latitude)) +
   labs(title=labtext,caption=captext,x="Longitude",y="Latitude")
 
 #a
-ggsave(file=fout, plot = a, device = "pdf", dpi = 300)
+ggsave(file=paste0(fig_dir, fout), plot = a, device = "pdf", dpi = 300)
 
 #Plot: Statewide by Fire Regions 
-library(ggplot2)
-library(colorspace)
 labtext = 'Statewide Station Similarity'
 #subtext = 'All Long Term ISD Stations'
 captext = 'Produced in support of EPC-18-026'
@@ -253,29 +259,20 @@ a <- ggplot(data = active.sub, aes(x = Longitude, y = Latitude)) +
   labs(title=labtext,caption=captext,x="Longitude",y="Latitude")
 
 #a
-ggsave(file=fout, plot = a, device = "pdf", dpi = 300)
+ggsave(file=paste0(fig_dir, fout), plot = a, device = "pdf", dpi = 300)
 
-####
-#Plot by Service Area
-####
+####Plot by Service Area ####
 
 #Load GIS objects
-library(rgdal)
-setwd('/home/owen/research/wildfire/service_areas/')
-service <- readOGR(dsn = ".")
+service <- readOGR(dsn = paste0(map_data, "service_areas/", "."))
 service <- spTransform(service,CRSobj = CA@proj4string)
 
-library(dplyr)
-library(sf)
 service.sf <- st_as_sf(service)
 service.sf <- service.sf %>%
   filter(Type == "IOU")
 
 
 service.st <- as(service.sf, "Spatial")
-
-
-setwd('/home/owen/research/wildfire/')
 
 labtext = 'Statewide Station Similarity'
 #subtext = 'All Long Term ISD Stations'
@@ -303,18 +300,13 @@ a <- ggplot(data = active.sub, aes(x = Longitude, y = Latitude)) +
   labs(title=labtext,caption=captext,x="Longitude",y="Latitude")
 
 #a
-ggsave(file=fout, plot = a, device = "pdf", dpi = 300)
+ggsave(file=paste0(fig_dir, fout), plot = a, device = "pdf", dpi = 300)
 
-
-
-
-
+#### Eval proposed weather stations ####
 # Read in SDG&E proposed weather stations
-setwd('~/research/wildfire')
-new.data <- read.csv(file = "2020 New Weather Stations_redacted.csv")
+new.data <- read.csv(file = paste0(station_dir, "2020 New Weather Stations_redacted.csv"))
 
 #Create a subset of the stations with just latitude and longitude
-library('dplyr')
 prop.data <- new.data %>%
   select('Lat','Lon')
 colnames(prop.data)[1:2] <-c("latitude","longitude")
@@ -323,9 +315,8 @@ colnames(prop.data)[1:2] <-c("latitude","longitude")
 summary(prop.data)
 
 #Plot map with proposed stations
-setwd('/home/owen/research/wildfire/')
 #Plot all stations
-library(ggplot2)
+
 labtext = 'SDG&E Proposed Station Similarity'
 #subtext = 'All Long Term ISD Stations'
 captext = 'Produced in support of EPC-18-026'
@@ -336,7 +327,7 @@ a <- ggplot(data = obs.data, aes(x = longitude, y = latitude)) +
   scale_fill_gradientn("similarity score",colours=c("#FFECB3","#E85285","#3e0020"), na.value = NA, limits=c(0,1)) +
   geom_polygon(data = CA.counties, aes(x=long, y=lat, group=group), color="black",fill=NA, size=0.5, alpha=0, show.legend = TRUE)+
   geom_path(data = highways.in, aes(x=long, y=lat, group=group), inherit.aes = FALSE, size=0.05, color="black", alpha=1, show.legend = TRUE)+
-  geom_point(alpha=1, size=0.75, color="black")+
+  geom_point(alpha=0.8, size=0.2, color="black")+
   geom_point(data=prop.data, aes(x=longitude,y=latitude),alpha=1, size=0.75, color="blue")+
   
   coord_fixed(xlim = c(min.lon,max.lon),  ylim = c(min.lat, max.lat), ratio=1.3)+
@@ -352,7 +343,7 @@ a <- ggplot(data = obs.data, aes(x = longitude, y = latitude)) +
   labs(title=labtext,caption=captext,x="Longitude",y="Latitude")
 
 #a
-ggsave(file=fout, plot = a, device = "pdf", dpi = 300)
+ggsave(file=paste0(fig_dir, fout), plot = a, device = "pdf", dpi = 300)
 
 
 #Match new points with a score
@@ -374,11 +365,8 @@ colnames(scores.df)[1:2] <-c("Lat","Lon")
 scores.merged.df<-merge(scores.df,new.data,by=c("Lat","Lon"))
 
 #Make a pretty table
-library(knitr)
-library(kableExtra)
 
 #Create a subset of the stations with just latitude and longitude
-library('dplyr')
 less.merged.df <- scores.merged.df %>%
   select('Lat','Lon','extracted.vals','Proposed.Weather.Station','Community') %>%
   arrange(desc(extracted.vals)) %>%
@@ -388,12 +376,12 @@ less.merged.df <- scores.merged.df %>%
 x <- head(less.merged.df, n = 5) %>%
   kable() %>%
   kable_styling(bootstrap_options = c("striped"))
-save_kable(x, file="highest_sdge_stations.png")
+save_kable(x, file=paste0(fig_dir, "highest_sdge_stations.png"))
 
 x <- tail(less.merged.df, n = 5) %>%
   kable() %>%
   kable_styling(bootstrap_options = c("striped"))
-save_kable(x, file="lowest_sdge_stations.png")
+save_kable(x, file=paste0(fig_dir,"lowest_sdge_stations.png"))
 
 
 # prop.rev = prop.data[,c(2,1)]

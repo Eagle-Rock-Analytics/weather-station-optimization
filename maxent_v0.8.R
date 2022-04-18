@@ -136,6 +136,8 @@ bioclim.data.CA<-brick(paste0(map_data, "CA_worldclim_crop.tif"))
 
 #### Section 5: Loops ####
 
+auc_table <- data.frame(loc = c(), quality = c(), auc = c())
+
 #for (l in 2:length(loc.number)) {
 for (l in 2:length(loc.number)) {
   for (t in 1:5 ) {
@@ -253,12 +255,15 @@ for (l in 2:length(loc.number)) {
     testa <- predict(maxent.me, avtest) 
     
     e3 <- evaluate(p=testp, a=testa)
-    
+    # 
     pdf(file=paste0(fig_dir, "roc_",file.location.string,"_wxstathresh_",t, ".pdf"), width = 8, height = 6)
     plot(e3, 'ROC')
     mtext(location.string, side = 3)
     dev.off()
 
+    ## save AUC values for each model
+    auc_table <- bind_rows(auc_table, data.frame(loc = l, quality = t, auc = e3@auc))
+    
     #Convert the predicted coverage to a spatial data frame
     test_spdf <- as(maxent.pred, "SpatialPixelsDataFrame")
     test_df <- as.data.frame(test_spdf)
@@ -269,12 +274,12 @@ for (l in 2:length(loc.number)) {
     #plot predictions
     
 
-    pdf(file=paste0(fig_dir, "ss_",file.location.string,"_wxstathresh_",t, ".pdf"), width = 8, height = 6)
-      plot(maxent.pred, main=paste("Similarity Score For \n ",location.string))
-      map('worldHires', fill=FALSE, add=TRUE)
-      points(stationtest$longitude, stationtest$latitude, pch="+", cex=0.2)
-      points(stationtrain$longitude, stationtrain$latitude, pch="o", cex=0.2)
-    dev.off()
+pdf(file=paste0(fig_dir, "ss_",file.location.string,"_wxstathresh_",t, ".pdf"), width = 8, height = 6)
+  plot(maxent.pred, main=paste("Similarity Score For \n ",location.string))
+  map('worldHires', fill=FALSE, add=TRUE)
+  points(stationtest$longitude, stationtest$latitude, pch="+", cex=0.2)
+  points(stationtrain$longitude, stationtrain$latitude, pch="o", cex=0.2)
+dev.off()
     
     # #simplest way to use 'evaluate'
     # e1 <- evaluate(me, p=occtest, a=bg, x=predictors)
@@ -345,17 +350,24 @@ for (l in 2:length(loc.number)) {
       labs(title=labtext,caption=captext,subtitle=subtext, x="Longitude",y="Latitude")
     
     #a
-    ggsave(file=fout, plot = a, device = "pdf", dpi = 300) 
-    
-    #### Section 8: Data dump ####
-    
+    ggsave(file=fout, plot = a, device = "pdf", dpi = 300)
+    # 
+    # #### Section 8: Data dump ####
+    # 
     fout = paste0(output_dir, "model_",file.location.string,"_wxstathresh_",t,'.RData')
     save(list=c("maxent.me", "maxent.pred"), file=fout)
-    
+
     fout = paste0(output_dir, "prediction",file.location.string,"_wxstathresh_",t,'.RDS')
-    saveRDS(test_spdf,fout) 
+    saveRDS(test_spdf,fout)
   } # end weather station quality threshold loop
 } #end location loop
+
+#### Pretty AUC table ####
+
+# write auc table
+write.csv(auc_table, paste0(output_dir, "maxent_bioclim_auc_values.csv"), row.names = F)
+
+
 
 #### Unid. code ####
 

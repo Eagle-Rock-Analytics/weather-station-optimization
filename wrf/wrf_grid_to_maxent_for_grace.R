@@ -28,6 +28,7 @@ wrflat<-ncvar_get(ncid,"XLAT")
 wrflon<-ncvar_get(ncid,"XLONG")
 
 # Regrid fn: arguments - wrf variable to process, directory where summarized wrf files are, output directory for bricked regrid data
+# requires wrflat and wrflon reference files
 regrid_wrf <- function(wrf_var = c("CANWAT", "PBLH", "PREC_ACC_NC", "PSFC", "Q2", "T2", "U10", "V10"),
                        in_directory = wrf_dir,
                        out_directory = wrf_out) {

@@ -104,12 +104,14 @@ regrid_wrf <- function(wrf_var = c("CANWAT", "PBLH", "PREC_ACC_NC", "PSFC", "Q2"
 
 
 ## Apply regrid to all vars
-regrid_wrf("Q2")
+all_vars <- c("CANWAT", "PBLH", "PREC_ACC_NC", "PSFC", "Q2", "T2", "U10", "V10")
+
+purrr::map(all_vars, ~regrid_wrf(wrf_var = .))
+
+#### Figure output #####
 
 #read command for later
 ImportName <- brick(paste0(wrf_out, "FileNAme.grd"))
-
-#### Figure output #####
 
 #Sample Figure Output
 # Cut to a single domain

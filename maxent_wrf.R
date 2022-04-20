@@ -21,7 +21,7 @@ library(colorspace)
 #### setup directories #### 
 
 map_data <- "map_data/"
-wrf_data <- "wrf_out/"
+wrf_out <- "wrf_out/"
 weather_stations <- "weather_stations/"
 output_dir <- "data_out/"
 fig_dir <- "figs/"

@@ -392,7 +392,29 @@ for (l in 2:length(loc.number)) {
   } # end weather station quality threshold loop
 } #end location loop
 
-#### Pretty AUC table ####
+#### Section 9: Pretty AUC table ####
 
 # write auc table
 write.csv(auc_table, paste0(output_dir, "maxent_wrf_auc_values.csv"), row.names = F)
+
+auc_table <- read_csv(paste0(output_dir, "maxent_wrf_auc_values.csv"))
+
+auc_labels <- auc_table %>%
+  mutate(Location = loc.number[loc],
+         Quality = quality.string[quality]) %>%
+  dplyr::select(Location, Quality, auc) %>%
+  rename(AUC = auc)
+
+x <- auc_labels %>%
+  filter(Location %in% loc.number[1:6]) %>%
+  kable() %>%
+  kable_styling(bootstrap_options = c("striped"))
+save_kable(x, file=paste0(fig_dir, "maxent_wrf_auc_iou.png"))
+
+x <- auc_labels %>%
+  filter(Location %in% loc.number[7:14]) %>%
+  kable() %>%
+  kable_styling(bootstrap_options = c("striped"))
+save_kable(x, file=paste0(fig_dir, "maxent_wrf_auc_fire_reg.png"))
+
+

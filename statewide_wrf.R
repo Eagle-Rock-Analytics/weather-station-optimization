@@ -47,37 +47,42 @@ wrf_list <- purrr::map(wrf_files, ~{
   wrf_raster <- brick(paste0(wrf_out, f))
   
   
-  if(var_name %in% c("U10", "V10")) {
-    wrf_final <- wrf_raster
-    names(wrf_final) <- paste0(names(wrf_final), "_", var_name)
-  } 
-  
-  if(var_name %in% c("T2", "PSFC")) {
-    wrf_final <- subset(wrf_raster, c("IQR", "max"))
-    names(wrf_final) <- paste0(names(wrf_final), "_", var_name)
-  }
-  
-  if(var_name %in% c("PREC", "Q2")) {
-    wrf_final <- subset(wrf_raster, c("IQR", "min"))
-    names(wrf_final) <- paste0(names(wrf_final), "_", var_name)
-  }
-  
-  if(var_name %in% c("CANWAT")) {
-    wrf_final <- subset(wrf_raster, c("mean", "IQR", "min"))
-    names(wrf_final) <- paste0(names(wrf_final),"_", var_name)
-  }
-  
-  if(var_name %in% c("PBLH")) {
-    wrf_final <- subset(wrf_raster, c("mean", "IQR", "max"))
-    names(wrf_final) <- paste0(names(wrf_final), "_", var_name)
-  }
+  wrf_final <- subset(wrf_raster, c("mean", "min", "max"))
+  names(wrf_final) <- paste0(names(wrf_final), "_", var_name)
+  # if(var_name %in% c("U10", "V10")) {
+  #   wrf_final <- wrf_raster
+  #   names(wrf_final) <- paste0(names(wrf_final), "_", var_name)
+  # } 
+  # 
+  # if(var_name %in% c("T2", "PSFC")) {
+  #   wrf_final <- subset(wrf_raster, c("IQR", "max"))
+  #   names(wrf_final) <- paste0(names(wrf_final), "_", var_name)
+  # }
+  # 
+  # if(var_name %in% c("PREC", "Q2")) {
+  #   wrf_final <- subset(wrf_raster, c("IQR", "min"))
+  #   names(wrf_final) <- paste0(names(wrf_final), "_", var_name)
+  # }
+  # 
+  # if(var_name %in% c("CANWAT")) {
+  #   wrf_final <- subset(wrf_raster, c("mean", "IQR", "min"))
+  #   names(wrf_final) <- paste0(names(wrf_final),"_", var_name)
+  # }
+  # 
+  # if(var_name %in% c("PBLH")) {
+  #   wrf_final <- subset(wrf_raster, c("mean", "IQR", "max"))
+  #   names(wrf_final) <- paste0(names(wrf_final), "_", var_name)
+  # }
   
   wrf_final
   
 })
 
 ## Stack list to one climate variable brick
-wrf_brick <- brick(wrf_list)
+wrf_brick1 <- brick(wrf_list)
+
+## rm layers that are all zeroes: min PREC, CANWAT, PBLH
+wrf_brick <- dropLayer(wrf_brick1, c("min_CANWAT", "min_PREC", "min_PBLH"))
 
 #### Statewide setup ####
 

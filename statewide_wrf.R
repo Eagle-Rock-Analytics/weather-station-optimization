@@ -161,7 +161,7 @@ bg <- randomPoints(bioclim.data, 1000) #background "pseudoabsences"
 #fit the maxent model
 rattler.me <- maxent(bioclim.data, stationtrain, a=bg,
                      args = c("betamultiplier=0.5"))
-# AUC = 0.575
+# AUC = 0.577
 
 # plot showing importance of each variable
 plot(rattler.me)
@@ -186,7 +186,7 @@ points(obs.data$longitude, obs.data$latitude, pch="+", cex=0.2)
 
 
 #Load Weather Region Shapefiles
-ff <- list.files(weather_dir, pattern="\\.shp$", full.names=TRUE)
+ff <- list.files(paste0(map_data, weather_dir), pattern="\\.shp$", full.names=TRUE)
 fire.wx.l <-lapply(ff,shapefile)
 fire.wx.reg <- do.call(bind,fire.wx.l)
 
@@ -375,6 +375,13 @@ x <- tail(less.merged.df, n = 5) %>%
   kable_styling(bootstrap_options = c("striped"))
 save_kable(x, file=paste0(fig_dir,"wrf_lowest_sdge_stations.png"))
 
-
-
+# without webshot
+# library(tableHTML)
+# head(less.merged.df, n = 5) %>%
+#   tableHTML() %>%
+#   add_theme('rshiny-blue')
+# 
+# tail(less.merged.df, n = 5) %>%
+#   tableHTML() %>%
+#   add_theme('rshiny-blue')
 

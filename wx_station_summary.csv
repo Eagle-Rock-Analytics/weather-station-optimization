@@ -1,0 +1,67 @@
+"Mesonet","Tier","Quality","Stations"
+"AGRIMET","Federal-Low",2,1
+"AIRNOW","Research",3,32
+"APRSWXNET/CWOP","Citizen",5,899
+"AZ-CLIMATE","State & Local",2,1
+"BAMI","State & Local",2,1
+"CA HYDRO",NA,NA,37
+"CALTRANS","State & Local",2,111
+"CARB","State & Local",2,154
+"CDEC","State & Local",2,6
+"CEMP","University",3,1
+"CIMIS","State & Local",2,126
+"CLR","Federal-Low",2,1
+"CNRFC","Federal-Low",2,560
+"CRN",NA,NA,10
+"CW3E","University",3,1
+"DRI","University",3,29
+"EDW","Federal-Low",4,1
+"EKAWFO","Federal-Low",1,1
+"GPSMET","University",3,1
+"HADS","Federal-Low",2,463
+"HNXWFO","Federal",1,14
+"HOLFUY","Private",4,7
+"HPWREN","University",3,19
+"IFLOWS","Federal-Low",2,9
+"INTELLISENSE",NA,NA,1
+"JPL","University",3,4
+"KIRKWOOD","Private",4,2
+"LIBERTY","IOU",2,29
+"LOXWFO","Federal-Low",2,20
+"MAMMOTH","Private",4,7
+"MAP","Federal-Low",2,63
+"MARITIME","Federal-Low",2,16
+"MISC","Unknown",5,5
+"MTRWFO","Federal-Low",2,12
+"NCAWOS","Federal-Low",2,1
+"NERRS","Federal",1,3
+"NOS-NWLON","Federal-Low",2,13
+"NOS-PORTS","Federal-Low",2,18
+"NV-ENERGY","IOU",2,3
+"NWS/FAA","Federal",1,139
+"OCPW","State & Local",2,1
+"OLINGA","Unknown",5,1
+"PACIFICORP","IOU",2,9
+"PGE","IOU",2,835
+"PURPLEAIR","Citizen",5,2011
+"RAWS","Federal",1,430
+"REVWFO","Federal-Low",2,1
+"SBCAPCD","State & Local",2,7
+"SC-EDISON","IOU",2,949
+"SCAN","Federal-Low",2,12
+"SDGE","IOU",2,214
+"SGXWFO","Federal-Low",2,109
+"SHASAVAL","Federal-Low",2,6
+"SJSUNET","University",3,3
+"SNOTEL","Federal-Low",2,33
+"TAHOE","Private",4,9
+"UCINET","University",3,1
+"UPR","Railroads",3,150
+"USARRAY","Federal-Low",2,1
+"UUNET","University",3,1
+"VCAPCD","State & Local",2,6
+"WEATHERSTEM","Citizen",5,1
+"WWG-LLWC","Industry",2,35
+"WWG-SONOMA","Industry",2,47
+"WX4U","Citizen",5,1
+"NV DOT","State & Local",2,1

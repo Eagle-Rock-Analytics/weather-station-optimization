@@ -167,9 +167,16 @@ bioclim.data <- crop(bioclim.data,extent(geographic.extent))  #crop will grab al
 bg <- randomPoints(bioclim.data, 1000) #background "pseudoabsences"
 
 #fit the maxent model
+# beta multiplier can be tweaked to improve fit of model - higher values run the risk of overspecified models however
 rattler.me <- maxent(bioclim.data, stationtrain, a=bg,
                      args = c("betamultiplier=0.5"))
 # AUC = 0.566
+
+## Notes on how to evaluate Maxent model output
+## AUC scores of 0.5 indicate model is performing no better than random chance
+## AUC scores above ~0.8 indicate robust model fit
+## But, look out for cases where AUC scores are very high (>0.9) and variable importance plots show only one or two variables with strong correlations
+## This indicates models are not picking up on an interpretable signal, but rather whatever env variable has the strongest gradient in the area
 
 # plot showing importance of each variable
 plot(rattler.me)

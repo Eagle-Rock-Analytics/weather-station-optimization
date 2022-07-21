@@ -124,6 +124,11 @@ if(location.flag <= 6) {
 
 #### Section 4: Basic Climate Data ####
 
+## The model run in Section 5 will work with different climate data, read in in this stage
+## Underlying climate data needs to be a raster brick of gridded data for the study area
+## Models at smaller scales (individual IOU regions or fire weather regions) require fine-scale environmental data
+## Fine-scale meaning <=1 km resolution
+
 #See process_worldclim.R
 #bioclim.data.CA <- stackOpen("CA_worldclim_crop.stk")
 bioclim.data.CA<-brick(paste0(map_data, "CA_worldclim_crop.tif"))
@@ -227,6 +232,7 @@ for (l in 2:length(loc.number)) {
     bg <- randomPoints(region_bioclim, 10000) #background "pseudolocations" -1000 probably sufficient
     
     #fit the maxent model
+    # beta multiplier can be tweaked to improve fit of model - higher values run the risk of overspecified models however
     maxent.me <- maxent(region_bioclim, stationtrain, a=bg,
                         args = c("betamultiplier=0.5"))
     
@@ -234,6 +240,12 @@ for (l in 2:length(loc.number)) {
     maxent.pred <- predict(maxent.me, region_bioclim)
     
     #### Section 6: Diagnostic Plots ####
+    
+    ## Notes on how to evaluate Maxent model output
+    ## AUC scores of 0.5 indicate model is performing no better than random chance
+    ## AUC scores above ~0.8 indicate robust model fit
+    ## But, look out for cases where AUC scores are very high (>0.9) and variable importance plots show only one or two variables with strong correlations
+    ## This indicates models are not picking up on an interpretable signal, but rather whatever env variable has the strongest gradient in the area
     
     # plot showing importance of each variable
     

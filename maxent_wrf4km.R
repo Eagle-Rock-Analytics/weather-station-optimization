@@ -316,47 +316,6 @@ for (l in 2:length(loc.number)) {
     points(stationtrain$longitude, stationtrain$latitude, pch="o", cex=0.2)
     dev.off()
     
-    # #simplest way to use 'evaluate'
-    # e1 <- evaluate(me, p=occtest, a=bg, x=predictors)
-    # 
-    # # alternative 1
-    # # extract values
-    # pvtest <- data.frame(extract(predictors, occtest))
-    # avtest <- data.frame(extract(predictors, bg))
-    # 
-    # e2 <- evaluate(me, p=pvtest, a=avtest)
-    # 
-    # # alternative 2 
-    # # predict to testing points 
-    # testp <- predict(me, pvtest) 
-    # head(testp)
-    # testa <- predict(me, avtest) 
-    # 
-    # e3 <- evaluate(p=testp, a=testa)
-    # e3
-    # threshold(e3)
-    # 
-    # plot(e3, 'ROC')
-    # 
-    # 
-    # 
-    # #testing the model
-    # # background data
-    # bg <- randomPoints(bioclim.data, 1000) #background "pseudoabsences"
-    # 
-    # #simplest way to use 'evaluate'
-    # e1 <- evaluate(rattler.me, p=stationtest, a=bg, x=bioclim.data)
-    # 
-    # plot(e1, 'ROC')
-    # rattlerChangePoints = extract(rattler.change, rattlerocc)
-    # hist(rattlerChangePoints, main="", xlab="Change in habitat suitability")
-    # abline(v=0, col="red")
-    # 
-    # rattlerMitChangePoints = extract(rattler.mit.change, rattlerocc)
-    # hist(rattlerChangePoints, main="", x)
-    # abline(v=0, col="red")
-    
-    
     #### Section 7: Output nice map ####
     
     #Plot all stations

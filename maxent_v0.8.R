@@ -143,8 +143,8 @@ bioclim.data.CA<-brick(paste0(map_data, "CA_worldclim_crop.tif"))
 
 auc_table <- data.frame(loc = c(), quality = c(), auc = c())
 
-#for (l in 2:length(loc.number)) {
 for (l in 2:length(loc.number)) {
+#for (l in 3) {
   for (t in 1:5 ) {
 
     # #debug values
@@ -209,7 +209,7 @@ for (l in 2:length(loc.number)) {
     
     # withold 10% of the data for testing the model
     stationocc<-st_drop_geometry(wx.stations.within.sf %>%
-      select(Longitude,Latitude)
+      dplyr::select(Longitude,Latitude)
     )
     
      fold <- kfold(stationocc, k=9)          #withold 10%, k = 10; withold 20% k= 5; withold 11.1%, k=9

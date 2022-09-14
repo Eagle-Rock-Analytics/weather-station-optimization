@@ -1,0 +1,1381 @@
+PG988  Yuba Street                       CA   39.131130  -122.847950   1701 ft   PGE
+PG069  Empire Mine Road                  CA   37.945510  -121.806600    337 ft   PGE
+PG063  Bear Creek                        CA   37.911000  -122.204550    690 ft   PGE
+PG065  Deer Trail                        CA   37.906860  -122.146680    631 ft   PGE
+PG848  Interlake Road - Monterey         CA   35.919610  -121.079290    900 ft   PGE
+PG171  Smith Road                        CA   35.807460  -121.051690   1515 ft   PGE
+PG002  Highland Peak Road                CA   37.812960  -121.805340   2487 ft   PGE
+PG003  Page Mill Road                    CA   37.325910  -122.180350   2230 ft   PGE
+PG004  Loma Prieta Road                  CA   37.098830  -121.857960   2964 ft   PGE
+PG005  Franz Valley Road                 CA   38.564650  -122.683860   1060 ft   PGE
+PG006  Hogback Road                      CA   37.911660  -122.578710   1033 ft   PGE
+PG032  Foresthill Road West              CA   38.999710  -120.865560   2860 ft   PGE
+PG009  Weybridge Court                   CA   37.815850  -122.191100   1184 ft   PGE
+PG010  Los Vaqueros                      CA   37.774620  -121.733000    811 ft   PGE
+PG011  Cull Canyon Road                  CA   37.761250  -122.061660   1360 ft   PGE
+PG012  Sunol Ridge Trail                 CA   37.622260  -121.924470   2135 ft   PGE
+PG013  Palomares Road                    CA   37.689310  -122.020430    373 ft   PGE
+PG014  Broadway Street                   CA   37.854140  -122.218070    755 ft   PGE
+PG015  Del Valle Road                    CA   37.612540  -121.696650   1123 ft   PGE
+PG017  Marciel Road                      CA   37.776650  -121.816850    828 ft   PGE
+PG039  Lake Chabot                       CA   37.728970  -122.131130    334 ft   PGE
+PG046  Drakes View Drive                 CA   38.079890  -122.867110   1328 ft   PGE
+PG048  Berryessa Knoxville Road          CA   38.509070  -122.214010    603 ft   PGE
+PG042  Castro Ranch Road                 CA   37.968470  -122.242900    242 ft   PGE
+PG043  Terrace Drive                     CA   37.919360  -122.286370    774 ft   PGE
+PG035  Old Rancheria Road                CA   38.076790  -122.674750    276 ft   PGE
+PG054  Grizzly Peak Blvd                 CA   37.865110  -122.221150   1475 ft   PGE
+PG008  Alhambra Valley Road              CA   37.963310  -122.200800   1008 ft   PGE
+PG028  Lowell Hill Road                  CA   39.224820  -120.836540   3430 ft   PGE
+PG071  Marsh Creek Road                  CA   37.896340  -121.859200    624 ft   PGE
+PG023  Foresthill Road East              CA   39.054900  -120.763380   3685 ft   PGE
+PG049  John Muir Parkway                 CA   38.013680  -122.244580    103 ft   PGE
+PG064  Briones Road                      CA   37.957050  -122.137140    794 ft   PGE
+PG022  Daffodil Lane                     CA   38.877360  -120.824180   2339 ft   PGE
+PG030  Nevada City                       CA   39.278080  -121.026370   3050 ft   PGE
+PG033  Georgia Slide Road                CA   38.922670  -120.838590   2611 ft   PGE
+PG053  Soda Canyon Road                  CA   38.363610  -122.283430     96 ft   PGE
+PG024  Springvale Road                   CA   38.769260  -120.943900   1265 ft   PGE
+PG025  Banner Road                       CA   39.252500  -120.943540   3580 ft   PGE
+PG026  Grass Valley NE                   CA   39.309020  -120.944480   3410 ft   PGE
+PG059  You-Bet Tower                     CA   39.180330  -120.907150   2818 ft   PGE
+PG062  Bohnen Road                       CA   37.074650  -121.960260   1072 ft   PGE
+PG021  Mt Veeder South                   CA   38.337430  -122.388330    694 ft   PGE
+PG038  Highway 128 Sonoma                CA   38.603120  -122.642060    684 ft   PGE
+PG044  Atlas Peak Road                   CA   38.434760  -122.243440   1987 ft   PGE
+PG045  Chiles Pope Valley Road           CA   38.542740  -122.345420    867 ft   PGE
+PG057  Loma Prieta Flat                  CA   37.122930  -121.928520   1705 ft   PGE
+PG067  Pokie Drive                       CA   38.007700  -120.255690   3451 ft   PGE
+PG055  Empire Grade Road @ Bird Rock     CA   37.142810  -122.196240   2191 ft   PGE
+PG061  Robertson Ranch Road              CA   38.041200  -120.285500   3466 ft   PGE
+PG036  Potter Valley                     CA   39.336490  -123.120250    973 ft   PGE
+PG050  Montevina Road                    CA   37.213500  -122.023300   2300 ft   PGE
+PG058  Morning Side                      CA   38.017470  -120.312850   2741 ft   PGE
+PG029  Yosemite Road                     CA   37.939730  -120.273060   2660 ft   PGE
+PG031  Fitch Ranch Road                  CA   37.922650  -120.282930   2256 ft   PGE
+PG070  Round Mountain                    CA   40.801600  -121.939300   2131 ft   PGE
+PG027  Goldfield Road                    CA   38.736170  -120.908510   1380 ft   PGE
+PG073  Deer Valley Road                  CA   38.724560  -121.013770   1335 ft   PGE
+PG016  Oakridge Road                     CA   37.507840  -121.833950    900 ft   PGE
+PG068  Placerville East                  CA   38.743680  -120.767000   2370 ft   PGE
+PG072  Rescue                            CA   38.709740  -120.970730   1330 ft   PGE
+PG074  Schenck Ranch Road                CA   38.589360  -120.932680    900 ft   PGE
+PG102  Mines Road South                  CA   37.535860  -121.561700   2240 ft   PGE
+PG037  Sky Oaks Road                     CA   37.965640  -122.605180    688 ft   PGE
+PG834  Sucker Run                        CA   39.591600  -121.267420    899 ft   PGE
+PG041  Sir Francis Drake Blvd            CA   38.044450  -122.743290    402 ft   PGE
+PG018  Keyes Ave                         CA   38.577840  -122.459500   1722 ft   PGE
+PG019  Upper Soda Canyon Road            CA   38.425590  -122.300310   1515 ft   PGE
+PG020  Lucas Valley                      CA   38.043670  -122.645420    795 ft   PGE
+PG034  Rock Ridge Road                   CA   38.006730  -122.639910    455 ft   PGE
+PG051  Mustang Court                     CA   38.701120  -122.379360    630 ft   PGE
+PG096  Emerford Road                     CA   38.844070  -122.725770   3025 ft   PGE
+PG076  Ponderosa                         CA   38.693460  -120.940940   1400 ft   PGE
+PG101  Mines Road                        CA   37.598250  -121.643240   1619 ft   PGE
+PG077  Pleasant Valley Road - Placer     CA   38.692310  -120.686790   2716 ft   PGE
+PG079  Middletown Northwest              CA   38.757960  -122.640910   1164 ft   PGE
+PG081  Bald Mountain                     CA   38.942390  -123.197460   2874 ft   PGE
+PG082  Ridge                             CA   38.735170  -122.832120   2084 ft   PGE
+PG085  Butts Canyon Road North           CA   38.744900  -122.576890   1091 ft   PGE
+PG087  Wilson Ave                        CA   38.091090  -122.607980    375 ft   PGE
+PG089  Redwood Valley                    CA   39.305580  -123.222350    825 ft   PGE
+PG090  Ridge Ranch                       CA   38.760190  -122.898340   1352 ft   PGE
+PG104  Swansboro Airport                 CA   38.797290  -120.726980   2580 ft   PGE
+PG105  Pollock Pines South               CA   38.752970  -120.612330   3756 ft   PGE
+PG106  Mulberry Lane                     CA   38.716290  -120.907200   1178 ft   PGE
+PG075  De Sabla                          CA   39.860510  -121.613470   2790 ft   PGE
+PG117  Plymouth Farms                    CA   38.496910  -120.826100   1245 ft   PGE
+PG040  Pine Mountain                     CA   38.857080  -122.912100   3400 ft   PGE
+PG084  King Ridge Road                   CA   38.601060  -123.192310   1470 ft   PGE
+PG099  Berry Creek                       CA   39.639230  -121.429500   1775 ft   PGE
+PG093  Avery Sheep Ranch Road            CA   38.205400  -120.381600   3578 ft   PGE
+PG095  Upper Dorray Road                 CA   38.355900  -120.585100   2779 ft   PGE
+PG078  Circle K                          CA   40.522710  -121.839140   3760 ft   PGE
+PG103  Falcon Haven                      CA   38.525890  -120.949600    595 ft   PGE
+PG116  Sutter Creek Ridge                CA   38.401280  -120.749630   1863 ft   PGE
+PG100  Downieville                       CA   39.568780  -120.823690   2947 ft   PGE
+PG080  Robinson Mills                    CA   39.494180  -121.317100   2709 ft   PGE
+PG086  Centerville                       CA   40.521660  -122.477850    850 ft   PGE
+PG047  Empire Grade Road                 CA   37.057500  -122.123050   1821 ft   PGE
+PG060  Seigler Springs                   CA   38.894550  -122.712030   2579 ft   PGE
+PG083  Wooden Valley                     CA   38.375200  -122.190300    617 ft   PGE
+PG091  White Sulphur Springs             CA   38.492170  -122.518650   1059 ft   PGE
+PG094  Pointe Court                      CA   38.460800  -120.532900   3540 ft   PGE
+PG097  Trouble Lane                      CA   38.923730  -122.598870   1382 ft   PGE
+PG098  Sly Park                          CA   38.721100  -120.581700   3660 ft   PGE
+PG107  Black Butte Road                  CA   40.497590  -121.995770   1856 ft   PGE
+PG114  Oak Street                        CA   38.820780  -122.700040   3180 ft   PGE
+PG110  Noble Ranch                       CA   38.844020  -122.563720   1832 ft   PGE
+PG111  Arroyo Vista                      CA   38.730450  -121.054500   1081 ft   PGE
+PG108  Barton                            CA   38.441720  -120.541310   3333 ft   PGE
+PG115  Spring Valley Road                CA   39.074470  -122.597800   1248 ft   PGE
+PG706  San Diego Road                    CA   35.445400  -120.668010   1152 ft   PGE
+PG109  Oak Knoll Road                    CA   39.117220  -123.233920   2518 ft   PGE
+PG533  Road 606                          CA   37.214860  -119.879730    834 ft   PGE
+PG124  Casa Loma                         CA   37.814040  -120.116400   3028 ft   PGE
+PG134  Forest Ranch                      CA   39.898200  -121.652890   2937 ft   PGE
+PG118  Sherwood Road South               CA   39.469330  -123.397880   2270 ft   PGE
+PG120  Reynolds Highway                  CA   39.445580  -123.324980   1325 ft   PGE
+PG122  Orr Springs Road                  CA   39.213950  -123.312750   2455 ft   PGE
+PG125  Cobb Ridge West                   CA   38.815370  -122.805650   3225 ft   PGE
+PG127  Steele Canyon Road                CA   38.446750  -122.193410    820 ft   PGE
+PG132  Mt St Helena West                 CA   38.669220  -122.632990   4340 ft   PGE
+PG121  Ferretti Road                     CA   37.851800  -120.145600   3140 ft   PGE
+PG126  Mt St Helena East                 CA   38.668560  -122.627400   4220 ft   PGE
+PG131  Stirling Road                     CA   39.911160  -121.530760   3750 ft   PGE
+PG129  Red Hill Lookout                  CA   40.037130  -121.187150   6333 ft   PGE
+PG130  Bluff Springs                     CA   40.418800  -121.811200   3133 ft   PGE
+PG133  Nicasio Hills                     CA   38.092770  -122.689730    937 ft   PGE
+PG123  Bigrock Ridge                     CA   38.054630  -122.596420   1612 ft   PGE
+PG136  Wallace Peak                      CA   39.056340  -120.434730   5838 ft   PGE
+PG138  Sugarloaf                         CA   40.910300  -122.447200   3748 ft   PGE
+PG141  Toro Creek                        CA   35.455500  -120.796080   1203 ft   PGE
+PG153  Pieta                             CA   38.937580  -123.053850   1000 ft   PGE
+PG056  Skyline and Muddy Road            CA   37.477060  -122.358790   1393 ft   PGE
+PG166  Twist Road                        CA   37.888450  -120.372300   1690 ft   PGE
+PG167  East Sonora                       CA   37.948200  -120.394400   1620 ft   PGE
+PG148  Banner Road South                 CA   38.290900  -120.482400   2640 ft   PGE
+PG112  Shilling Road                     CA   37.697500  -120.116250   3310 ft   PGE
+PG146  Shasta East                       CA   40.606640  -122.462520    737 ft   PGE
+PG147  Cholame                           CA   35.689170  -120.292680   2035 ft   PGE
+PG155  Jackass Ridge Road                CA   37.774630  -120.201450   3413 ft   PGE
+PG156  Ponderosa Way                     CA   38.123500  -120.414200   2750 ft   PGE
+PG157  Melones                           CA   37.997500  -120.454800   1590 ft   PGE
+PG159  Mt Poso Hills                     CA   35.602280  -118.962990   1385 ft   PGE
+PG161  Airola Road                       CA   38.038950  -120.468420   1735 ft   PGE
+PG179  Tuolumne Overlook                 CA   37.896690  -120.291990   2000 ft   PGE
+PG186  Penon Blanco                      CA   37.731450  -120.261700   2850 ft   PGE
+PG158  Williams Ranch Road               CA   35.641580  -118.810060   2632 ft   PGE
+PG165  Mt Poso North                     CA   35.627410  -118.979610   1040 ft   PGE
+PG184  Jordan Creek Road                 CA   37.755410  -120.059340   2501 ft   PGE
+PG181  Walnut Drive - El Dorado          CA   38.696360  -120.967660   1535 ft   PGE
+PG150  Windy Hill                        CA   37.359890  -122.247540   1826 ft   PGE
+PG152  Alpine Road                       CA   37.309780  -122.197420   2031 ft   PGE
+PG163  Old Woman Mountain                CA   34.589440  -115.206880   4031 ft   PGE
+PG119  TV Towers                         CA   35.360530  -120.655970   2467 ft   PGE
+PG160  Blackhawk West                    CA   39.354930  -123.373150   2255 ft   PGE
+PG172  Osborn Road                       CA   39.931290  -122.452150    650 ft   PGE
+PG173  Fern Road                         CA   40.645650  -121.942320   1950 ft   PGE
+PG174  Lassen Ave                        CA   40.432060  -122.423610    780 ft   PGE
+PG178  Tiger Penstock Top                CA   38.453290  -120.477900   3560 ft   PGE
+PG180  Fountain House Road               CA   39.413900  -121.194130   3119 ft   PGE
+PG140  Lockwood Jolon Road               CA   35.966370  -121.132330   1000 ft   PGE
+PG142  South El Pomar Road               CA   35.531080  -120.631740   1311 ft   PGE
+PG128  Old Highway 53                    CA   38.977560  -122.622130   1415 ft   PGE
+PG143  Foxen Canyon Road West            CA   34.790140  -120.176790    970 ft   PGE
+PG164  Wilson Hill Road - Marin          CA   38.183840  -122.723640    464 ft   PGE
+PG170  Ranchita Canyon                   CA   35.812940  -120.549330   1381 ft   PGE
+PG176  Red Hill Road                     CA   38.160700  -122.687340    650 ft   PGE
+PG177  Sonoma Mountain Road              CA   38.344450  -122.577160   2390 ft   PGE
+PG168  Highland                          CA   35.085480  -120.486600    821 ft   PGE
+PG175  Camino Del Capitan                CA   35.545700  -120.905330   1843 ft   PGE
+PG191  El Monte Road                     CA   35.503290  -120.759600   1910 ft   PGE
+PG169  Interlake Road - San Luis Obispo  CA   35.775780  -120.893980   1372 ft   PGE
+PG204  Larabee Valley                    CA   40.440430  -123.679460   2466 ft   PGE
+PG201  Schmitt & Hwy 128                 CA   38.630340  -122.670240    300 ft   PGE
+PG193  Ponderosa Sky                     CA   40.357170  -121.792610   3150 ft   PGE
+PG195  Bear Valley Road - Colusa South   CA   39.156780  -122.439610   1340 ft   PGE
+PG199  Summit Lake                       CA   38.603390  -122.458680   2103 ft   PGE
+PG197  Wild Horse                        CA   38.320000  -122.199300   1399 ft   PGE
+PG189  Morning Star Lane                 CA   37.496330  -119.922020   2797 ft   PGE
+PG188  Martinez                          CA   37.971160  -122.158260    659 ft   PGE
+PG187  Black Bart Trail                  CA   39.257930  -123.149740   1790 ft   PGE
+PG190  Flying Lady Road                  CA   35.413590  -120.525510   1645 ft   PGE
+PG205  Misty Canyon                      CA   35.500960  -120.608520   1410 ft   PGE
+PG088  Upper Lake                        CA   39.210370  -122.913130   1425 ft   PGE
+PG144  Macarthur Flat                    CA   41.000200  -121.288200   3330 ft   PGE
+PG196  Nickel Creek Road                 CA   35.766410  -120.611190   1205 ft   PGE
+PG151  Pollock Pines East                CA   38.753620  -120.556730   4230 ft   PGE
+PG154  Bohlman Road                      CA   37.219030  -122.033220   2523 ft   PGE
+PG198  Tollhouse Road                    CA   37.052400  -119.372680   4032 ft   PGE
+PG149  Durham Road                       CA   37.393800  -122.351190   1296 ft   PGE
+PG202  Bald Mountain Road                CA   37.060540  -119.412380   4620 ft   PGE
+PG498  La Gloria Road                    CA   36.548800  -121.290340   2525 ft   PGE
+PG183  Big Valley Road                   CA   38.990560  -122.856940   1356 ft   PGE
+PG185  Lower Atlas Peak Road             CA   38.419580  -122.248700   1453 ft   PGE
+PG192  Martin Road (Satellite)           CA   37.047650  -122.141560   1527 ft   PGE
+PG200  Eshom Valley Drive                CA   36.609510  -118.949810   3412 ft   PGE
+PG145  Lake De Sabla                     CA   39.871900  -121.612200   2760 ft   PGE
+PG206  El Caminito Road                  CA   36.491670  -121.711850   1211 ft   PGE
+PG139  Placer Road                       CA   40.546280  -122.462280    855 ft   PGE
+PG203  East Carmel Road                  CA   36.430520  -121.622980   1030 ft   PGE
+PG207  Priest Valley Road                CA   36.183400  -120.679380   2375 ft   PGE
+PG137  Burney Falls                      CA   41.044570  -121.631450   3070 ft   PGE
+PG066  Morgan Territory                  CA   37.818290  -121.779060   2078 ft   PGE
+PG218  Auberry Road                      CA   37.086300  -119.441700   4100 ft   PGE
+PG219  Frazier Road                      CA   37.077100  -119.509100   2200 ft   PGE
+PG220  Auberry and Jose Basin Road       CA   37.089400  -119.472000   2631 ft   PGE
+PG211  Wiemiller Road                    CA   37.037910  -119.434950   1956 ft   PGE
+PG227  Lower Tollhouse Road              CA   37.017900  -119.391000   2151 ft   PGE
+PG217  Oak Tree Lane                     CA   37.008700  -119.397000   1922 ft   PGE
+PG224  Middle Tollhouse                  CA   37.043260  -119.381450   3830 ft   PGE
+PG225  Highland Way                      CA   34.850200  -118.903000   4075 ft   PGE
+PG213  Round Mountain Road               CA   35.486100  -118.889960   1571 ft   PGE
+PG239  Hopewell Road                     CA   36.775240  -119.171730   2372 ft   PGE
+PG241  Clear Canyon Road                 CA   34.846850  -118.882790   3652 ft   PGE
+PG223  TV Towers Road 2                  CA   35.391290  -120.708500   2507 ft   PGE
+PG226  Pine Mountain-Kern                CA   35.594220  -118.827160   2375 ft   PGE
+PG233  Recter Lane                       CA   36.764570  -119.238970   2012 ft   PGE
+PG234  La Entrada Road                   CA   35.400610  -120.491800   1969 ft   PGE
+PG222  Woody Granite Road                CA   35.633470  -118.842590   2005 ft   PGE
+PG237  Parkhill Road West                CA   35.383630  -120.466430   1955 ft   PGE
+PG182  Cloverdale Peak                   CA   38.868150  -122.972550   2658 ft   PGE
+PG221  Granite Road                      CA   35.609430  -118.900060   1403 ft   PGE
+PG235  Parkhill Road North               CA   35.369900  -120.405000   1825 ft   PGE
+PG236  Parkhill Road East                CA   35.341490  -120.354600   1734 ft   PGE
+PG210  Falcon Road                       CA   35.446300  -120.713100   2000 ft   PGE
+PG242  San Juan Creek Road               CA   35.310060  -120.124920   1611 ft   PGE
+PG258  Creekside Road                    CA   36.693800  -119.138000   2386 ft   PGE
+PG215  Camatta Creek Road                CA   35.432650  -120.286800   1551 ft   PGE
+PG229  Diamond Mountain Road             CA   38.547450  -122.580520   1804 ft   PGE
+PG238  Jade Canyon Road                  CA   35.472610  -120.585500   1619 ft   PGE
+PG244  Ida Clayton Road                  CA   38.670360  -122.666790   2252 ft   PGE
+PG247  Novato Boulevard                  CA   38.140680  -122.699250    419 ft   PGE
+PG251  Wall Road                         CA   38.428150  -122.487310   1516 ft   PGE
+PG252  Booneville                        CA   39.009620  -123.379690    386 ft   PGE
+PG256  Highway 128 Mendocino             CA   39.087710  -123.475230    222 ft   PGE
+PG257  Creighton Ridge Road              CA   38.550410  -123.201840   1471 ft   PGE
+PG267  Bay Lane                          CA   36.713300  -119.170000   2780 ft   PGE
+PG208  Indian Valley Road North          CA   36.024750  -120.654330   1658 ft   PGE
+PG243  Skaggs Springs                    CA   38.686380  -123.014720    981 ft   PGE
+PG209  Foxen Canyon Road East            CA   34.762550  -120.115270   1529 ft   PGE
+PG214  Long Valley Road                  CA   34.704310  -120.058460   1329 ft   PGE
+PG232  Laughlin Mountain                 CA   39.323260  -123.272370   3188 ft   PGE
+PG240  Los Pilitas Road                  CA   35.350940  -120.497770   1323 ft   PGE
+PG255  Hennessy Road South               CA   38.509380  -122.341720   1482 ft   PGE
+PG277  Bald Hill Road                    CA   41.115950  -123.714560   1633 ft   PGE
+PG283  Mt. Pierce Lookout                CA   40.421040  -124.125160   2900 ft   PGE
+PG287  Monument Road                     CA   40.468590  -124.131000   1240 ft   PGE
+PG261  Spink Road                        CA   38.398300  -120.561050   2564 ft   PGE
+PG263  Mt. Zion Lookout                  CA   38.390200  -120.652070   2960 ft   PGE
+PG278  Snow Camp Road                    CA   40.820190  -123.824700   3000 ft   PGE
+PG266  Murphy Grade Road                 CA   38.093280  -120.533390   1641 ft   PGE
+PG162  Mt. Hood                          CA   38.487440  -122.538750   1939 ft   PGE
+PG259  Pacheco Pass 1                    CA   37.069090  -121.216700   1406 ft   PGE
+PG269  Jamieson Road                     CA   37.035530  -121.426470   1134 ft   PGE
+PG273  Airport Road                      CA   40.199710  -123.854460   1797 ft   PGE
+PG282  Pratt Mountain                    CA   40.120370  -123.692690   3884 ft   PGE
+PG260  Coalinga Road                     CA   36.409120  -120.963180   2153 ft   PGE
+PG274  Humboldt Redwood St. Park         CA   40.337280  -124.031060    575 ft   PGE
+PG300  Clark Road                        CA   39.779620  -121.577800   2112 ft   PGE
+PG289  Ladoga Stonyford                  CA   39.297800  -122.521300   1344 ft   PGE
+PG294  Road 303                          CA   39.452400  -122.470400   1792 ft   PGE
+PG699  Sulphur Springs Ave               CA   38.488010  -122.459570    242 ft   PGE
+PG296  Red Bluff Road                    CA   40.593000  -122.488620    966 ft   PGE
+PG302  Middle Creek Road                 CA   40.595270  -122.442150    520 ft   PGE
+PG228  Butts Canyon Road South           CA   38.678010  -122.445080   1011 ft   PGE
+PG249  Upper Bear River Road             CA   40.487060  -124.259790   1696 ft   PGE
+PG250  Highway 36 - Trinity              CA   40.460420  -123.523790   2778 ft   PGE
+PG253  Bair Road                         CA   40.965080  -123.841790    717 ft   PGE
+PG279  Lower Mad River                   CA   40.388070  -123.448890   2586 ft   PGE
+PG276  Ridge Road-Tehama                 CA   40.110310  -122.437490    609 ft   PGE
+PG212  River Road - San Luis Obispo      CA   35.341090  -120.400800   1512 ft   PGE
+PG271  Calf Canyon Highway               CA   35.460000  -120.427550   1765 ft   PGE
+PG288  Kelly Ridge Road                  CA   39.520570  -121.467030   1081 ft   PGE
+PG290  Webb Creek Circle                 CA   39.393260  -121.403870    802 ft   PGE
+PG295  Sunview Drive                     CA   39.677580  -121.570630   1130 ft   PGE
+PG231  Pope Canyon Road                  CA   38.642180  -122.378220    615 ft   PGE
+PG245  Wilder Ridge Road                 CA   40.145500  -124.011310   1139 ft   PGE
+PG248  Greenwood Road                    CA   39.103590  -123.580050   1132 ft   PGE
+PG254  Bear Butte Road                   CA   40.208900  -123.839310   1088 ft   PGE
+PG469  Kneeland Road                     CA   40.535830  -123.823550   2619 ft   PGE
+PG281  Truitt                            CA   38.800330  -122.832120   1751 ft   PGE
+PG285  Barry Road West                   CA   40.718970  -123.989480   2306 ft   PGE
+PG230  Hog Ranch Road                    CA   38.213970  -122.195480    536 ft   PGE
+PG292  Gray Flats Sub                    CA   40.020610  -121.064550   2787 ft   PGE
+PG265  Howard Drive                      CA   40.550590  -122.406070    712 ft   PGE
+PG280  Huffmaster Road                   CA   39.241030  -122.358290    464 ft   PGE
+PG303  Healdsburg Hills North            CA   38.729730  -122.760010   2480 ft   PGE
+PG306  Narcissus Road                    CA   38.379890  -120.663240   2126 ft   PGE
+PG284  Highway 101 Hilltop               CA   38.899920  -123.046240    990 ft   PGE
+PG298  Vierra Road                       CA   39.420460  -121.337150   1174 ft   PGE
+PG275  Deer Meadow Road                  CA   39.623050  -121.457750   1969 ft   PGE
+PG291  McAuliffe Road                    CA   40.384100  -122.610350    893 ft   PGE
+PG293  Trinity Mountain Road North       CA   40.788380  -122.610590   1652 ft   PGE
+PG264  Bloomer Hill                      CA   39.652680  -121.463390   2982 ft   PGE
+PG304  Twin Pines Drive                  CA   40.301020  -121.049980   4955 ft   PGE
+PG286  Richardson Springs Road           CA   39.841060  -121.784000    622 ft   PGE
+PG309  Brownsville                       CA   39.454100  -121.282170   2059 ft   PGE
+PG310  Stampfii Lane                     CA   40.102770  -120.865110   3521 ft   PGE
+PG315  Bucks Lake Road                   CA   39.944720  -120.982150   3443 ft   PGE
+PG301  Bartlett Springs Road             CA   39.164750  -122.479660   2364 ft   PGE
+PG246  Stage Coach Lane                  CA   39.721820  -121.537000   1733 ft   PGE
+PG308  Feather Lake Highway              CA   40.644230  -121.162110   5583 ft   PGE
+PG216  James George Drive                CA   36.752340  -119.128520   2049 ft   PGE
+PG311  Bucks Lake Road West              CA   39.931230  -121.060980   3793 ft   PGE
+PG334  Hodson Road                       CA   37.979220  -120.664130    965 ft   PGE
+PG337  Altatina Drive                    CA   39.813360  -121.702260   1808 ft   PGE
+PG340  Signal Hill Trail                 CA   37.913610  -120.614010    960 ft   PGE
+PG341  Ward Creek                        CA   40.052050  -120.703980   3751 ft   PGE
+PG345  Jaquima Drive                     CA   38.101190  -120.699340   1738 ft   PGE
+PG268  Laguna Seca                       CA   36.577380  -121.761990    528 ft   PGE
+PG307  Blue Sky Road                     CA   40.660590  -122.195610    576 ft   PGE
+PG316  Honey Lane                        CA   40.539840  -122.182150    528 ft   PGE
+PG319  Parrot Ranch                      CA   36.387150  -121.604370   1724 ft   PGE
+PG335  Jellys Ferry Road                 CA   40.371300  -122.149320    440 ft   PGE
+PG344  Highway 36                        CA   40.361390  -121.495420   4922 ft   PGE
+PG324  Forest Route 18N07                CA   39.354910  -122.643870   2447 ft   PGE
+PG318  Rana Creek Tower                  CA   36.530050  -121.609250   3452 ft   PGE
+PG325  Heller Vineyard                   CA   36.389120  -121.646800   1317 ft   PGE
+PG333  Upper Skyway Road                 CA   39.815000  -121.583600   2233 ft   PGE
+PG336  Dream Valley Road                 CA   39.987760  -122.580500   1007 ft   PGE
+PG262  Glen Canyon Road                  CA   37.033800  -122.016880    571 ft   PGE
+PG313  Wilson Hill Road - Shasta         CA   40.449790  -121.876190   2079 ft   PGE
+PG326  Flea Mountain                     CA   39.828640  -121.471660   4249 ft   PGE
+PG321  Plum Creek Road                   CA   40.315700  -121.899490   2023 ft   PGE
+PG330  Cow Creek Ranch                   CA   40.603890  -122.059470   1057 ft   PGE
+PG338  Bridgeville Farmhouse             CA   40.332990  -123.723750   2276 ft   PGE
+PG342  Power House Road                  CA   40.405050  -121.864600   2012 ft   PGE
+PG297  Grand Oak Road                    CA   39.475240  -121.387710   1585 ft   PGE
+PG299  Beegum Gorge                      CA   40.356950  -122.888090   2678 ft   PGE
+PG317  Lumpkin Road                      CA   39.570100  -121.314830   2157 ft   PGE
+PG343  Alder Point Road                  CA   40.414580  -123.759310   1890 ft   PGE
+PG350  Celestial Valley Road             CA   39.416870  -121.066180   1779 ft   PGE
+PG353  Poonkinney Road                   CA   39.758670  -123.254170   1414 ft   PGE
+PG312  Mission Olive Road                CA   39.446610  -121.449990    816 ft   PGE
+PG320  Coleman Fish Hatchery             CA   40.413900  -122.111610    944 ft   PGE
+PG349  Cramer Road                       CA   38.985410  -121.115790   1301 ft   PGE
+PG359  Bumper Road                       CA   38.650530  -120.877740   1572 ft   PGE
+PG322  Long Road                         CA   40.405440  -121.968560   1205 ft   PGE
+PG323  Blocksburg                        CA   40.280520  -123.641130   1639 ft   PGE
+PG348  Bar Ranch Road                    CA   39.255550  -121.164540   1959 ft   PGE
+PG354  Horizon Court                     CA   38.631180  -120.794030   1999 ft   PGE
+PG355  Underwood Lane                    CA   39.863180  -123.716390    946 ft   PGE
+PG364  Coloma Road                       CA   38.827550  -120.942600    695 ft   PGE
+PG365  Briceland Thorn Road              CA   40.064730  -123.963120    981 ft   PGE
+PG328  Concow Road                       CA   39.799470  -121.483700   2785 ft   PGE
+PG351  Maryland Road                     CA   39.223370  -121.026220   2631 ft   PGE
+PG352  Aptos Creek Road                  CA   36.986040  -121.903010    173 ft   PGE
+PG357  Bass Lake Road - El Dorado        CA   38.660670  -121.032740   1052 ft   PGE
+PG361  El Toro Road                      CA   37.039050  -121.292350    398 ft   PGE
+PG367  Perimeter Road                    CA   39.065490  -121.194040   1207 ft   PGE
+PG366  Gallagher Road                    CA   38.803850  -121.051970   1436 ft   PGE
+PG377  Dog Ranch Road                    CA   39.090900  -121.001310   2138 ft   PGE
+PG332  Garden Bar Road                   CA   39.054150  -121.167760   1169 ft   PGE
+PG194  Topo Road                         CA   36.373290  -121.151660   4405 ft   PGE
+PG339  Paradise Humboldt Road            CA   39.756260  -121.736590    955 ft   PGE
+PG378  Paine Road                        CA   38.380350  -120.876920    820 ft   PGE
+PG347  Paradise Highway 191              CA   39.735400  -121.612880   1459 ft   PGE
+PG375  Olive Orchard Road                CA   38.143550  -120.881220    530 ft   PGE
+PG381  Morning Dove Lane                 CA   39.300050  -121.326050   1658 ft   PGE
+PG387  Road 108                          CA   39.466150  -120.892740   4793 ft   PGE
+PG373  Oakstream Road                    CA   38.544470  -120.771050   1748 ft   PGE
+PG363  Oak Tree Road                     CA   39.362870  -121.084910   2265 ft   PGE
+PG382  Center Gap Road North             CA   39.773320  -121.672570    646 ft   PGE
+PG358  Knoxville                         CA   38.838070  -122.373190   1998 ft   PGE
+PG370  Ormsey Cutoff Trail               CA   37.065250  -121.818320   2513 ft   PGE
+PG383  Walker Ridge West                 CA   39.037910  -122.495080   2727 ft   PGE
+PG399  Mt Madonna Road                   CA   37.015860  -121.719730   1756 ft   PGE
+PG376  Pax Place Court                   CA   37.039950  -121.851810   1526 ft   PGE
+PG380  Coleman Valley Road               CA   38.411370  -122.965170    996 ft   PGE
+PG362  Pfeiffer Ridge Road               CA   36.245800  -121.787400    905 ft   PGE
+PG400  Summit Road                       CA   37.050150  -121.764130   2458 ft   PGE
+PG368  Manzanita Road                    CA   39.021100  -122.282750    724 ft   PGE
+PG379  Highway 20 Mendocino              CA   39.392680  -123.447340   1916 ft   PGE
+PG385  Moss Landing Road                 CA   36.921790  -121.677950    105 ft   PGE
+PG406  Airline Highway                   CA   36.567040  -121.182330   1455 ft   PGE
+PG386  Pinnacles National Park           CA   36.501180  -121.139080   1125 ft   PGE
+PG270  New Idria Road                    CA   36.515270  -120.873400   1847 ft   PGE
+PG356  Pepper Road                       CA   38.284110  -122.732020    109 ft   PGE
+PG369  Laytonville North                 CA   39.774470  -123.533890   2061 ft   PGE
+PG329  Summit Lake Road                  CA   41.020980  -121.910340   1706 ft   PGE
+PG371  Paloma Road                       CA   38.258280  -120.760140   1399 ft   PGE
+PG372  Candy Circle                      CA   38.315710  -120.670310   1681 ft   PGE
+PG402  Reeve Ranch                       CA   36.745860  -121.473170   2144 ft   PGE
+PG394  Ben Hur Road South                CA   37.309650  -119.970090   1079 ft   PGE
+PG407  Hout Road                         CA   38.437160  -120.907310    761 ft   PGE
+PG346  Cassel Road                       CA   40.918820  -121.549880   3188 ft   PGE
+PG331  Red Mule Road                     CA   38.492530  -120.701090   2217 ft   PGE
+PG401  Old Stockton Road                 CA   38.343820  -120.961830    276 ft   PGE
+PG404  China Gulch Road                  CA   38.262430  -120.899100    742 ft   PGE
+PG384  McArthur Road                     CA   41.117200  -121.573710   3331 ft   PGE
+PG393  Mills Ave                         CA   38.196000  -120.652430   1301 ft   PGE
+PG405  Millerton Road                    CA   36.969390  -119.586620    601 ft   PGE
+PG395  Big Oak Flat Road                 CA   37.824600  -120.012580   2883 ft   PGE
+PG374  Antelope Road                     CA   36.705210  -119.263130   1804 ft   PGE
+PG391  Panoche Road (Call Mountain)      CA   36.616090  -121.068140   3882 ft   PGE
+PG416  Carmel Valley Road                CA   36.328880  -121.494750   1423 ft   PGE
+PG396  Monroe Canyon Road                CA   36.243010  -121.239260    742 ft   PGE
+PG360  Williams Hill                     CA   35.950960  -121.001980   2790 ft   PGE
+PG389  Wish I Ah Road                    CA   37.102590  -119.497830   2137 ft   PGE
+PG410  Blue Heron Road                   CA   37.046110  -119.501350   1674 ft   PGE
+PG388  Golden Chain Highway              CA   38.329200  -120.748020   1212 ft   PGE
+PG397  Hawver Road                       CA   38.261390  -120.662310   1340 ft   PGE
+PG408  Burma Road                        CA   36.867730  -119.326050   1339 ft   PGE
+PG327  Drive 152                         CA   36.624480  -119.202500   1698 ft   PGE
+PG414  Lado Road                         CA   37.003770  -119.636110   1181 ft   PGE
+PG409  Coast Road                        CA   36.375420  -121.898110    404 ft   PGE
+PG403  Millwood Drive                    CA   36.567880  -119.126090   1313 ft   PGE
+PG422  Willowood Road                    CA   36.665470  -119.176370   1315 ft   PGE
+PG412  Indian Peak Road                  CA   37.403260  -119.850080   2033 ft   PGE
+PG420  Grist Road                        CA   37.441400  -119.922230   2392 ft   PGE
+PG421  Lakeside Road                     CA   37.543600  -119.977630   3150 ft   PGE
+PG413  Heritage Lane                     CA   37.449110  -120.004730   1625 ft   PGE
+PG432  Corlew Mountain Road              CA   37.011780  -119.545390   1350 ft   PGE
+PG426  Ave 380                           CA   36.479030  -119.099510    553 ft   PGE
+PG435  Anza Drive                        CA   37.061000  -119.666280   1301 ft   PGE
+PG423  Road Runner Lane                  CA   37.267600  -119.863050   1389 ft   PGE
+PG425  O'Neals                           CA   37.139720  -119.733170   1336 ft   PGE
+PG428  Wells Road                        CA   37.271150  -119.738810   2185 ft   PGE
+PG434  Best Way Road                     CA   37.197710  -119.800150   1059 ft   PGE
+PG417  Dry Creek Road                    CA   36.612100  -119.016600   2825 ft   PGE
+PG431  Cantelow Road                     CA   38.427560  -122.027770    618 ft   PGE
+PG390  Holtzel Road                      CA   37.738300  -120.128920   3184 ft   PGE
+PG415  So-So Road                        CA   38.588990  -120.605390   3408 ft   PGE
+PG433  Hawkeye Road                      CA   38.654600  -120.583660   3226 ft   PGE
+PG429  Spencerville Road                 CA   39.167130  -121.199420   1425 ft   PGE
+PG430  Strawberry Overlook               CA   38.193450  -120.038530   5821 ft   PGE
+PG436  Whispering Spring Lane            CA   37.028510  -119.480700   2312 ft   PGE
+PG457  Mariposa                          CA   37.505390  -120.009780   2406 ft   PGE
+PG462  Old Railroad                      CA   37.081400  -119.350050   4969 ft   PGE
+PG427  Clark Road South                  CA   39.693900  -121.608870    710 ft   PGE
+PG437  Sycamore Road                     CA   36.957680  -119.322170   1388 ft   PGE
+PG455  Eden Road                         CA   37.268080  -122.074030   1415 ft   PGE
+PG458  Bucks Lake Fire Department        CA   39.868500  -121.174190   5169 ft   PGE
+PG461  Kern Round Mountain               CA   35.543350  -118.975730    854 ft   PGE
+PG459  Banderilla Road                   CA   37.654520  -120.341400   1214 ft   PGE
+PG460  Butterfield Stage Road            CA   37.140730  -119.673040   1555 ft   PGE
+PG463  Red Eye Road                      CA   39.688590  -121.507800   1296 ft   PGE
+PG424  Clark Ranch Way                   CA   39.398390  -121.231640   2061 ft   PGE
+PG464  Columbia Airport                  CA   38.028040  -120.410190   2082 ft   PGE
+PG466  Cannon Road                       CA   40.212700  -122.491130    955 ft   PGE
+PG440  Pine Mountain Tower               CA   35.552640  -118.823380   2673 ft   PGE
+PG007  Patterson Pass                    CA   37.686820  -121.629880   1604 ft   PGE
+PG444  Highway 178                       CA   35.437790  -118.740960   3517 ft   PGE
+PG446  Rancho Road                       CA   35.087170  -118.820010    763 ft   PGE
+PG439  April Lane                        CA   35.505380  -118.978310   1009 ft   PGE
+PG442  Homestead Drive                   CA   40.728260  -122.020280   1926 ft   PGE
+PG451  Melton Road                       CA   40.776210  -121.931910   2668 ft   PGE
+PG443  Heidi Lane                        CA   40.261780  -124.093070   2341 ft   PGE
+PG862  Finley Road                       CA   37.804480  -121.860200    742 ft   PGE
+PG448  John Born Road                    CA   39.256970  -121.230830   1417 ft   PGE
+PG449  Pampa Peak Towers                 CA   35.366530  -118.725480   2633 ft   PGE
+PG450  Cow Creek                         CA   40.557570  -122.059300    680 ft   PGE
+PG452  Wayland Road                      CA   39.726590  -121.637000   1343 ft   PGE
+PG486  La Rocca                          CA   39.855290  -121.660350   2311 ft   PGE
+PG474  Graham Hill Road                  CA   37.012140  -122.035260    452 ft   PGE
+PG485  Greenwood Road West               CA   39.131920  -123.650060   1189 ft   PGE
+PG441  Old Highway Road                  CA   37.408560  -120.072110   1315 ft   PGE
+PG453  Seminole Road                     CA   36.961970  -119.389940   2644 ft   PGE
+PG476  West Drive                        CA   37.098610  -122.059230   1100 ft   PGE
+PG456  Tiptop Road                       CA   37.467350  -119.824110   3122 ft   PGE
+PG472  Big Basin Sub                     CA   37.130390  -122.171390   2636 ft   PGE
+PG473  Manton Ridge                      CA   40.451940  -121.776990   3334 ft   PGE
+PG447  Road 628                          CA   37.397120  -119.705720   3201 ft   PGE
+PG445  Fowler Tower                      CA   38.022740  -120.589950   2833 ft   PGE
+PG454  Don Pedro                         CA   37.727210  -120.355350    985 ft   PGE
+PG465  Highway 41                        CA   37.349480  -119.642270   2389 ft   PGE
+PG478  Roberts Drive                     CA   41.114090  -121.319110   3583 ft   PGE
+PG482  Devil Ranch                       CA   36.358420  -121.528130   2543 ft   PGE
+PG502  Dunlap Substation                 CA   36.709190  -119.029740   4174 ft   PGE
+PG491  Pine Grove Ave                    CA   40.664080  -122.388360    737 ft   PGE
+PG507  Davis Peak                        CA   35.233510  -120.785120   1784 ft   PGE
+PG515  Pulgas Ridge                      CA   37.507110  -122.372170   1066 ft   PGE
+PG471  Funt Ranch                        CA   36.353660  -121.880820    995 ft   PGE
+PG477  3 Springs Road                    CA   37.363940  -121.762110   1515 ft   PGE
+PG495  Sapaque Valley Road               CA   35.825910  -121.103890   1059 ft   PGE
+PG467  Corrine Lake                      CA   37.158930  -119.494370   2406 ft   PGE
+PG305  Pine Flat Road                    CA   38.763910  -122.762790   3308 ft   PGE
+PG517  Mountain Ranch Road               CA   38.216390  -120.554540   2283 ft   PGE
+PG521  Wolf Back Ridge                   CA   37.850780  -122.498350   1111 ft   PGE
+PG480  East Side Road                    CA   38.657030  -122.229010   1038 ft   PGE
+PG487  Skyway Road                       CA   39.777290  -121.606520   2018 ft   PGE
+PG499  Highway 299 Towers                CA   41.003190  -121.482630   4415 ft   PGE
+PG508  Carson Drive                      CA   38.433240  -120.579330   3091 ft   PGE
+PG512  Watts Valley Road                 CA   36.871890  -119.458440    870 ft   PGE
+PG510  House Green Valley Road           CA   38.247580  -122.203670   1287 ft   PGE
+PG468  Rim Road                          CA   39.764880  -121.486080   2943 ft   PGE
+PG475  Louise Lane                       CA   39.621210  -121.516930   1701 ft   PGE
+PG479  South Fork South                  CA   40.393810  -122.311420    521 ft   PGE
+PG481  American River Overlook           CA   38.951000  -120.808050   3018 ft   PGE
+PG500  Soda Springs                      CA   39.321000  -120.378960   6762 ft   PGE
+PG506  Deer Creek Highway                CA   39.845560  -121.694420   1964 ft   PGE
+PG516  Palo Duro                         CA   40.621990  -122.263800    664 ft   PGE
+PG574  Diamond Ranch Road                CA   39.574680  -122.603200   1185 ft   PGE
+PG523  Jager Junction                    CA   40.558800  -123.827090   3512 ft   PGE
+PG470  Lower Skyway Road                 CA   39.716590  -121.706740    801 ft   PGE
+PG526  Bear Mountain Road                CA   40.687080  -122.284840    782 ft   PGE
+PG580  Lower Mad River Overlook          CA   40.260970  -123.330130   3085 ft   PGE
+PG545  Confidence Road                   CA   38.028690  -120.207410   4044 ft   PGE
+PG582  Little Giant Mill Road            CA   40.306590  -121.761940   3532 ft   PGE
+PG572  Sills Lane                        CA   39.474840  -121.246330   2438 ft   PGE
+PG392  Armstrong Road North              CA   38.235360  -120.449130   2684 ft   PGE
+PG524  Round Valley Road                 CA   39.837400  -122.630630   1106 ft   PGE
+PG536  Avila Beach                       CA   35.191180  -120.675450    526 ft   PGE
+PG544  Los Osos Road                     CA   35.345700  -120.795860    474 ft   PGE
+PG578  Grindlay Ranch Road               CA   40.649350  -121.880760   2523 ft   PGE
+PG519  Whiskeytown Shasta                CA   40.750760  -122.306460   1877 ft   PGE
+PG541  Vineyard Canyon Road              CA   35.925830  -120.500980   1859 ft   PGE
+PG577  North Lake Berryessa              CA   38.679320  -122.266640    501 ft   PGE
+PG581  San Pedro Tower                   CA   37.991350  -122.500130   1003 ft   PGE
+PG586  North Powerhouse Road             CA   37.108800  -119.502450   2220 ft   PGE
+PG584  Zenia                             CA   40.204920  -123.498870   2816 ft   PGE
+PG509  Coyote Lake                       CA   37.070330  -121.521420    938 ft   PGE
+PG537  Camp Roberts                      CA   35.701620  -120.811990   1225 ft   PGE
+PG483  Sierra Road                       CA   37.415810  -121.781250   2073 ft   PGE
+PG548  Spolini Mountain                  CA   38.232020  -122.498160    825 ft   PGE
+PG575  Morissey Road Towers              CA   37.532500  -120.051900   3294 ft   PGE
+PG560  Mohrhardt Ridge Tower             CA   38.577580  -123.159340   2230 ft   PGE
+PG571  Oak Grove Road                    CA   37.364380  -119.870480   1736 ft   PGE
+PG511  Mono Way                          CA   38.184820  -120.012900   5732 ft   PGE
+PG518  Bear Valley Sub Station           CA   37.600440  -120.127450   1788 ft   PGE
+PG573  Powerhouse 225                    CA   37.206040  -119.498510   2597 ft   PGE
+PG522  Bootjack                          CA   37.463350  -119.882780   2248 ft   PGE
+PG570  Sudden Peak                       CA   34.591210  -120.529130    717 ft   PGE
+PG568  Triangle Road                     CA   37.501020  -119.810820   3282 ft   PGE
+PG579  Rock Front Ranch                  CA   35.109860  -120.090060   1377 ft   PGE
+PG587  Kern Hills                        CA   35.549640  -118.921640   1075 ft   PGE
+PG585  X Line Road                       CA   40.504070  -121.648860   4850 ft   PGE
+PG504  Forks Lookout                     CA   40.654280  -122.520610   3139 ft   PGE
+PG576  Cuyama Highway Hills              CA   35.071440  -120.161870   1246 ft   PGE
+PG513  Pismo Beach                       CA   35.150990  -120.607770    402 ft   PGE
+PG549  Mill Creek Vineyard               CA   38.613090  -122.995450   1543 ft   PGE
+PG569  Whale Rock Reservoir              CA   35.464110  -120.858200    635 ft   PGE
+PG484  Hildreth                          CA   37.090080  -119.596610   1941 ft   PGE
+PG535  Mt. Hamilton Road                 CA   37.323650  -121.700490   1404 ft   PGE
+PG531  Mendenhall Del Valle              CA   37.593500  -121.688200   1130 ft   PGE
+PG554  King Ridge Road East              CA   38.601860  -123.204630   1707 ft   PGE
+PG552  Water Road                        CA   37.625300  -121.809400    847 ft   PGE
+PG555  French Town Road                  CA   39.389360  -121.258550   1474 ft   PGE
+PG561  Loma Rica Road                    CA   39.330730  -121.363160    784 ft   PGE
+PG566  Mace Road                         CA   38.754510  -120.654370   3251 ft   PGE
+PG557  Sills Road                        CA   38.930500  -122.097900    449 ft   PGE
+PG598  Rail Canyon Road                  CA   39.351440  -122.456760   2250 ft   PGE
+PG600  Hamilton Branch                   CA   40.313080  -121.213500   4508 ft   PGE
+PG418  Satterlee                         CA   40.199090  -123.707240   2998 ft   PGE
+PG601  Baker Ridge                       CA   40.499560  -122.658400   1863 ft   PGE
+PG525  Shady Grove Road                  CA   38.713970  -122.615010   1225 ft   PGE
+PG503  Stone Ridge Drive                 CA   38.567170  -122.461670   1607 ft   PGE
+PG558  Wild View Way                     CA   38.523540  -122.675350   1242 ft   PGE
+PG591  SC Mountain Winery                CA   37.165610  -122.030260   2243 ft   PGE
+PG530  Ten Mile Cutoff Road              CA   38.869190  -123.590680    921 ft   PGE
+PG493  Loma Alta Fire Road               CA   38.030980  -122.617390   1290 ft   PGE
+PG562  Morelli Vista                     CA   38.319450  -122.606100   1095 ft   PGE
+PG603  Hillcrest Drive - Tehama          CA   40.005380  -122.406080    705 ft   PGE
+PG597  Truck Road                        CA   41.064150  -124.092690    664 ft   PGE
+PG490  Bald Mountain Tower               CA   38.788330  -122.121940   1800 ft   PGE
+PG550  San Geronimo Ridge Road           CA   37.998680  -122.656000   1322 ft   PGE
+PG564  Nelligan Road                     CA   38.388570  -122.522520    371 ft   PGE
+PG596  Mendocino Pass                    CA   39.832610  -123.088300   2161 ft   PGE
+PG599  Tuscan Buttes                     CA   40.262360  -122.092730   1840 ft   PGE
+PG607  Pickett Road                      CA   38.587750  -122.554710    386 ft   PGE
+PG497  Conservation Camp 34              CA   39.654100  -122.717920   4514 ft   PGE
+PG556  Muniz Ranch Road                  CA   38.505440  -123.140200   1766 ft   PGE
+PG604  Fair Play Road                    CA   38.594130  -120.691440   2258 ft   PGE
+PG553  Healdsburg Hill                   CA   38.649860  -122.758770    755 ft   PGE
+PG534  San Juan Grade                    CA   36.826000  -121.581000   1277 ft   PGE
+PG543  Chualar Canyon Road               CA   36.592450  -121.430210    945 ft   PGE
+PG563  Eagle Peak                        CA   39.559480  -122.439020    535 ft   PGE
+PG542  Las Aquilas                       CA   36.445600  -121.292300    597 ft   PGE
+PG551  Casmalia                          CA   34.844020  -120.518910    333 ft   PGE
+PG605  Sears Ranch                       CA   37.341390  -122.277400    972 ft   PGE
+PG411  Palo Escrito Peak                 CA   36.406840  -121.492610   4406 ft   PGE
+PG592  Paynes Creek Wagon Road           CA   40.247920  -122.148870    615 ft   PGE
+PG520  Lake Sonoma                       CA   38.716750  -123.050180   1258 ft   PGE
+PG559  Signal Peak                       CA   39.308780  -123.055270   1189 ft   PGE
+PG606  Cow Mountain                      CA   39.111430  -123.083340   3096 ft   PGE
+PG492  Mathison Peak                     CA   39.271950  -123.692430   1022 ft   PGE
+PG496  Twitchell Reservoir               CA   35.016670  -120.336610    734 ft   PGE
+PG590  Sweetwater Springs Road           CA   38.537190  -122.895360    556 ft   PGE
+PG501  Hearst-Willits Road               CA   39.466130  -123.233990   1728 ft   PGE
+PG527  Parkfield Tower                   CA   35.925920  -120.374800   3298 ft   PGE
+PG595  Oasis                             CA   38.991860  -122.959130   1965 ft   PGE
+PG602  Mountain View Road                CA   38.952740  -123.677640    299 ft   PGE
+PG589  Caribou Butte Valley Road         CA   40.091840  -121.141660   4050 ft   PGE
+PG594  Green Valley Road                 CA   35.533920  -120.999550    676 ft   PGE
+PG488  Erin Road                         CA   37.526120  -122.425520   1771 ft   PGE
+PG419  Five Brooks                       CA   37.999340  -122.747490    486 ft   PGE
+PG489  Bolinas Ridge Road                CA   37.951400  -122.676390   1623 ft   PGE
+PG588  Fair View Road                    CA   37.655410  -122.003020   1495 ft   PGE
+PG567  Sherridan Road                    CA   37.546910  -121.899950   1138 ft   PGE
+PG494  Adelaida Foothills                CA   35.620880  -120.921370   1694 ft   PGE
+PG514  Santa Rosa IDSM                   CA   38.499050  -122.761110    145 ft   PGE
+PG539  Tin Barn Road                     CA   38.618040  -123.293820   1065 ft   PGE
+PG593  Sonoma Hilltop Towers             CA   38.452330  -122.509580   2530 ft   PGE
+PG547  Highway 152                       CA   37.009380  -121.367510    522 ft   PGE
+PG540  Highway 162                       CA   39.589870  -122.453310    619 ft   PGE
+PG538  Beegum Road                       CA   40.224680  -122.310750    406 ft   PGE
+PG528  Highway 198                       CA   36.193840  -120.762920   2761 ft   PGE
+PG532  Stags Leap Overlook               CA   35.657760  -120.763150   1649 ft   PGE
+PG135  Blackhawk Drive                   CA   39.353080  -123.387760   2215 ft   PGE
+PG092  Old Giannini Ranch Road           CA   38.434290  -120.613360   2450 ft   PGE
+PG505  Fine Gold                         CA   37.192630  -119.613540   1345 ft   PGE
+PG565  Warm Springs Ranch                CA   38.665230  -123.077700   1483 ft   PGE
+PG865  McCourtney Road South             CA   38.964150  -121.274400    238 ft   PGE
+PG622  Old Coast Tower                   CA   36.316220  -121.871400   1207 ft   PGE
+PG617  Whiskeytown-Shasta                CA   40.622540  -122.495390    977 ft   PGE
+PG625  Hunter Liggett                    CA   35.950800  -121.232930   1828 ft   PGE
+PG616  French Gulch                      CA   40.712720  -122.637400   1376 ft   PGE
+PG618  Lockwood San Lucas Road           CA   36.015780  -121.067820   1653 ft   PGE
+PG621  Argyle Road                       CA   36.023810  -121.170820   1109 ft   PGE
+PG623  Hot Springs Road                  CA   38.782590  -123.033210    873 ft   PGE
+PG626  York Mountain Road                CA   35.544280  -120.831290   1588 ft   PGE
+PG610  KNPT Towers                       CA   37.108430  -121.844900   3722 ft   PGE
+PG627  Lexington Reservoir               CA   37.201460  -121.990820    666 ft   PGE
+PG612  Redwood Drive                     CA   37.030900  -121.791640   1140 ft   PGE
+PG609  Crocker Ridge                     CA   36.056030  -121.273310   2451 ft   PGE
+PG619  Paseo Vista Ave                   CA   37.118980  -121.569790    993 ft   PGE
+PG608  Mt. Umunhum                       CA   37.160110  -121.907160   3319 ft   PGE
+PG656  Webster Road                      CA   35.447950  -120.547880   1532 ft   PGE
+PG653  Arroyo Seco Road                  CA   36.249640  -121.442790   1620 ft   PGE
+PG546  Humboldt Highway 128              CA   38.886260  -123.159380    922 ft   PGE
+PG648  Arco-Cholame                      CA   35.709760  -120.101790   1243 ft   PGE
+PG654  Digier Road Hilltop               CA   34.895310  -118.945200   5099 ft   PGE
+PG611  Tepusquet Canyon Road West        CA   34.917000  -120.216750   1757 ft   PGE
+PG650  Happy Canyon Hill                 CA   34.631590  -119.991530    976 ft   PGE
+PG649  Beartrap Road                     CA   34.865860  -118.834200   4270 ft   PGE
+PG624  Palo Escrito                      CA   36.409060  -121.496690   4345 ft   PGE
+PG613  Mount Olive Road                  CA   39.143750  -120.981240   2351 ft   PGE
+PG615  Priest Station                    CA   37.813600  -120.273930   2510 ft   PGE
+PG644  Old Highway Road - Lassen         CA   41.053410  -121.278980   3653 ft   PGE
+PG645  Chemise Road                      CA   38.648570  -122.960950    890 ft   PGE
+PG634  San Simeon Creek Road             CA   35.642260  -121.058930   1099 ft   PGE
+PG631  English Hill                      CA   38.347210  -122.865400    907 ft   PGE
+PG630  Troost Trail                      CA   39.324290  -121.167980   2262 ft   PGE
+PG636  Hudson Canyon                     CA   34.903770  -120.227890    803 ft   PGE
+PG640  Owens Mountain                    CA   36.930160  -119.641950   1602 ft   PGE
+PG620  Whimsy Mine                       CA   36.433940  -120.662380   1964 ft   PGE
+PG647  Bena Road                         CA   35.333960  -118.734900   1053 ft   PGE
+PG314  Hogan Dam Road                    CA   38.067840  -120.740270   1143 ft   PGE
+PG642  Huasna                            CA   35.116210  -120.391300    743 ft   PGE
+PG675  Bohn Lake                         CA   38.739350  -122.448010   1228 ft   PGE
+PG632  Pelato Peak                       CA   34.920470  -119.405780   4496 ft   PGE
+PG667  Coldwater Creek Road              CA   38.834610  -122.880680   1849 ft   PGE
+PG664  Pozo Road East                    CA   35.312950  -120.324210   1603 ft   PGE
+PG662  Chrome                            CA   39.753940  -122.546910    773 ft   PGE
+PG663  Frenchtown                        CA   38.642870  -120.937690   1346 ft   PGE
+PG639  Hogback Drive                     CA   36.651950  -119.002180   3558 ft   PGE
+PG721  Pittman Hill Road                 CA   36.949190  -119.448940   1233 ft   PGE
+PG633  Old Creek Road                    CA   35.491520  -120.822630   1430 ft   PGE
+PG665  Cat Canyon Road                   CA   34.792130  -120.261440   1261 ft   PGE
+PG666  Shake Ridge Road South            CA   38.443180  -120.733450   1883 ft   PGE
+PG669  Grub Gulch                        CA   37.331020  -119.770930   2388 ft   PGE
+PG677  Black Mountain                    CA   35.388080  -120.354130   3048 ft   PGE
+PG678  Kramer Road                       CA   41.126610  -121.191260   4125 ft   PGE
+PG635  Frazier Lake Road                 CA   36.976640  -121.417860    403 ft   PGE
+PG673  La Grange Road                    CA   37.829620  -120.476140   1186 ft   PGE
+PG720  Eastmont Road                     CA   35.499470  -118.864290   1255 ft   PGE
+PG722  Kern Canyon                       CA   35.432230  -118.780150   1189 ft   PGE
+PG658  Elwood Road                       CA   36.813810  -119.375110    807 ft   PGE
+PG672  Woodland Pond Trail               CA   37.235150  -119.554310   2936 ft   PGE
+PG638  McKinnley Grove Road              CA   37.005720  -118.970950   6542 ft   PGE
+PG674  Mt. Alison                        CA   37.499370  -121.870820   2647 ft   PGE
+PG719  Branscomb Road                    CA   39.651670  -123.527610   1942 ft   PGE
+PG629  Island Mountain Road              CA   40.045490  -123.577520   2161 ft   PGE
+PG659  Black Diamond Mine                CA   37.963550  -121.889510    975 ft   PGE
+PG676  Kahn Road                         CA   40.302680  -122.450830    592 ft   PGE
+PG725  Thomas Road                       CA   38.456450  -122.906420    341 ft   PGE
+PG668  Coal Pit Road                     CA   40.454590  -122.524000   1005 ft   PGE
+PG730  Hardin Road                       CA   38.599350  -122.367800    599 ft   PGE
+PG783  Salmon Creek Ranch                CA   38.348260  -123.008050    513 ft   PGE
+PG785  Orchard Hill                      CA   37.382150  -122.248250   1158 ft   PGE
+PG796  Round Mountain Microtowers        CA   35.456410  -118.872330   1036 ft   PGE
+PG792  Marshes Flat Road                 CA   37.789460  -120.303810   1863 ft   PGE
+PG797  Old Stage Road - Monterey         CA   36.671980  -121.525450   1306 ft   PGE
+PG798  Valley Ford Road                  CA   38.297050  -122.826420    214 ft   PGE
+PG779  Horse Camp Trail                  CA   37.287900  -122.236970   1159 ft   PGE
+PG788  Two Rocks                         CA   38.260800  -122.784520     85 ft   PGE
+PG723  BFI Office                        CA   37.509200  -122.406750   1092 ft   PGE
+PG736  Honey Hill Drive                  CA   38.793200  -122.526770   1268 ft   PGE
+PG781  Burdell Mountain                  CA   38.145000  -122.593470   1481 ft   PGE
+PG790  Wards Ferry Road                  CA   37.931710  -120.320270   1919 ft   PGE
+PG791  Cerini Road                       CA   38.227640  -122.855340    519 ft   PGE
+PG786  Viboras Road                      CA   36.956620  -121.342640    469 ft   PGE
+PG727  Jolon Hills                       CA   35.884460  -120.955840   1495 ft   PGE
+PG735  Calistoga-Lower Lake              CA   38.689240  -122.595570   1523 ft   PGE
+PG738  Dersch Road                       CA   40.487910  -122.125050    621 ft   PGE
+PG671  Los Animas                        CA   37.227170  -121.660810    759 ft   PGE
+PG728  Annapolis Road                    CA   38.680150  -123.312990    722 ft   PGE
+PG729  Morgan Valley Road West           CA   38.885650  -122.532650   1279 ft   PGE
+PG776  Diablo Gates                      CA   35.818820  -120.379750   1266 ft   PGE
+PG775  Lewis Ranch Road                  CA   35.380260  -120.222110   2122 ft   PGE
+PG614  Cool                              CA   38.895280  -121.011350   1583 ft   PGE
+PG670  Fay Hill                          CA   37.861970  -122.119600    862 ft   PGE
+PG764  Mossy Rock Lane                   CA   37.011660  -119.575220   1202 ft   PGE
+PG778  Lompoc Hill                       CA   34.627890  -120.442260    671 ft   PGE
+PG732  Clear Creek                       CA   40.490330  -122.540270   1080 ft   PGE
+PG651  Arroya Sausal Road                CA   38.143580  -122.792090    538 ft   PGE
+PG737  Shoup Road                        CA   40.448440  -122.635310    929 ft   PGE
+PG787  Highway 190                       CA   36.135830  -118.792940   1170 ft   PGE
+PG770  Peoria Mountain                   CA   37.934550  -120.506350   1520 ft   PGE
+PG795  Moss Landing Hills                CA   36.934980  -121.651190   1544 ft   PGE
+PG767  Calero                            CA   37.188570  -121.807630    582 ft   PGE
+PG824  Lake Spaulding                    CA   39.325010  -120.642890   5125 ft   PGE
+PG652  Santa Fe Geothermal               CA   38.787040  -122.746930   3881 ft   PGE
+PG774  Hat Creek East                    CA   40.872870  -121.412660   4055 ft   PGE
+PG780  Telegraph Road                    CA   37.585530  -120.002460   2257 ft   PGE
+PG724  Harry Road                        CA   37.215520  -121.804540    988 ft   PGE
+PG731  High Line Trail Road              CA   40.706310  -122.205660   1175 ft   PGE
+PG734  Rim View Drive                    CA   40.674880  -121.427670   4374 ft   PGE
+PG772  Road 41                           CA   38.896210  -122.236940    516 ft   PGE
+PG789  Bear Valley Road - Mariposa       CA   37.532690  -120.207610   1113 ft   PGE
+PG655  Poy Ah Now Road                   CA   37.215650  -119.488050   2637 ft   PGE
+PG760  Dublin Canyon Road                CA   37.692330  -121.976180   1035 ft   PGE
+PG823  Jenner Road                       CA   38.474100  -123.133100    997 ft   PGE
+PG821  Forty Ranch Lane                  CA   36.983970  -119.376880   2040 ft   PGE
+PG822  Scott Forbes Road                 CA   39.231520  -121.297050   1160 ft   PGE
+PG832  Snake Road                        CA   38.219480  -122.915130    512 ft   PGE
+PG773  Doty Road                         CA   40.820020  -121.503870   3313 ft   PGE
+PG820  Healdsburg Hills South            CA   38.670890  -122.764320   1700 ft   PGE
+PG766  Chimney Rock Road                 CA   35.669330  -120.991380   2049 ft   PGE
+PG759  Cosgrove Creek                    CA   38.231970  -120.799450    908 ft   PGE
+PG794  Tule Road                         CA   35.636750  -118.948310   1084 ft   PGE
+PG697  Colusa Hills                      CA   39.097860  -122.335790   1122 ft   PGE
+PG784  Lake Drive                        CA   37.618420  -122.449900    798 ft   PGE
+PG836  Cottonwood Road Tower             CA   36.694110  -121.196410   1054 ft   PGE
+PG765  Foley Estates                     CA   34.649260  -120.300970    693 ft   PGE
+PG761  Montgomery - Shasta               CA   40.841290  -121.932270   2199 ft   PGE
+PG782  Bellota Riverbank                 CA   37.871940  -120.687860    675 ft   PGE
+PG768  Bridgeville - Cottonwood          CA   40.375080  -122.680650   1275 ft   PGE
+PG769  Bridgeville West                  CA   40.366810  -122.797980   1736 ft   PGE
+PG825  Divide-Cabrillo                   CA   34.729940  -120.436370   1130 ft   PGE
+PG762  Double Springs                    CA   38.212360  -120.756330   1066 ft   PGE
+PG683  Holdridge Road                    CA   36.109100  -118.889810    794 ft   PGE
+PG827  Highway 41 South                  CA   37.269700  -119.661730   3160 ft   PGE
+PG684  San Joaquin Ridge                 CA   36.301620  -120.401090   3563 ft   PGE
+PG690  Moose Road                        CA   39.001880  -123.210430   1247 ft   PGE
+PG680  Pine Hill                         CA   38.719530  -120.990060   2030 ft   PGE
+PG777  Coyote Canyon Road                CA   35.249250  -120.585290    564 ft   PGE
+PG771  Humboldt Highway 175              CA   38.918380  -122.771880   2238 ft   PGE
+PG689  South Black Diamond Way           CA   37.942890  -121.890600   1882 ft   PGE
+PG695  Drum Forebay                      CA   39.253260  -120.748920   4755 ft   PGE
+PG793  Montgomery - Napa                 CA   38.394420  -122.458330   1418 ft   PGE
+PG641  Higgins Canyon Road               CA   37.451720  -122.414090    151 ft   PGE
+PG698  Cisco Buttes                      CA   39.306000  -120.562630   6409 ft   PGE
+PG819  Monte Bello Road West             CA   37.300660  -122.117930   2322 ft   PGE
+PG907  Las Yeguas                        CA   35.440870  -119.956970   3343 ft   PGE
+PG911  Humboldt Highway 29               CA   39.085790  -122.920800   1522 ft   PGE
+PG916  Los Alamos                        CA   34.707460  -120.169660    966 ft   PGE
+PG903  Humboldt Eagle Rock Red Bud       CA   38.847900  -122.778710   2538 ft   PGE
+PG688  Morgan Valley Road East           CA   38.885640  -122.510810   1855 ft   PGE
+PG661  Centerville Road                  CA   39.822600  -121.641230   1413 ft   PGE
+PG682  Nacimiento Lake Drive             CA   35.836400  -120.844460    681 ft   PGE
+PG657  Coleman Valley Road West          CA   38.394280  -123.044900    955 ft   PGE
+PG994  Sierra Azul                       CA   37.180230  -121.917410   2834 ft   PGE
+PG998  Priest Rock                       CA   37.194060  -121.964070   1740 ft   PGE
+PG685  Skyline                           CA   37.309900  -122.169220   2158 ft   PGE
+PG646  Los Alamos Road                   CA   38.485550  -122.601400   1396 ft   PGE
+PG910  Glenhaven                         CA   39.033710  -122.708570   2386 ft   PGE
+PG696  Diablo-Blackhawk                  CA   37.835270  -121.897370   1916 ft   PGE
+PG981  East Bay MUD                      CA   37.778470  -122.090440    969 ft   PGE
+PG914  Contra Costa                      CA   37.916550  -121.977780    892 ft   PGE
+PG529  San Jose Mines Road               CA   37.395320  -121.490430   2194 ft   PGE
+PG829  Esmeralda Road                    CA   38.155040  -120.530700   1457 ft   PGE
+PG687  Mines Road North                  CA   37.612730  -121.673310   1541 ft   PGE
+PG984  Coleman Valley Road South         CA   38.373070  -123.050620    869 ft   PGE
+PG913  Garcia Ranch Road                 CA   37.942220  -122.170170   1103 ft   PGE
+PG681  Bear Mountain                     CA   36.746390  -119.280090   3388 ft   PGE
+PG900  Orinda                            CA   37.847380  -122.165220    772 ft   PGE
+PG909  Wilder Hills                      CA   37.851570  -122.180090   1345 ft   PGE
+PG901  Briones-Diablo                    CA   37.891270  -122.005660    743 ft   PGE
+PG996  Cortina Mendocino                 CA   39.091280  -122.347010    662 ft   PGE
+PG993  Willow Spring Road                CA   37.152350  -121.683900    335 ft   PGE
+PG692  Cedar Lane                        CA   37.607780  -120.209480   1993 ft   PGE
+PG886  Thistle                           CA   36.683350  -119.086600   3346 ft   PGE
+PG898  Santos                            CA   37.662150  -121.932290   1473 ft   PGE
+PG694  Doty Flat                         CA   38.908720  -121.151740    733 ft   PGE
+PG908  Mt. Boullion                      CA   37.534670  -120.030430   4247 ft   PGE
+PG983  Fountain Grove                    CA   38.497040  -122.696210    722 ft   PGE
+PG905  Hang Glider                       CA   36.764550  -119.097220   4647 ft   PGE
+PG897  Yorkville Highway 128             CA   38.908990  -123.231790   1083 ft   PGE
+PG899  Shadowhawk                        CA   37.859990  -122.057700    801 ft   PGE
+PG979  Stoetz Lane                       CA   38.445570  -122.954450    865 ft   PGE
+PG726  Kneeland Road North               CA   40.635000  -123.879220   2216 ft   PGE
+PG982  Freestone Flat Road               CA   38.384580  -122.934580    273 ft   PGE
+PG956  Humboldt Road                     CA   39.741410  -121.777370    347 ft   PGE
+PG915  Mears Road                        CA   38.950710  -121.168730    938 ft   PGE
+PG891  Lower Spyrock Road                CA   39.813580  -123.510960   3211 ft   PGE
+PG902  Alcosta Boulevard                 CA   37.752610  -121.926320    768 ft   PGE
+PG686  Wolf Mountain                     CA   39.140520  -121.094810   2379 ft   PGE
+PG733  Panoramic Highway                 CA   37.891130  -122.556370    754 ft   PGE
+PG643  Old Adobe Road                    CA   36.947740  -121.815150    278 ft   PGE
+PG831  Sweigert Road                     CA   37.416380  -121.838290    873 ft   PGE
+PG948  Corral De Cielo Road              CA   36.533980  -121.620750   3385 ft   PGE
+PG991  Dutcher Creek Road                CA   38.760480  -123.000170    442 ft   PGE
+PG893  Piercy                            CA   39.963140  -123.791560    782 ft   PGE
+PG890  Bell Springs Road South           CA   39.955180  -123.591650   3843 ft   PGE
+PG959  Donner Pass Road                  CA   39.320170  -120.338550   7636 ft   PGE
+PG975  Road 23                           CA   38.686240  -122.086300    367 ft   PGE
+PG873  Comanche Parkway                  CA   38.195270  -120.929880    352 ft   PGE
+PG997  Poonkinney West                   CA   39.732640  -123.305580   2738 ft   PGE
+PG987  Shamrock Lane                     CA   39.633750  -123.464580   1694 ft   PGE
+PG980  Guthrie Road                      CA   39.501740  -123.729450    177 ft   PGE
+PG964  Quail Canyon Road                 CA   38.471950  -122.055600    371 ft   PGE
+PG863  Prussian Hill                     CA   38.299440  -120.568450   2719 ft   PGE
+PG967  Pleasants Valley Road             CA   38.367310  -122.023590    246 ft   PGE
+PG952  Mill Creek                        CA   37.522970  -121.872720   1554 ft   PGE
+PG912  Maidu Drive                       CA   38.789600  -120.706860   2903 ft   PGE
+PG881  Country Downs                     CA   39.208840  -121.173210   1439 ft   PGE
+PG917  McCourtney Road North             CA   39.121420  -121.147440   1529 ft   PGE
+PG904  Lake Francis Road                 CA   39.342500  -121.191140    609 ft   PGE
+PG986  Sonoma Brooks Road                CA   38.575870  -122.795240    231 ft   PGE
+PG939  Forest Route 4N06                 CA   40.733620  -123.681020   4036 ft   PGE
+PG833  Huntington Club Road              CA   40.506690  -122.257480    494 ft   PGE
+PG828  Babcock Road                      CA   41.087930  -121.191190   4119 ft   PGE
+PG940  Snow Camp Lake                    CA   40.750200  -123.755750   4569 ft   PGE
+PG918  Sun Valley                        CA   39.015650  -120.963100   2130 ft   PGE
+PG941  Fort Seward West                  CA   40.213490  -123.662490   1447 ft   PGE
+PG826  Goose Valley Ranch                CA   40.928160  -121.696720   3195 ft   PGE
+PG944  Fort Seward East                  CA   40.221540  -123.645300    351 ft   PGE
+PG990  Cahto Peak                        CA   39.686520  -123.579750   4230 ft   PGE
+PG892  Missouri Flat                     CA   38.690970  -120.830100   1747 ft   PGE
+PG896  Vichy Springs                     CA   39.162390  -123.209560    632 ft   PGE
+PG974  Ricetti Lane                      CA   39.242470  -123.169250   1175 ft   PGE
+PG957  Bachelor Valley Road              CA   39.184630  -122.953220   1351 ft   PGE
+PG884  Indian Hill Road                  CA   38.872860  -121.099980   1311 ft   PGE
+PG861  Twin Sisters Road                 CA   38.304140  -122.162240   1611 ft   PGE
+PG885  Shingletown Airport               CA   40.515930  -121.815320   3835 ft   PGE
+PG883  Pit-Round Mountain                CA   40.978840  -121.965940   2857 ft   PGE
+PG946  Millwood Road                     CA   36.735820  -119.046630   3873 ft   PGE
+PG875  Foresthill Road South             CA   38.973860  -120.906080   2275 ft   PGE
+PG968  Boundary                          CA   37.210180  -121.771120    929 ft   PGE
+PG860  Thatcher Mill Road                CA   40.566500  -121.713900   4164 ft   PGE
+PG970  Road 110                          CA   38.944270  -123.177720   2180 ft   PGE
+019PG  Pine Canyon Road                  CA   36.151270  -121.192580    635 ft   PGE
+023PG  Paris Valley Road                 CA   36.048680  -121.003290    627 ft   PGE
+026PG  Parker Flats Cutoff               CA   36.629870  -121.791820    436 ft   PGE
+PG947  Fresno Road 128                   CA   36.647780  -119.286360    481 ft   PGE
+PG887  Red Top Lookout                   CA   37.128300  -119.776700   1839 ft   PGE
+PG838  Kiler Canyon Road                 CA   35.607060  -120.724790    975 ft   PGE
+PG953  Pine Flat Lake Overlook           CA   36.863410  -119.247890   2151 ft   PGE
+021PG  Winters                           CA   38.519080  -122.031840    361 ft   PGE
+PG889  Hornitos Road                     CA   37.498420  -120.175450   1164 ft   PGE
+PG955  Payne Creek Road                  CA   36.649780  -121.003390   2180 ft   PGE
+PG867  Lower New Idria                   CA   36.487470  -120.795800   1932 ft   PGE
+PG966  Loma Rica Road West               CA   39.309500  -121.422640    390 ft   PGE
+PG878  Spring Gap                        CA   38.168010  -120.102980   4910 ft   PGE
+PG958  Dick Smith Road                   CA   40.580310  -124.113690    336 ft   PGE
+PG978  Skaggs Hill                       CA   38.671110  -123.194470   1082 ft   PGE
+PG879  Fremont Hills                     CA   37.624850  -121.972130   1528 ft   PGE
+050PG  Glencoe                           CA   38.327410  -120.630740   1982 ft   PGE
+022PG  Long Barn                         CA   38.131410  -120.119510   5300 ft   PGE
+032PG  Cienega Farm                      CA   36.747300  -121.393550   1220 ft   PGE
+PG660  Cienega Road                      CA   36.712210  -121.339660    871 ft   PGE
+PG872  Hopland                           CA   38.977890  -123.112900    481 ft   PGE
+PG866  Andregg Road                      CA   38.857540  -121.075810   1155 ft   PGE
+PG962  San Jose San Felipe Road          CA   37.271040  -121.675910   1063 ft   PGE
+PG835  Indian Valley Road South          CA   35.853060  -120.700570    851 ft   PGE
+013PG  San Juan Bautista                 CA   36.865740  -121.554400    163 ft   PGE
+PG830  Lower Vineyard Canyon Road        CA   35.776500  -120.694060    689 ft   PGE
+011PG  Bloods Ridge                      CA   38.486400  -120.052600   8486 ft   PGE
+014PG  Laureles Grade                    CA   36.528090  -121.749640   1372 ft   PGE
+010PG  Granite Rock                      CA   36.900170  -121.622770    514 ft   PGE
+051PG  Sebastian Road                    CA   35.032100  -118.772600   1120 ft   PGE
+001PG  South Main Street                 CA   38.058900  -120.534400   1409 ft   PGE
+PG961  Fowler Road                       CA   37.314030  -121.754790    514 ft   PGE
+PG963  Klein Road                        CA   37.339270  -121.780160    353 ft   PGE
+045PG  Mt Oso                            CA   37.501430  -121.373180   3320 ft   PGE
+047PG  West Hardin Lane                  CA   38.292070  -122.633790    191 ft   PGE
+PG713  Lovers Lane                       CA   36.966020  -121.432990    155 ft   PGE
+040PG  Central Silverado                 CA   38.461300  -122.366750    280 ft   PGE
+PG942  Cow Gulch Tower                   CA   40.369900  -122.937200   2969 ft   PGE
+PG876  Henness Pass                      CA   39.511230  -120.844870   5617 ft   PGE
+000PG  Southside Road                    CA   36.789210  -121.339430    424 ft   PGE
+049PG  Loma Chiquita East                CA   37.105100  -121.821080   2585 ft   PGE
+PG864  Walker Ridge East                 CA   39.030760  -122.451370   2189 ft   PGE
+PG924  Reliez Valley Road                CA   37.946230  -122.107920    329 ft   PGE
+PG972  Roop Road                         CA   37.049630  -121.530010    363 ft   PGE
+PG954  Cascade                           CA   40.907920  -122.387280   1374 ft   PGE
+PG710  Lower Arbor Road                  CA   35.599640  -120.716070    902 ft   PGE
+PG874  Pleasant Valley Road - Nevada     CA   39.305400  -121.153190   1650 ft   PGE
+PG709  Live Oak Road                     CA   35.589720  -120.724850    929 ft   PGE
+043PG  Suisun Valley Road                CA   38.265120  -122.111310     76 ft   PGE
+046PG  Henry Road                        CA   38.276720  -122.355310    250 ft   PGE
+PG943  Bootleg Reservoir                 CA   40.768980  -121.308070   5553 ft   PGE
+PG818  Encina Ave                        CA   35.391740  -120.607270    999 ft   PGE
+028PG  Road 16                           CA   38.705460  -122.086630    234 ft   PGE
+057PG  6 Mile Road                       CA   38.106020  -120.494490   1917 ft   PGE
+PG703  Armstrong Road South              CA   38.210080  -120.456980   2413 ft   PGE
+029PG  Woodbine Street                   CA   38.833150  -122.192600    359 ft   PGE
+PG714  Soscol Creek Road                 CA   38.239620  -122.266310     79 ft   PGE
+PG700  Second Ave - Napa                 CA   38.302530  -122.243690    117 ft   PGE
+041PG  Iverson Road                      CA   36.551460  -121.441210    237 ft   PGE
+002PG  Reservation Road                  CA   36.633590  -121.696990     83 ft   PGE
+044PG  Joyce Lane                        CA   38.304880  -122.139170    604 ft   PGE
+058PG  Valley View Street                CA   38.494190  -122.469180    257 ft   PGE
+PG707  Wooden Valley Cross Road          CA   38.323460  -122.126560    647 ft   PGE
+020PG  Robles Ave                        CA   38.394640  -122.713400    111 ft   PGE
+024PG  Dessie Drive                      CA   39.067310  -122.972100   1722 ft   PGE
+039PG  Rosita Road                       CA   37.586740  -122.495670     49 ft   PGE
+PG882  Quinn Place                       CA   38.781390  -121.163240    470 ft   PGE
+PG960  Woodmansee Way                    CA   35.739780  -120.720340    809 ft   PGE
+PG973  Boonville Road                    CA   39.051470  -123.247990   2263 ft   PGE
+PG701  Morro Road                        CA   35.465060  -120.671780    915 ft   PGE
+030PG  North Winters                     CA   38.593420  -122.010590    233 ft   PGE
+PG945  Grand Ave - North Bay             CA   37.980820  -122.515140     81 ft   PGE
+PG711  Orcutt Road                       CA   35.225030  -120.598920    322 ft   PGE
+PG965  Bear Valley Road - Colusa North   CA   39.219390  -122.480450   1502 ft   PGE
+PG702  Silverado Trail                   CA   38.417310  -122.337000    111 ft   PGE
+PG679  Cummings Peak                     CA   38.025250  -122.195620    818 ft   PGE
+056PG  Central Ave                       CA   36.280440  -121.224590    404 ft   PGE
+PG718  Hwy 154                           CA   34.556960  -119.915940    980 ft   PGE
+055PG  Fort Romie                        CA   36.397680  -121.336650    181 ft   PGE
+PG933  Chuck Yeager Road                 CA   39.183590  -121.305450    909 ft   PGE
+PG992  Moreheart Ridge                   CA   39.552020  -121.170020   3873 ft   PGE
+PG934  Hatchet Mountain                  CA   40.874670  -121.771530   5293 ft   PGE
+PG708  Gold Tree Sub                     CA   35.320870  -120.693240    458 ft   PGE
+PG930  Caballo Ranchero Drive            CA   37.843050  -121.954190    893 ft   PGE
+PG935  Cliffecastle Court                CA   37.740510  -121.990550   1465 ft   PGE
+PG704  Long Ridge                        CA   36.430580  -121.736370   2004 ft   PGE
+PG931  El Cerrito                        CA   37.915610  -122.302950    119 ft   PGE
+025PG  Grove Street                      CA   38.304310  -122.549800   1238 ft   PGE
+PG763  Wheelbarrow Ranch Road            CA   39.498380  -123.336490   2023 ft   PGE
+PG949  Clay Bank Road                    CA   38.286720  -122.002260    104 ft   PGE
+PG705  Montebenito Ranch                 CA   36.666200  -121.387440   2290 ft   PGE
+036PG  Humboldt Cherry Creek             CA   39.602090  -123.422320   1807 ft   PGE
+037PG  Buffalo Ranch                     CA   39.228840  -123.107810   1297 ft   PGE
+033PG  Fruitland                         CA   40.286610  -123.813290   1078 ft   PGE
+PG807  High School Hill                  CA   35.280120  -120.631170   1571 ft   PGE
+PG715  Mt. Lowe                          CA   35.308580  -120.599630   2628 ft   PGE
+053PG  Calhoun Street                    CA   37.645900  -122.051570    447 ft   PGE
+PG837  Black Mountain Foothills          CA   35.368110  -120.368170   2295 ft   PGE
+PG801  Friis Camp                        CA   35.369340  -120.325100   2747 ft   PGE
+PG895  Price Creek                       CA   40.545530  -124.163310     65 ft   PGE
+PG817  Navajo Flats                      CA   35.379070  -120.287410   2037 ft   PGE
+PG805  Old Ornbaun Hot Springs           CA   38.914760  -123.306370   1201 ft   PGE
+PG969  Piercy Ranch Road                 CA   37.244880  -121.758820    391 ft   PGE
+PG877  Oroville Spring Hill              CA   39.605890  -121.531170   1348 ft   PGE
+PG880  Blue Ridge Road South             CA   38.393740  -122.098710   2669 ft   PGE
+012PG  Saw Mill Flat                     CA   36.944700  -119.015250   6009 ft   PGE
+PG950  Panoramic Point                   CA   36.760190  -118.945710   7097 ft   PGE
+PG894  Howard Street                     CA   40.447370  -122.300990    434 ft   PGE
+017PG  Guadalupe Mines                   CA   37.214570  -121.901920    651 ft   PGE
+009PG  Fulton - Calistoga South          CA   38.635020  -122.594850   1292 ft   PGE
+042PG  Spring Valley Road                CA   38.779110  -120.510240   3946 ft   PGE
+PG921  Wine Country Road                 CA   38.325500  -122.339600    218 ft   PGE
+PG888  Oak Run Road South                CA   40.634130  -122.111740    949 ft   PGE
+PG717  Lopez Drive                       CA   35.174290  -120.529040    360 ft   PGE
+PG809  Sherwood Road North               CA   39.585960  -123.469210   1884 ft   PGE
+PG811  Arroyo Grande                     CA   35.109230  -120.580760     78 ft   PGE
+016PG  Arrowhead Hills                   CA   38.271050  -122.387470    713 ft   PGE
+PG739  Deer Creek                        CA   39.260310  -120.774470   4115 ft   PGE
+005PG  Ridgewood Drive                   CA   40.746770  -124.176440    171 ft   PGE
+015PG  Fairfield                         CA   38.240150  -122.141750    563 ft   PGE
+PG850  Lost Coast Ranch                  CA   40.544980  -124.353970    565 ft   PGE
+PG951  Fenced Meadow Lookout             CA   36.960570  -119.168090   4954 ft   PGE
+006PG  Vacaville Tower                   CA   38.325750  -122.041040    661 ft   PGE
+008PG  El Camino Real                    CA   36.860740  -121.590270    324 ft   PGE
+018PG  Peninsula Fire Lane Tower         CA   37.330530  -122.214340   2389 ft   PGE
+PG999  Kincaid Road South                CA   37.379790  -121.672440   2239 ft   PGE
+PG923  Leak Lane                         CA   38.819520  -121.148930    596 ft   PGE
+003PG  Loma Chiquita West                CA   37.104760  -121.825320   2608 ft   PGE
+034PG  Stone Canyon                      CA   36.018300  -120.516920   3376 ft   PGE
+035PG  Mattole Road South                CA   40.278290  -124.246200    154 ft   PGE
+PG812  Los Padres Highway 41             CA   35.685200  -120.336580   1111 ft   PGE
+PG799  Shulte Road                       CA   36.513370  -121.830240   1137 ft   PGE
+PG977  Cavedale Road                     CA   38.357620  -122.465820   1615 ft   PGE
+PG976  Spyrock Road                      CA   39.844060  -123.510030   3517 ft   PGE
+PG816  Adelaida                          CA   35.668580  -120.847890   1742 ft   PGE
+PG808  Tepusquet Road                    CA   34.853840  -120.259650    456 ft   PGE
+PG815  Santa Rosa Road                   CA   34.606530  -120.210620    342 ft   PGE
+PG758  Wikiup Bridge Way                 CA   38.516150  -122.736610    689 ft   PGE
+PG936  Kelly Canyon                      CA   37.714490  -121.985320    699 ft   PGE
+PG716  Kahler Court                      CA   37.431360  -121.805060   1783 ft   PGE
+PG806  Lynch Canyon Road                 CA   35.781000  -120.983540   1232 ft   PGE
+PG756  Soda Springs Road                 CA   37.170550  -121.942120   2727 ft   PGE
+PG743  Grapevine Road East               CA   34.927870  -118.926230   1745 ft   PGE
+PG744  Jolon Road                        CA   36.114170  -121.169710   1305 ft   PGE
+PG740  San Antonio Valley Road West - S  CA   37.351090  -121.608100   3131 ft   PGE
+PG754  Crawford Road                     CA   36.706210  -119.380930    450 ft   PGE
+PG748  Arnold Drive                      CA   38.211090  -122.455040     39 ft   PGE
+PG750  Parkhill Road South               CA   35.367360  -120.399330   1833 ft   PGE
+PG757  Humboldt Morgan Valley            CA   38.862850  -122.412520   2123 ft   PGE
+PG747  Clark Tunnel Road                 CA   38.871610  -121.179410    879 ft   PGE
+PG989  Monte Vista                       CA   37.279480  -122.107090   1567 ft   PGE
+PG741  Cayucos Road                      CA   35.445410  -120.867250    337 ft   PGE
+PG752  Avila Road                        CA   38.015710  -121.989760    445 ft   PGE
+PG755  Red Bluff IDSM                    CA   40.159730  -122.229940    321 ft   PGE
+PG927  Blackstone Court                  CA   37.680380  -122.036430    701 ft   PGE
+PG932  Humboldt Bridgeville              CA   40.495120  -123.801210   1693 ft   PGE
+PG712  Peninsula Road                    CA   37.793610  -122.128020    756 ft   PGE
+048PG  Loop Road                         CA   37.511480  -122.339660    497 ft   PGE
+PG800  Colma IDSM                        CA   37.684220  -122.474400    280 ft   PGE
+PG926  Laguna Road                       CA   38.483220  -122.852160    105 ft   PGE
+PG937  Oakland IDSM                      CA   37.760750  -122.218090     10 ft   PGE
+PG852  De La Concepcion                  CA   34.566750  -120.499040   2020 ft   PGE
+004PG  Weller Road                       CA   37.485330  -121.863450   2462 ft   PGE
+PG971  Stone House Road                  CA   38.894700  -121.090230   1027 ft   PGE
+PG995  Gunsight Fire Road                CA   38.025030  -122.632120   1149 ft   PGE
+PG693  Marshall Petaluma Road            CA   38.163610  -122.876210    375 ft   PGE
+PG853  Dimeo Lane                        CA   36.970550  -122.104060    241 ft   PGE
+PG858  Mt. Devin Road                    CA   36.496170  -121.911540   1644 ft   PGE
+PG857  Breckenridge Road                 CA   35.424930  -118.729840   2602 ft   PGE
+PG854  Bull Canyon Road                  CA   34.968800  -120.405870    245 ft   PGE
+PG929  Pope Valley Road                  CA   38.634390  -122.447850    776 ft   PGE
+063PG  Coal Creek Road                   CA   40.848030  -122.330450   1239 ft   PGE
+PG742  Farrell Road                      CA   38.379630  -121.998030    262 ft   PGE
+054PG  Clements Road                     CA   37.874670  -120.169280   2984 ft   PGE
+062PG  Sprig Lake Hills                  CA   37.020270  -121.686210   1116 ft   PGE
+070PG  Colma - Sand Hill                 CA   37.682810  -122.442480    541 ft   PGE
+071PG  Pillar Point                      CA   37.514600  -122.494050     61 ft   PGE
+PG846  Upper Cavedale Road               CA   38.372100  -122.457400   2129 ft   PGE
+052PG  Willows                           CA   39.626510  -122.346510    397 ft   PGE
+PG842  Highway 162 - Foothills           CA   39.531300  -122.315030    227 ft   PGE
+PG844  Mt. Veeder                        CA   38.375200  -122.451390   2475 ft   PGE
+PG845  Road 65                           CA   39.434980  -122.306430    519 ft   PGE
+068PG  Half Moon Bay Switch              CA   37.450450  -122.429200     96 ft   PGE
+078PG  Miramontes Point Road             CA   37.432650  -122.420700    143 ft   PGE
+064PG  Quimby Road                       CA   37.345960  -121.736460   2123 ft   PGE
+PG843  Newville Road                     CA   39.785690  -122.519290    648 ft   PGE
+PG851  Dagnino Road                      CA   37.739100  -121.746930    551 ft   PGE
+PG847  Johnson Road West                 CA   40.151460  -122.477910    669 ft   PGE
+PG856  Evergreen Road                    CA   40.367540  -122.387350    485 ft   PGE
+075PG  Little Pico Creek                 CA   35.632750  -121.162070     57 ft   PGE
+077PG  Los Osos Valley Road              CA   35.300150  -120.775850     58 ft   PGE
+065PG  Stolo Winery                      CA   35.572480  -121.054150    154 ft   PGE
+073PG  Tepusquet Canyon Road East        CA   34.910920  -120.187220   3179 ft   PGE
+072PG  Hillcrest Drive - San Luis Obisp  CA   35.375350  -120.847120    206 ft   PGE
+074PG  Hearst Ranch                      CA   35.656360  -121.185860    160 ft   PGE
+PG841  Huckleberry Road                  CA   39.994200  -122.297500    446 ft   PGE
+PG803  Willits Fort Bragg                CA   39.320400  -123.299710   1627 ft   PGE
+093PG  Lower Bell Springs Road           CA   40.015820  -123.623490   2338 ft   PGE
+094PG  Harris Road - Humboldt            CA   40.086480  -123.659850   2204 ft   PGE
+067PG  Coggins Road                      CA   37.314000  -122.263810    925 ft   PGE
+082PG  Barry Road East                   CA   40.726590  -123.972260   2665 ft   PGE
+PG928  School Street                     CA   39.039040  -120.735700   3376 ft   PGE
+PG814  Noyes Ranch Road                  CA   38.766990  -122.495760   1105 ft   PGE
+061PG  Fort Bragg                        CA   39.395970  -123.801010    205 ft   PGE
+066PG  New Hogan Dam                     CA   38.165530  -120.814420    759 ft   PGE
+113PG  Dry Creek                         CA   38.686160  -122.938520    295 ft   PGE
+114PG  Lower Chemise Road                CA   38.647230  -122.947030    654 ft   PGE
+103PG  Kiwi Lane                         CA   40.480430  -122.395390    708 ft   PGE
+059PG  Santa Ana Valley Road             CA   36.861110  -121.347300    382 ft   PGE
+100PG  Stuart Ridge                      CA   37.230650  -122.049810   2004 ft   PGE
+PG813  Gray Road                         CA   38.886070  -122.691590   2451 ft   PGE
+060PG  Baywood Way                       CA   39.332650  -123.341220   2169 ft   PGE
+PG922  Van Tam Way                       CA   39.178550  -121.112480   2361 ft   PGE
+096PG  Bakers Creek Road                 CA   39.306020  -123.252690   2276 ft   PGE
+038PG  Laughlin Road                     CA   38.512400  -123.007240     43 ft   PGE
+083PG  Butler Ranch Road                 CA   39.066750  -123.197680   1744 ft   PGE
+111PG  Reeves Canyon Road                CA   39.281670  -123.279590   1267 ft   PGE
+089PG  Deer Meadows Drive                CA   39.032970  -123.348480   1626 ft   PGE
+108PG  Pentz Road                        CA   39.712080  -121.571960   1439 ft   PGE
+PG925  Meadow Valley Road                CA   39.366180  -121.229850   1894 ft   PGE
+097PG  Village Drive                     CA   38.275760  -120.979550    329 ft   PGE
+101PG  Sky Ranch Road                    CA   36.431340  -121.676710   1815 ft   PGE
+102PG  Moulton Loop                      CA   40.357200  -121.909520   1719 ft   PGE
+104PG  Pleasant Valley Lane              CA   36.549970  -121.701370   2019 ft   PGE
+088PG  Le Vin                            CA   38.892580  -123.118890   1654 ft   PGE
+095PG  Ridge Road - Lake                 CA   38.952560  -122.956610   1772 ft   PGE
+PG839  Lower Alderpoint Road             CA   40.164430  -123.613860    989 ft   PGE
+086PG  Verna Way                         CA   39.040470  -122.768420   1644 ft   PGE
+109PG  Taylor Canyon Road                CA   35.766030  -120.444280   1639 ft   PGE
+112PG  Davis Road                        CA   35.666220  -120.191940   2193 ft   PGE
+PG849  Elsey                             CA   39.608650  -121.622460    272 ft   PGE
+087PG  Sycamore Springs Road             CA   37.885100  -121.814260    427 ft   PGE
+098PG  Shake Ridge Road North            CA   38.482680  -120.604010   3080 ft   PGE
+117PG  Charleston Road                   CA   38.462230  -120.650770   2807 ft   PGE
+PG869  Browns Valley                     CA   39.223940  -121.422460    174 ft   PGE
+105PG  River Road - Monterey             CA   36.497960  -121.517690    451 ft   PGE
+076PG  Calaveras Airport                 CA   38.142840  -120.643160   1243 ft   PGE
+PG745  New Chicago Road                  CA   38.437680  -120.835220   1137 ft   PGE
+PG871  Vista Robles                      CA   39.418900  -121.509370    263 ft   PGE
+115PG  Liberty Lane                      CA   38.805500  -122.585430    988 ft   PGE
+091PG  Kortum Trail                      CA   38.416480  -123.100060    178 ft   PGE
+116PG  Newtown Road                      CA   39.257700  -121.086260   2381 ft   PGE
+123PG  Reuss Road                        CA   37.661620  -121.659520    938 ft   PGE
+134PG  Fountain Ranch Road               CA   40.895860  -123.580690    642 ft   PGE
+135PG  Chimney Rock East                 CA   39.891680  -123.580640   3076 ft   PGE
+137PG  Middletown South                  CA   38.732760  -122.608410   1665 ft   PGE
+158PG  Cooley Ranch                      CA   38.790500  -123.115540    976 ft   PGE
+079PG  Coastal Stage Road                CA   37.304150  -122.356440    241 ft   PGE
+PG870  Gulch Road                        CA   37.228070  -119.737550   1882 ft   PGE
+121PG  San Antonio Valley Road East - S  CA   37.365380  -121.478110   2042 ft   PGE
+PG855  Black Butte Lake                  CA   39.803570  -122.341020    480 ft   PGE
+081PG  Castle Rock                       CA   38.424120  -122.594190    877 ft   PGE
+154PG  New Long Valley Road              CA   39.086680  -122.679360   1314 ft   PGE
+133PG  Railroad Flat Road North          CA   38.325910  -120.519510   2648 ft   PGE
+149PG  San Antonio Road - Monterey       CA   35.823450  -120.980390   1069 ft   PGE
+145PG  Tassajara Road                    CA   36.367200  -121.574950   2797 ft   PGE
+141PG  Road 78                           CA   38.739390  -122.160220    342 ft   PGE
+155PG  Aluffo Road                       CA   35.712870  -120.957490    921 ft   PGE
+PG802  Whitehall Lane                    CA   38.465280  -122.480460   1513 ft   PGE
+084PG  Holst Road                        CA   38.495560  -122.597970   1928 ft   PGE
+160PG  Philo-Hopland                     CA   39.107860  -123.157020    616 ft   PGE
+159PG  East Hill Road                    CA   39.395040  -123.302910   1457 ft   PGE
+127PG  Dennis Drive                      CA   39.313970  -121.391720    594 ft   PGE
+PG920  Hidden Ranch Road                 CA   39.024080  -121.088610   1492 ft   PGE
+153PG  Francis Lane                      CA   38.822090  -122.543850   1767 ft   PGE
+161PG  Daly Place                        CA   38.818290  -122.498240    947 ft   PGE
+144PG  Atlantic Gold Hill                CA   38.657840  -121.134990    356 ft   PGE
+156PG  Benmore Valley Road               CA   39.018250  -123.039980   2605 ft   PGE
+162PG  Branscomb Road West               CA   39.652360  -123.624150   1565 ft   PGE
+PG868  Kelsey Canyon Road                CA   38.785720  -120.825400   1924 ft   PGE
+138PG  Paicines Road                     CA   36.610140  -120.921510   1436 ft   PGE
+151PG  Eden Valley Ranch                 CA   39.633280  -123.193790   2475 ft   PGE
+132PG  North Dublin                      CA   37.745230  -121.856950    573 ft   PGE
+PG859  Merced IDSM                       CA   37.292140  -120.408800    193 ft   PGE
+147PG  Felix Hill                        CA   38.020650  -120.705280   1147 ft   PGE
+157PG  Elk Mountain Road                 CA   39.246730  -122.950590   1471 ft   PGE
+148PG  Coyote Ridge Road                 CA   38.035310  -120.840180    460 ft   PGE
+PG919  Aetna Springs Road                CA   38.653680  -122.490470    902 ft   PGE
+090PG  Briggs Ranch Road                 CA   38.652180  -122.736140    280 ft   PGE
+177PG  Garden Valley West                CA   38.857080  -120.906180   2014 ft   PGE
+179PG  Crazy Horse                       CA   36.771180  -121.581400    657 ft   PGE
+185PG  Lower Cobb Ridge                  CA   38.805780  -122.814710   1893 ft   PGE
+188PG  Mendocino-Hartley                 CA   39.206630  -123.010360   2587 ft   PGE
+085PG  Burnside Road                     CA   38.376710  -122.866480    545 ft   PGE
+146PG  Fort Ross Sub                     CA   38.539870  -123.223720   1467 ft   PGE
+027PG  Sky Ranch Lane                    CA   38.420780  -122.084010   2019 ft   PGE
+128PG  Concow Basin                      CA   39.782980  -121.513590   2088 ft   PGE
+143PG  Pentz Valley                      CA   39.667570  -121.580760    535 ft   PGE
+172PG  Mays Canyon Road                  CA   38.486020  -122.971270    289 ft   PGE
+175PG  Poverty Lane                      CA   38.378460  -120.500160   2744 ft   PGE
+165PG  Walnut Drive - Colusa             CA   39.101330  -122.281720    303 ft   PGE
+163PG  Humboldt 140                      CA   38.885320  -122.468860   2393 ft   PGE
+150PG  South Fork North                  CA   40.535150  -122.557990   1359 ft   PGE
+142PG  Road 305                          CA   39.679950  -122.502640    637 ft   PGE
+164PG  Gomez Road                        CA   41.042900  -121.507520   3320 ft   PGE
+136PG  Oak Run Road Central              CA   40.641140  -122.086000    680 ft   PGE
+166PG  Paskenta                          CA   39.906420  -122.570430    899 ft   PGE
+124PG  Jelly's Ferry Road                CA   40.276490  -122.226120    388 ft   PGE
+131PG  Oroville-Cherokee                 CA   39.529790  -121.548350    314 ft   PGE
+152PG  Duck Cove Road                    CA   38.138240  -122.915550    354 ft   PGE
+173PG  Conrad Lane                       CA   40.116840  -122.072040    292 ft   PGE
+331PG  Harris Road - Mariposa            CA   37.454300  -119.735010   3044 ft   PGE
+184PG  Graciosa Road                     CA   34.824170  -120.458100    753 ft   PGE
+176PG  Phelan Morgan Road                CA   37.867350  -120.229380   2513 ft   PGE
+PG840  Smith Creek Road                  CA   40.220290  -123.305750   2764 ft   PGE
+129PG  Laufer Rd                         CA   40.081330  -123.546550   1865 ft   PGE
+186PG  Hernandez Road                    CA   36.511430  -121.081730   1340 ft   PGE
+069PG  Ano Nuevo                         CA   37.140190  -122.318880    156 ft   PGE
+190PG  Elk Rock                          CA   39.098410  -123.704630    300 ft   PGE
+191PG  Shellenger Road                   CA   38.797450  -122.956240   1936 ft   PGE
+168PG  Mariposa Hills                    CA   37.495750  -120.134620   1313 ft   PGE
+187PG  Bridgeport                        CA   37.414380  -120.027370   2567 ft   PGE
+193PG  Terry Mill Road                   CA   40.810940  -121.865800   4085 ft   PGE
+174PG  Carberry                          CA   40.824110  -121.800030   4655 ft   PGE
+120PG  Humboldt Manzanita Ranch          CA   40.716280  -123.538050   1647 ft   PGE
+139PG  Mines Tower                       CA   37.606110  -121.621440   2924 ft   PGE
+198PG  Bass Lake Road - Madera           CA   37.338200  -119.584470   3434 ft   PGE
+118PG  Central Gulch                     CA   39.225260  -123.208610    771 ft   PGE
+195PG  Davis Ranch                       CA   40.347720  -122.486250    625 ft   PGE
+245PG  Yankee Hill                       CA   39.697030  -121.525000   1659 ft   PGE
+207PG  Riviera Estates                   CA   38.990290  -122.743950   1513 ft   PGE
+211PG  Cloverdale                        CA   40.485470  -122.511350    975 ft   PGE
+194PG  Broadview Drive                   CA   38.989680  -122.757250   2238 ft   PGE
+210PG  Wild Turkey Lane                  CA   40.507590  -121.732020   4032 ft   PGE
+243PG  Mayberery                         CA   39.557520  -121.430710   1441 ft   PGE
+263PG  Inwood Road                       CA   40.526020  -121.957300   2043 ft   PGE
+PG804  Los Posadas Forest                CA   38.563700  -122.400550   1251 ft   PGE
+119PG  Cornwall Road                     CA   39.106950  -122.799870   1948 ft   PGE
+126PG  Lower Pine Mountain               CA   38.837750  -123.006750    781 ft   PGE
+182PG  Casterlin Road                    CA   40.235990  -123.617620    758 ft   PGE
+196PG  Chalair Drive                     CA   39.717350  -121.507120   2015 ft   PGE
+203PG  Humboldt Cave Creek Road          CA   39.380970  -123.211810   1961 ft   PGE
+205PG  Laytonville Dos Rios Road         CA   39.705990  -123.363710   1462 ft   PGE
+206PG  Diablo Grande Parkway             CA   37.444330  -121.193810    487 ft   PGE
+213PG  Center Gap Road South             CA   39.759830  -121.679660    557 ft   PGE
+214PG  Arbuckle Mountain                 CA   40.364220  -122.869060   2384 ft   PGE
+212PG  Cruz Rock                         CA   35.711850  -121.295810     24 ft   PGE
+208PG  Excelsior Road                    CA   38.716490  -120.803790   2018 ft   PGE
+204PG  Bellota EMS                       CA   38.017000  -121.015250    156 ft   PGE
+200PG  Herndon Sub EMS                   CA   36.840640  -119.922120    295 ft   PGE
+259PG  Bagby                             CA   37.633470  -120.153780   1640 ft   PGE
+246PG  McCall EMS                        CA   36.612590  -119.640260    317 ft   PGE
+140PG  Bailey Road                       CA   38.007620  -121.940700    290 ft   PGE
+209PG  Stardust Lane                     CA   38.870770  -121.253250    369 ft   PGE
+244PG  Quartz Trail                      CA   37.174830  -119.683580   2320 ft   PGE
+264PG  Osprey Drive                      CA   38.301750  -123.004640    254 ft   PGE
+178PG  Nicasio Valley Road               CA   38.103920  -122.728280    241 ft   PGE
+339PG  Arroyo Hills                      CA   37.601380  -121.749800   1464 ft   PGE
+262PG  Chowchila Mountain                CA   37.484130  -119.719520   3911 ft   PGE
+337PG  Gates EMS                         CA   36.137990  -120.122440    396 ft   PGE
+334PG  Carr Ranch Road                   CA   37.813220  -122.104190    621 ft   PGE
+333PG  Dana Foothill                     CA   35.040550  -120.444060    535 ft   PGE
+215PG  Anderson Valley Highway           CA   39.045610  -123.404690    406 ft   PGE
+329PG  Old Mount Road                    CA   37.130410  -122.022340   1189 ft   PGE
+316PG  Highway 25                        CA   36.666430  -121.249050    839 ft   PGE
+PG746  Rush Creek Hill                   CA   40.069870  -121.117720   6174 ft   PGE
+318PG  Indian Valley Road Central        CA   35.944290  -120.666430   1193 ft   PGE
+325PG  Buckhorn Ridge                    CA   35.025290  -120.197940   1028 ft   PGE
+181PG  Marysville IDSM                   CA   39.164460  -121.561450     71 ft   PGE
+319PG  Parkfield Coalinga Road           CA   35.897510  -120.437790   1520 ft   PGE
+326PG  Wilson Hill Road North            CA   40.468560  -121.884330   2915 ft   PGE
+327PG  Oak Run Road North                CA   40.700090  -122.037830   1460 ft   PGE
+321PG  Old Sacramento Road               CA   38.485720  -120.911230    643 ft   PGE
+315PG  St. George Road                   CA   38.714260  -122.841050    908 ft   PGE
+332PG  Caswell Road                      CA   38.744800  -120.836110   1817 ft   PGE
+189PG  Upper Lake Sonoma                 CA   38.746920  -123.118470   1720 ft   PGE
+169PG  Rifle Range Road                  CA   37.759060  -122.081130    894 ft   PGE
+250PG  Harville Road                     CA   38.489430  -122.666560    349 ft   PGE
+293PG  Auction Yard                      CA   40.307280  -122.282900    643 ft   PGE
+170PG  Crow Canyon Rd                    CA   37.765430  -122.023370    631 ft   PGE
+261PG  Newark EMS                        CA   37.506000  -121.986900     15 ft   PGE
+330PG  Swanton Road                      CA   37.036480  -122.210550    338 ft   PGE
+PG751  Vaca-Dixon IDSM                   CA   38.403650  -121.916590     82 ft   PGE
+295PG  Bailinquick Road                  CA   38.070870  -120.649820   1355 ft   PGE
+167PG  High Valley                       CA   39.069050  -122.690870   1855 ft   PGE
+PG906  Yankee Jims Road                  CA   39.031220  -120.862960   2618 ft   PGE
+247PG  Flintlock Place                   CA   39.018590  -122.506530   1982 ft   PGE
+323PG  Camp Nine Road                    CA   38.157020  -120.384920   2984 ft   PGE
+324PG  Berryessa Peak                    CA   38.666130  -122.191340   2909 ft   PGE
+240PG  Mine Road                         CA   38.567510  -120.667580   2898 ft   PGE
+257PG  Passalaqua Road                   CA   38.651300  -122.845510    284 ft   PGE
+251PG  Cottonwood EMS                    CA   40.396680  -122.270950    444 ft   PGE
+260PG  Dibble Creek Road                 CA   40.220490  -122.391310    566 ft   PGE
+248PG  Shingle Road                      CA   38.595530  -120.960520   1193 ft   PGE
+258PG  Peckham Road                      CA   36.951460  -121.701820    277 ft   PGE
+252PG  Kirby Canyon                      CA   37.177360  -121.673490    547 ft   PGE
+241PG  Los Banos EMS                     CA   37.055080  -121.016860    305 ft   PGE
+255PG  Uvas Hill                         CA   37.074180  -121.681950   1093 ft   PGE
+256PG  Apple Colony Road                 CA   37.921090  -120.254090   2368 ft   PGE
+338PG  Little Sugarloaf                  CA   38.543870  -122.241400    844 ft   PGE
+320PG  Lower Chiles Valley Road          CA   38.517380  -122.311150    974 ft   PGE
+253PG  Starr Ranch                       CA   35.668970  -120.855800   1501 ft   PGE
+317PG  Sage Canyon Road                  CA   38.463580  -122.336970   1380 ft   PGE
+410PG  Sand Haul Road                    CA   38.247480  -122.954730    306 ft   PGE
+254PG  Lower Deer Creek Highway          CA   39.786490  -121.725390   1380 ft   PGE
+336PG  Purisima Road                     CA   37.447040  -122.404200    268 ft   PGE
+322PG  Lakewood Meadow                   CA   37.928660  -121.997010    395 ft   PGE
+242PG  Highway 198 West                  CA   36.159090  -120.905760    928 ft   PGE
+328PG  Hoopa                             CA   41.046990  -123.673250    338 ft   PGE
+080PG  Byron Hills                       CA   37.841020  -121.724540    315 ft   PGE
+402PG  Butts Canyon Rd                   CA   38.736150  -122.514910    991 ft   PGE
+404PG  Rodgers Flat                      CA   39.960120  -121.280090   2044 ft   PGE
+411PG  Spring Hill Road                  CA   38.232830  -122.735840    227 ft   PGE
+249PG  High Gate Hill                    CA   38.131840  -122.178190    694 ft   PGE
+401PG  Crazy Horse Canyon                CA   36.520110  -121.366000    731 ft   PGE
+409PG  Palermo                           CA   39.452580  -121.515860    383 ft   PGE
+391PG  Table Mountain EMS                CA   39.552480  -121.649320    153 ft   PGE
+392PG  Monte Vista EMS                   CA   37.324860  -122.073820    388 ft   PGE
+393PG  Pecho Valley Road                 CA   35.303980  -120.860350    260 ft   PGE
+394PG  Moraga Bluffs                     CA   37.841250  -122.090060    859 ft   PGE
+395PG  Cortina EMS                       CA   39.119620  -122.219980    143 ft   PGE
+396PG  Metcalf EMS                       CA   37.221230  -121.740270    253 ft   PGE
+397PG  Alexander Valley Rd               CA   38.653850  -122.839010    259 ft   PGE
+398PG  Ignacio EMS                       CA   38.076900  -122.542080      4 ft   PGE
+399PG  Llagas Creek                      CA   37.149040  -121.742340    616 ft   PGE
+408PG  Norbom Road                       CA   38.335560  -122.444530    939 ft   PGE
+413PG  Carson Road                       CA   38.741790  -120.724470   2877 ft   PGE
+412PG  Livingston Lane                   CA   38.660610  -120.750160   2251 ft   PGE
+403PG  Lone Barn Road                    CA   38.598200  -120.756640   1823 ft   PGE
+406PG  Drivers Flat Road                 CA   38.958640  -120.953670   1783 ft   PGE
+414PG  Tomales Shadow                    CA   38.179880  -122.832640    207 ft   PGE
+301PG  Slickrock Hills                   CA   36.667240  -119.118960   2766 ft   PGE
+390PG  Salmon Creek Overlook             CA   38.350510  -123.050370    303 ft   PGE
+299PG  Lonoak                            CA   36.285360  -120.936080    926 ft   PGE
+400PG  Morro Bay Power Plant EMS         CA   35.376080  -120.851880     20 ft   PGE
+305PG  Lower Ishi Road                   CA   40.198050  -122.134850    342 ft   PGE
+298PG  Shingletown Ranch                 CA   40.514150  -121.707350   4204 ft   PGE
+304PG  Potter Valley Hills               CA   39.207210  -123.037170   2254 ft   PGE
+407PG  Basler Road                       CA   40.283730  -122.365230    598 ft   PGE
+405PG  Albion Ridge Road                 CA   39.222290  -123.761450    337 ft   PGE
+201PG  Black Diamond Road                CA   39.408820  -122.546410   1087 ft   PGE
+300PG  Stoney Creek Road                 CA   38.354380  -120.795860   1471 ft   PGE
+311PG  Lower Hogan Dam                   CA   38.119550  -120.801400    740 ft   PGE
+314PG  Tule Powerhouse                   CA   36.159610  -118.718380   2401 ft   PGE
+313PG  Redinger Way                      CA   37.165760  -119.434900   1639 ft   PGE
+294PG  Piney Creek Road                  CA   37.700260  -120.296210   1411 ft   PGE
+309PG  Carbondale Road                   CA   38.450220  -120.963850    557 ft   PGE
+303PG  Pit 7                             CA   40.839190  -121.977440   2311 ft   PGE
+308PG  Porto Fino Rd                     CA   37.971630  -120.243520   2715 ft   PGE
+297PG  Morales Ranch Road                CA   38.566120  -120.848060    962 ft   PGE
+292PG  Williamson Melones                CA   37.971030  -120.473710   1529 ft   PGE
+310PG  Spring Creek                      CA   40.662320  -122.488790   1591 ft   PGE
+306PG  Mining Claim Road                 CA   40.621720  -122.476220   1153 ft   PGE
+296PG  Lower Haney Mountain              CA   40.997020  -121.473130   3785 ft   PGE
+307PG  Cloud Lane                        CA   38.198650  -122.599920    195 ft   PGE
+302PG  Alisal Road                       CA   34.547410  -120.120130    675 ft   PGE
+291PG  Lovall Valley Road                CA   38.299410  -122.397690    666 ft   PGE
+290PG  Cressman Road                     CA   37.045770  -119.351530   4071 ft   PGE
+180PG  Sweeney Ridge                     CA   37.605380  -122.458380   1208 ft   PGE
+312PG  Oasis Road                        CA   36.112160  -121.087380    570 ft   PGE
+335PG  Rush Creek Road                   CA   40.038700  -121.131260   3399 ft   PGE
+192PG  Kelsey Creek Road                 CA   38.934370  -122.850940   1459 ft   PGE
+218PG  Oroville Quincy Highway           CA   39.690580  -121.338710   3556 ft   PGE
+226PG  Bear Cub Circle                   CA   39.622200  -121.392350   2304 ft   PGE
+225PG  Gamble Road                       CA   39.637670  -121.395280   2157 ft   PGE
+228PG  Big Ridge Road                    CA   39.604580  -121.375650   2345 ft   PGE
+217PG  Zink Road                         CA   39.640400  -121.369280   2396 ft   PGE
+197PG  Sanhedrin Road                    CA   39.627820  -122.599510   1046 ft   PGE
+202PG  Butt Valley Powerhouse            CA   40.160950  -121.177820   4164 ft   PGE
+199PG  Johnson Road East                 CA   40.150760  -122.386040    538 ft   PGE
+237PG  Camenzind Court                   CA   39.838970  -121.886860    247 ft   PGE
+236PG  Mendocino EMS                     CA   39.251680  -123.198900    720 ft   PGE
+229PG  Last Chance Road                  CA   37.087240  -122.260290    600 ft   PGE
+234PG  Black Diamond Mines               CA   37.976420  -121.857960    711 ft   PGE
+238PG  Haas Power House EMS              CA   36.905520  -119.057830   3881 ft   PGE
+221PG  Highway 46                        CA   35.726760  -120.195690   1454 ft   PGE
+222PG  Stonegate                         CA   38.449170  -122.613740    437 ft   PGE
+227PG  Yard 49                           CA   37.586730  -120.125810   2240 ft   PGE
+239PG  Sink Road                         CA   38.823610  -123.028680    343 ft   PGE
+235PG  Byron Hot Springs                 CA   37.802980  -121.644990    408 ft   PGE
+231PG  Pozo Road West                    CA   35.303480  -120.369990   1473 ft   PGE
+007PG  Willow Canyon Drive               CA   37.264290  -119.507560   3142 ft   PGE
+122PG  Chinese Camp                      CA   37.858210  -120.420270   1294 ft   PGE
+233PG  Hi Mountain Road                  CA   35.203960  -120.420750    694 ft   PGE
+223PG  Lorenz Road                       CA   40.993530  -121.625840   2990 ft   PGE
+232PG  Bogard                            CA   40.580540  -121.084640   5648 ft   PGE
+130PG  Railroad Flat Road South          CA   38.253330  -120.514720   2593 ft   PGE
+230PG  Margarita Vineyards               CA   35.358350  -120.555480   1235 ft   PGE
+216PG  Snag Hill Lookout                 CA   40.970300  -121.012200   6069 ft   PGE
+PG938  San Ramon IDSM                    CA   37.782730  -121.966300    475 ft   PGE
+219PG  Yosemite 49                       CA   37.681700  -120.174660   2024 ft   PGE
+183PG  Gericke Road                      CA   38.285300  -122.887090     89 ft   PGE
+286PG  Arvin Hills                       CA   35.199890  -118.769730    547 ft   PGE
+350PG  Toomes Camp Road                  CA   39.889040  -122.629230   2399 ft   PGE
+277PG  Drunken Gulch Towers              CA   37.550290  -120.099660   1995 ft   PGE
+353PG  Whiskeytown                       CA   40.635420  -122.560180   1239 ft   PGE
+340PG  Road to Ranches                   CA   38.056480  -122.733100    858 ft   PGE
+349PG  Point Lakeview Road               CA   38.952550  -122.705440   1733 ft   PGE
+346PG  Chaparral Cove                    CA   38.615760  -122.289750    488 ft   PGE
+285PG  Montezuma Road                    CA   37.899350  -120.453870   1238 ft   PGE
+348PG  Laytonville Valley Drive          CA   39.696870  -123.525970   1711 ft   PGE
+356PG  Pleasure Cove                     CA   38.451380  -122.152040    608 ft   PGE
+341PG  Old Stage Road - Butte            CA   39.667880  -121.654030    710 ft   PGE
+361PG  Francis Drake Hills South         CA   38.088260  -122.917420    191 ft   PGE
+276PG  Tarina                            CA   35.387390  -118.810990   1180 ft   PGE
+344PG  Bodega                            CA   38.350500  -122.961170    144 ft   PGE
+347PG  Belmont IDSM                      CA   37.515450  -122.261810      9 ft   PGE
+274PG  Lower Fence Meadow                CA   36.961300  -119.204210   2466 ft   PGE
+354PG  Ukiah IDSM                        CA   39.143360  -123.192140    587 ft   PGE
+342PG  Storrie Road                      CA   39.872090  -121.379370   2577 ft   PGE
+352PG  Castle Rock Springs               CA   38.773550  -122.779160   3174 ft   PGE
+343PG  Greenville                        CA   40.140090  -120.936190   3560 ft   PGE
+364PG  Red Rock Tower                    CA   39.025200  -122.630920   2219 ft   PGE
+355PG  Bolinas Fire Station              CA   37.908820  -122.702810    186 ft   PGE
+362PG  Lake Almanor Dam                  CA   40.173430  -121.089690   4526 ft   PGE
+275PG  Lower Bucks Lake Tower            CA   39.902480  -121.249780   5740 ft   PGE
+282PG  Birchville Road                   CA   39.318300  -121.132020   1936 ft   PGE
+357PG  Kelsey Creek                      CA   38.911230  -122.867010   1690 ft   PGE
+359PG  Pride Mountain Vineyard           CA   38.523740  -122.567520   2121 ft   PGE
+345PG  San Antonio Valley                CA   37.339420  -121.527330   2169 ft   PGE
+369PG  Highway 20 Lake                   CA   38.994670  -122.550440   1014 ft   PGE
+266PG  Black Mountain Lookout            CA   37.013030  -119.452030   3579 ft   PGE
+283PG  Rancheria Road                    CA   35.488290  -118.808000   1850 ft   PGE
+375PG  Paxton Road                       CA   40.038670  -120.983680   2934 ft   PGE
+281PG  Sierra Bald Mountain Lookout      CA   38.904010  -120.705200   4585 ft   PGE
+269PG  Little Bald Mountain              CA   39.143930  -120.508930   7144 ft   PGE
+378PG  London Flat                       CA   40.718420  -122.678960   2591 ft   PGE
+388PG  St. Helena IDSM                   CA   38.499730  -122.460180    232 ft   PGE
+270PG  Cole Creek Road                   CA   38.510870  -120.217280   5854 ft   PGE
+382PG  Trinity-Cottonwood                CA   40.681100  -122.839080   2476 ft   PGE
+372PG  Keswick-Trinity                   CA   40.707400  -122.892960   2808 ft   PGE
+374PG  Gravelly Ridge                    CA   39.515920  -122.562390   1826 ft   PGE
+289PG  Red Rock Mountain                 CA   34.691170  -120.267430   1968 ft   PGE
+284PG  Sierra Highway 20                 CA   39.306450  -120.678580   4557 ft   PGE
+373PG  Red Bluff Powerhouse              CA   40.212840  -122.114460    887 ft   PGE
+287PG  Leek Spring Hill                  CA   38.629260  -120.277790   7621 ft   PGE
+384PG  Meyers Grade                      CA   38.510300  -123.197400   1612 ft   PGE
+422PG  Breckenridge Road South           CA   35.407760  -118.761420   1817 ft   PGE
+436PG  Forest Route 1S26                 CA   37.853700  -119.964350   4172 ft   PGE
+377PG  Shiell Gulch                      CA   40.372270  -122.996090   3313 ft   PGE
+381PG  Diamond Springs                   CA   39.607120  -121.075230   4211 ft   PGE
+376PG  Stewarts Ranch                    CA   40.152570  -123.460140   3452 ft   PGE
+427PG  Los Padres Hills                  CA   34.675980  -120.335920    700 ft   PGE
+265PG  Midway-Santa Maria                CA   34.999670  -120.221410   2009 ft   PGE
+368PG  North Valley Cold Spring Mountai  CA   39.098600  -122.488980   3573 ft   PGE
+358PG  Honeydew                          CA   40.247530  -124.126800    406 ft   PGE
+278PG  Smith Peak                        CA   37.800710  -120.100750   3877 ft   PGE
+367PG  Chambers Road                     CA   40.323060  -124.258970    347 ft   PGE
+268PG  Miami Mountain                    CA   37.419420  -119.745150   4324 ft   PGE
+365PG  Hammer Loop Road                  CA   40.144020  -122.732480   2325 ft   PGE
+370PG  Stewarts Point Highway 1          CA   38.653720  -123.400290    168 ft   PGE
+280PG  Yosemite Pilot Peak               CA   37.762590  -119.935880   6002 ft   PGE
+387PG  Little Valley                     CA   40.959900  -121.267450   3739 ft   PGE
+389PG  Lower Stewarts Ranch Peak         CA   40.124640  -123.476780   2300 ft   PGE
+386PG  Reed Orchid Road                  CA   39.993720  -121.965620    411 ft   PGE
+432PG  Stockton IDSM                     CA   37.946690  -121.288920     13 ft   PGE
+371PG  Camel Peak                        CA   39.720180  -121.101530   5701 ft   PGE
+437PG  Weaverville                       CA   40.733070  -123.048990   1866 ft   PGE

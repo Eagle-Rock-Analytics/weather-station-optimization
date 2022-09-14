@@ -2,11 +2,9 @@
 ## Source: https://mesowest.utah.edu/cgi-bin/droman/meso_station.cgi
 
 library(tidyverse)
-library(rvest)
-library(janitor)
 
 ## Read in HTML table of observations
-table <- read_table('pge.txt',skip = 0, col_names = F, guess_max = 1300)
+table <- read_table('weather_stations/pge.txt',skip = 0, col_names = F, guess_max = 1300)
 colnames(table) <- c('STN', 'NAME', 'Name2', 'Name3', 'ST', 'LAT', 'LON', 'ELV', 'MNET')
 
 # Clean up table to get station coordinates
@@ -29,12 +27,12 @@ readRDS("map_data/wx_station.rds")
 # new PGE stations 
 new_pge <- pge_clean %>%
   filter(!(STN %in% wx_station$Station.ID)) %>% ## not in existing dataset
-  select(-data, -coords)
+  dplyr::select(-data, -coords)
   
 # format to existing data table
 colnames(new_pge) <- c("Station.ID", "Latitude", "Longitude")
 new_pge$Latitude <- as.numeric(new_pge$Latitude)
-new_pge$Longitude <- as.numeric(new_pge$Longitude)
+new_pge$Longitude <- as.numeric(new_pge$Longitude)*-1
 new_pge$Mesonet <- "PGE"
 new_pge$Station.Name <- NA
 new_pge$Elevation <- NA

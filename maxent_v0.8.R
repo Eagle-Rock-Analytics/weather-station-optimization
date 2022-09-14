@@ -143,8 +143,8 @@ bioclim.data.CA<-brick(paste0(map_data, "CA_worldclim_crop.tif"))
 
 auc_table <- data.frame(loc = c(), quality = c(), auc = c())
 
-for (l in 2:length(loc.number)) {
-#for (l in 3) {
+#for (l in 2:length(loc.number)) {
+for (l in 3) {
   for (t in 1:5 ) {
 
     # #debug values

@@ -1,6 +1,8 @@
 # weather-station-optimization
 Weather station optimization work for Pyregence
+
 Authors: Grace Di Cecco & Owen Doherty
+
 Organization: Eagle Rock Analytics
 
 ### Overview
@@ -24,7 +26,7 @@ Scripts to run different iterations of MaxEnt are as follows:
 *Present day*
 - `maxent_v0.8.R` runs MaxEnt models for fire weather regions and IOU service territories for present-day climate conditions (input climate layers from WorldClim at 1-km resolution)
 - `statewide_v1.R` runs MaxEnt models for the whole state of California for present-day climate conditions (input climate layers from WorldClim at 1-km resolution)
--`process_worldclim.R` formats WorldClim data into raster layers for inputting into MaxEnt
+- `process_worldclim.R` formats WorldClim data into raster layers for inputting into MaxEnt
 
 *Future climate*
 - `maxent_wrf4km.R` and `statewide_wrf4km.R` run MaxEnt models for fire weather regions and IOU service territories, and statewide for CA, respectively, using future climate projections downscaled with WRF at 4-km resolution

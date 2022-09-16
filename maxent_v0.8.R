@@ -92,6 +92,20 @@ firewx.sf <- readRDS(file=paste0(map_data, "firewx.sf.RDS")) #stand alone fire w
 
 wx.station <- readRDS(file = paste0(map_data, "wx_station.rds"))
 
+# just for eval of potential new PG&E sites
+# 
+# new_sites <- read.csv("weather_stations/potential_pge_sites.csv", stringsAsFactors = F)
+# new_sites_formatted <- new_sites %>%
+#   dplyr::select(-asset_type) %>%
+#   rename(Station.Name = "ï..stn_name", Latitude = "lat", Longitude = "lon") %>%
+#   mutate(Mesonet = NA, Station.ID = NA,
+#          Elevation = NA, County = NA, 
+#          First.Data.Date = NA, Last.Data.Date = NA,
+#          Status = NA, last.year = NA, Quality = 2, Tier = "IOU")
+# 
+# wx.station <- readRDS(file = paste0(map_data, "wx_station.rds")) %>%
+#   bind_rows(new_sites_formatted)
+
 # #set level of data quality; 1 highest, 2 iou/state, 3 universities, 4 private, 5 citizen
 # #quality.accept = 3
 # 
@@ -308,7 +322,7 @@ dev.off()
       geom_polygon(data = CA.counties, aes(x=long, y=lat, group=group), color="black",fill=NA, size=0.5, alpha=0, show.legend = TRUE)+
       geom_path(data = highways.in, aes(x=long, y=lat, group=group), inherit.aes = FALSE, size=0.05, color="black", alpha=1, show.legend = TRUE)+
       geom_point(alpha= 0.8, size=0.25, color="black")+
-      
+       
       coord_fixed(xlim = c(shape.extent@xmin,shape.extent@xmax),  ylim = c(shape.extent@ymin, shape.extent@ymax), ratio=1.3)+
       
       theme(plot.title = element_text(size = 25, face = "bold"),

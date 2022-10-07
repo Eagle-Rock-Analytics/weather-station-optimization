@@ -157,8 +157,8 @@ bioclim.data.CA<-brick(paste0(map_data, "CA_worldclim_crop.tif"))
 
 auc_table <- data.frame(loc = c(), quality = c(), auc = c())
 
-#for (l in 2:length(loc.number)) {
-for (l in 3) {
+for (l in 2:length(loc.number)) {
+#for (l in 3) {
   for (t in 1:5 ) {
 
     # #debug values
@@ -294,6 +294,16 @@ for (l in 3) {
     test_spdf <- as(maxent.pred, "SpatialPixelsDataFrame")
     test_df <- as.data.frame(test_spdf)
     
+    # threshold output
+    thresh_out <- threshold(e3, stat = 'spec_sens') # eval threshold level - maximize sum of sensitivity and specificity
+    
+    # threshold breaks
+    breaks <- matrix(c(0, thresh_out, 1,
+                thresh_out, 1, 0), ncol = 3, byrow = T)
+    
+    # threshold raster
+    thresh_raster <- reclassify(maxent.pred, breaks)
+    
     #Save workspace for later
     #save(bioclim.data,stationocc,stationtest,stationtrain,maxent.me,maxent.pred,obs.data,file="/media/owen/data2/wildfire/statewide_test.RData") 
     
@@ -340,7 +350,7 @@ dev.off()
     # #### Section 8: Data dump ####
     # 
     fout = paste0(output_dir, "model_",file.location.string,"_wxstathresh_",t,'.RData')
-    save(list=c("maxent.me", "maxent.pred"), file=fout)
+    save(list=c("maxent.me", "maxent.pred", "thresh_raster"), file=fout)
 
     fout = paste0(output_dir, "prediction",file.location.string,"_wxstathresh_",t,'.RDS')
     saveRDS(test_spdf,fout)

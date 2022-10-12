@@ -1,0 +1,21 @@
+File naming structure for prediction rasters
+Spatial resolution: 1 km x 1 km
+
+Each individual similiarty score data file follows a standard naming convention: 
+
+model_[domain]_wxstathresh_[quality-tier]_[data-type].grd
+
+Domain:
+IOU name - analysis considers only weather and stations within IOU service territory
+Fire Weather Region - analysis contains weather stations and weather within an individual fire weather region
+
+Quality tier:
+1 - Federally monitored and calibrated instrumentation (i.e., NOAA/FAA, RAWS)
+2 - Quality Tier 1, and utility installed and maintained weather stations
+3 - Quality Tier 2, and researcher installed and maintained weather stations
+4 - Quality Tier 3, and weather stations installed and maintained by other government agencies
+5 - All known weather stations, including public
+
+Data type:
+simscore - Continuous similarity score between 0-1 for all raster cells in spatial domain
+threshscore - Thresholded similarity score highlighting areas of highest priority for coverage by weather stations

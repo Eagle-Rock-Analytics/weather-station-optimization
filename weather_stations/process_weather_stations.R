@@ -84,3 +84,29 @@ geographic.extent <- extent(x = c(min.lon, max.lon, min.lat, max.lat))
 #Save output as its own dataset
 setwd('~/research/wildfire/rds')
 saveRDS(active.all, file = "wx_station.rds")
+
+### Append updated IOU stations
+wx_station <- readRDS('map_data/wx_station.rds')
+
+# Quality tiers
+quality_tiers <- wx_station %>% distinct(Mesonet, Quality, Tier)
+
+# read in synoptic csvs, organize colnames, join in quality tiers
+new_data <- map_dfr(paste0('weather_stations/', 
+                           list.files('weather_stations/')[grepl('synoptic', list.files('weather_stations/'))]),
+                    ~read_csv(., col_types = c('ELEV_DEM' = 'c'))) %>%
+  dplyr::select(MNET_SHORTNAME, STID, SHORTNAME, ELEVATION, LONGITUDE, LATITUDE, COUNTY, STATUS) %>%
+  rename('Mesonet' = MNET_SHORTNAME, 'Station.ID' = STID, 'Station.Name' = SHORTNAME,
+         'Elevation' = ELEVATION, 'Longitude' = LONGITUDE, 'Latitude' = LATITUDE, 'County' = COUNTY,
+         'Status' = STATUS) %>%
+  mutate_at(c('Elevation'), ~as.factor(.)) %>%
+  filter(!(Station.ID %in% wx_station$Station.ID)) %>%
+  left_join(quality_tiers, by = 'Mesonet')
+
+# append unique stations to wx_station
+wx_station_appended <- wx_station %>%
+  bind_rows(new_data)
+
+# save file
+write_rds(wx_station_appended, 'map_data/wx_station_2023.rds')
+

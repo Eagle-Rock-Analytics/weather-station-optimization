@@ -1,6 +1,6 @@
 
 # Read in statewide weather stations
-setwd('~/research/wildfire')
+setwd('weather_stations/')
 in.data <- read.csv(file = "statewide_stations.csv")
 
 #Remove all rows with na's in them

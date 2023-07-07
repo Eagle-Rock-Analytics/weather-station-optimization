@@ -1,0 +1,64 @@
+MesoWest ID,Abbreviation,Mesonet Full Name,Quality,Tier,Active Stations,Total Stations,Last Observation (UTC)
+11,AGRIMET,U.S. Bureau of Reclamation,2,Federal-Low,87,96,2021-01-12 15:30
+136,AIRNOW,AIRNow,3,Research,1350,1999,2021-01-12 16:00
+65,APRSWXNET/CWOP,Automatic Position Reporting System WX NET/Citizen Weather Observer Program,5,Citizen,10096,23306,2021-01-12 16:12
+261,AZ-CLIMATE,Arizona State Climate Office,2,State & Local,3,3,2021-01-12 15:50
+31,BAMI,Bay Area Mesoscale Initiative,2,State & Local,0,20,2003-02-06 21:55
+59,CALTRANS,California Department of Transportation,2,State & Local,111,158,2021-01-12 16:12
+57,CARB,California Air Resources Board,2,State & Local,173,263,2021-01-12 16:00
+140,CDEC,California Department of Water Resources,2,State & Local,6,8,2021-01-12 16:00
+50,CEMP,Community Environmental Monitoring Program,3,University,13,30,2021-01-12 15:50
+66,CIMIS,California Irrigation Management Information System,2,State & Local,128,181,2021-01-08 15:00
+30,CLR,China Lake/Fort Irwin,2,Federal-Low,0,24,2009-08-04 19:00
+43,CNRFC,California Nevada River Forecast Center,2,Federal-Low,578,694,2021-01-12 16:05
+260,CW3E,Scripps CW3E Mesonet,3,University,11,11,2020-12-31 23:58
+62,DRI,Desert Research Institute,3,University,82,162,2021-01-12 15:50
+145,EDW,Edwards Air Force Base,4,Federal-Low,0,14,2011-08-03 23:36
+172,EKAWFO,Eureka Weather Forecast Office,1,Federal-Low,1,1,2021-01-12 16:00
+69,GPSMET,FSL Ground-Based GPS ,3,University,0,324,2015-09-09 19:10
+106,HADS,Hydrometeorological Automated Data System,2,Federal-Low,5867,7642,2021-01-12 16:11
+83,HNXWFO,Hanford Weather Forecast Office,1,Federal,15,28,2021-01-12 16:10
+222,HOLFUY,Holfuy Meteorology,4,Private,8,9,2021-01-12 16:00
+81,HPWREN,High Performance Wireless Research and Education Network,3,University,19,26,2021-01-12 16:06
+209,IFLOWS,Integrated Flood Observing and Warning System,2,Federal-Low,1330,1887,2021-01-12 16:10
+191,JPL,NASA Jet Propulsion Laboratory,3,University,5,5,2021-01-12 15:00
+240,KIRKWOOD,Kirkwood Mountain Resort,4,Private,2,2,2021-01-12 15:55
+243,LIBERTY,Liberty Utilities,2,IOU,29,29,2021-01-12 16:10
+17,LOXWFO,Los Angeles/Oxnard Weather Forecast Office,2,Federal-Low,21,55,2021-01-12 16:03
+95,MAMMOTH,Mammoth Mountain Ski Area,4,Private,7,17,2021-01-12 16:02
+195,MAP,Multi-Agency Profiler Surface Observations,2,Federal-Low,84,149,2021-01-12 15:00
+96,MARITIME,Moored Buoys and CMAN,2,Federal-Low,354,852,2021-01-12 16:00
+12,MISC,Miscellaneous,5,Unknown,43,85,2021-01-12 16:10
+128,MTRWFO,Monterey Weather Forecast Office,2,Federal-Low,12,18,2021-01-12 16:05
+108,NCAWOS,MADIS Non-Commissioned AWOS,2,Federal-Low,107,167,2020-12-31 23:40
+188,NERRS,National Estuarine Research Reserve System,1,Federal,29,34,2021-01-12 16:00
+122,NOS-NWLON,National Ocean Service Water Level Observation Network,2,Federal-Low,188,247,2021-01-12 16:00
+121,NOS-PORTS,National Ocean Service Physical Oceanographic Real-Time System,2,Federal-Low,57,73,2021-01-12 15:54
+22,NV DOT,Nevada Department of Transportation,2,State & Local,108,125,2021-01-12 16:12
+259,NV-ENERGY,NV Energy,2,IOU,30,30,2021-01-12 16:10
+1,NWS/FAA,National Weather Service/Federal Aviation Administration,1,Federal,2545,3458,2021-01-12 16:35
+197,OCPW,Orange County Public Works,2,State & Local,0,60,2018-11-05 21:00
+226,OLINGA,Olinga Learning,5,Unknown,0,3,2018-09-14 22:06
+244,PACIFICORP,PacifiCorp,2,IOU,49,62,2021-01-12 16:10
+227,PGE,Pacific Gas and Electric,2,IOU,868,1009,2021-01-12 16:10
+206,PURPLEAIR,Purple Air Quality Network,5,Citizen,3758,5218,2021-01-12 16:10
+2,RAWS,Interagency Remote Automatic Weather Stations,1,Federal,2208,3392,2021-01-12 16:09
+190,REVWFO,Reno Weather Forecast Office,2,Federal-Low,5,6,2021-01-12 16:00
+113,SBCAPCD,Santa Barbara County Air Pollution Control District,2,State & Local,9,18,2021-01-12 15:59
+229,SC-EDISON,Southern California Edison,2,IOU,1053,1063,2021-01-12 16:10
+29,SCAN,Soil Climate Analysis Network,2,Federal-Low,176,223,2021-01-12 16:00
+139,SDGE,San Diego Gas and Electric,2,IOU,214,219,2021-01-12 16:10
+85,SGXWFO,San Diego Weather Forecast Office,2,Federal-Low,111,264,2021-01-12 16:12
+58,SHASAVAL,Mt. Shasta Avalanche Center,2,Federal-Low,6,6,2021-01-12 15:00
+174,SJSUNET,San Jose State University,3,University,3,4,2021-01-12 16:10
+25,SNOTEL,Natural Resources Conservation Service,2,Federal-Low,859,940,2021-01-12 15:00
+212,TAHOE,Squaw Valley and Alpine Meadows Ski Resorts,4,Private,9,11,2021-01-12 16:00
+193,UCINET,University of California Irvine,3,University,1,14,2021-01-12 01:00
+64,UPR,Union Pacific Railroad,3,Railroads,1368,1465,2021-01-12 16:06
+170,USARRAY,U.S. Transportable Array,2,Federal-Low,337,947,2021-01-12 16:05
+153,UUNET,University of Utah MesoWest Mesonet,3,University,55,65,2021-01-12 16:15
+178,VCAPCD,Ventura County Air Pollution Control District ,2,State & Local,6,6,2021-01-12 16:00
+247,WEATHERSTEM,WeatherSTEM,5,Citizen,380,522,2021-01-12 16:10
+221,WWG-LLWC,Western Weather Group - Lodi Wine Country,2,Industry,35,41,2021-01-12 16:00
+220,WWG-SONOMA,Western Weather Group - Sonoma County,2,Industry,47,52,2021-01-12 16:00
+35,WX4U,Weather For You ,5,Citizen,0,414,2008-05-08 19:20

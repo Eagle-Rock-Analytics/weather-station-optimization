@@ -87,11 +87,40 @@ firewx.sf <- readRDS(file=paste0(map_data, "firewx.sf.RDS")) #stand alone fire w
 #### Section 2: Find the Weather Station Data ####
 
 #Load weather data as its own dataset
-
+# merge this code with the new liberty
+# load in new liberty and merge with existing wx.station
+# get rid of redundant stations in liberty territory
 wx.station <- readRDS(file = paste0(map_data, "wx_station.rds"))
 
-# just for eval of potential new PG&E sites
+# eval of new Liberty sites
+
+new_liberty_sites <- read.csv("weather_stations/liberty_processed_stations_2024.csv", stringsAsFactors = F)
+new_liberty_sites_formatted <- new_liberty_sites %>%
+  mutate(Mesonet = NA, Station.ID = NA,
+        Elevation = NA, County = NA,
+        First.Data.Date = NA, Last.Data.Date = NA,
+        Status = NA, last.year = NA, Quality = 2, Tier = "IOU")
+wx.station <- readRDS(file = paste0(map_data, "wx_station.rds")) %>%
+  bind_rows(new_liberty_sites_formatted)
+
+# #set level of data quality; 1 highest, 2 iou/state, 3 universities, 4 private, 5 citizen
+# #quality.accept = 3
 # 
+# station.sub <- wx.station %>%
+# #  filter(Quality<=quality.accept) %>%
+#   drop_na(Latitude,Longitude)  #drop rows where Lat and Lon are missing
+# 
+# #create a spatial points data.frame for extraction by region below
+# xy <-station.sub %>%
+#   dplyr::select(Longitude,Latitude)
+# 
+# wx.station.spdf <- SpatialPointsDataFrame(coords=xy, data=station.sub, proj4string = CRS("+proj=longlat +datum=WGS84 +ellps=WGS84 +towgs84=0,0,0"))
+
+
+
+
+# just for eval of potential new PG&E sites
+#
 # new_sites <- read.csv("weather_stations/potential_pge_sites.csv", stringsAsFactors = F)
 # new_sites_formatted <- new_sites %>%
 #   dplyr::select(-asset_type) %>%
@@ -143,7 +172,7 @@ if(location.flag <= 6) {
 
 #See process_worldclim.R
 #bioclim.data.CA <- stackOpen("CA_worldclim_crop.stk")
-bioclim.data.CA<-brick(paste0(map_data, "CA_worldclim_crop.tif"))
+bioclim.data.CA<-brick(paste0(map_data, "all_CA_worldclim_crop.tif"))
 
 #bioclim.data.CA <-readRDS(file="CA_worldclim_crop.RDS") #avoid RDS for raster stacks
 #bioclim.data.CA <- readAll(bioclim.data.CA) #reads entire object into RAM - avoid writing rasters as RDS in the future

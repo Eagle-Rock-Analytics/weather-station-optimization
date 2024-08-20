@@ -149,6 +149,9 @@ wx.station <- readRDS(file = paste0(map_data, "wx_station.rds")) %>%
 #### Section 3: Define Regions of Interest ####
 
 loc.number<-c('Bear Valley Electric Service','Liberty Utilities','Pacific Gas & Electric Company','PacifiCorp','San Diego Gas & Electric','Southern California Edison','Bay_Area','Central_Coast','LA', 'Modoc', 'Northwest', 'San Diego', 'Sierras_East','Sierras_West')
+
+#loc.number<-c('Liberty Utilities', 'Bear Valley Electric Service')
+
 location.string = loc.number[location.flag]
 
 #Load shape files for user selected regions
@@ -253,7 +256,7 @@ for (l in 2:length(loc.number)) {
       dplyr::select(Longitude,Latitude)
     )
     
-     fold <- kfold(stationocc, k=9)          #withold 10%, k = 10; withold 20% k= 5; withold 11.1%, k=9
+     fold <- kfold(stationocc, k=2)          #withold 10%, k = 10; withold 20% k= 5; withold 11.1%, k=9
      stationtest <- stationocc[fold == 1, ]
      stationtrain <- stationocc[fold != 1, ]
     # 

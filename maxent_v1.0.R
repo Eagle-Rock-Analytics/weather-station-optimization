@@ -12,6 +12,9 @@
 
 # Jesse Espinoza - Eagle Rock Analytics
 # September 26, 2024
+
+# Note(s)
+# file CA_worldclim_crop.zip needs to be unzipped out of R and placed back into local dir within map_data to run
 #### Libraries #####
 
 library("sp")

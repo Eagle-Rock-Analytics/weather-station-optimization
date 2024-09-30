@@ -107,7 +107,10 @@ if(location.flag <= 6) {
 ## Models at smaller scales (individual IOU regions or fire weather regions) require fine-scale environmental data
 ## Fine-scale meaning <=1 km resolution
 
-# See process_worldclim.R
+# Point to California worldclim data
+# Original file was too large to upload to github, so it was compressed
+# Compressed file 'CA_worldclim_crop.zip' needs to be unzipped and placed in your local directory
+# within the map_data folder 
 bioclim.data.CA<-brick(paste0(map_data, "CA_worldclim_crop.tif"))
 
 #### Section 5: Loops ####

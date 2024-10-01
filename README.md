@@ -24,7 +24,7 @@ Regridded 3-km WRF data is stored in `/wrf_3km`
 Scripts to run different iterations of MaxEnt are as follows:
 
 *Present day*
-- `maxent_v0.8.R` runs MaxEnt models for fire weather regions and IOU service territories for present-day climate conditions (input climate layers from WorldClim at 1-km resolution)
+- `maxent_v1.0.R` runs MaxEnt models for fire weather regions and IOU service territories for present-day climate conditions (using climate layers from WorldClim at 1-km resolution)
 - `statewide_v1.R` runs MaxEnt models for the whole state of California for present-day climate conditions (input climate layers from WorldClim at 1-km resolution)
 - `process_worldclim.R` formats WorldClim data into raster layers for inputting into MaxEnt
 

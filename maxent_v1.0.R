@@ -15,6 +15,7 @@
 
 # Note(s)
 # file CA_worldclim_crop.zip needs to be unzipped out of R and placed back into local dir within map_data to run
+
 #### Libraries #####
 
 library("sp")
@@ -42,10 +43,8 @@ load(file = paste0(map_data, "map_objects.RData"))
 #### Params #####
 
 # Parameters from Website: Analysis Type; Station Quality Flag, Location Flag
-
 # Analysis type
 # Options: Fire Weather or Climatology
-# will direct to wrf or daymet data
 
 # Station Quality Flag
 # set level of data quality; 1 highest, 2 iou/state, 3 universities, 4 private, 5 citizen
@@ -53,8 +52,9 @@ quality.accept <- 2
 quality.string <- c('highest','iou/state','universities', 'private', 'citizen')
 
 # Location Flag
+# These flags refer to the geographical region in which optimization analysis occurs -
+# see below for details
 # Regions and IOUs
-#location.flag <- input from webserver
 location.flag <- 3
 
 #### Section 1: Geographic domain ####
